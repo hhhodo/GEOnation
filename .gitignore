@@ -1,0 +1,7 @@
+.DS_Store
+node_modules/
+# 원본 소스(카탈로그/ai/사진)는 올리지 않음
+/*.ai
+/*.pdf
+/*.png
+/*.tmp
