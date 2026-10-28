@@ -95,6 +95,28 @@
     measure();
   }
 
+  /* ---------- 사업영역: 모여 있다가 스크롤하면 펼쳐짐 ---------- */
+  var apps = document.querySelector('[data-apps]');
+  if (apps) {
+    var small = window.matchMedia('(max-width: 1024px)');
+    var tickApps = function () {
+      if (small.matches) { apps.style.setProperty('--s', 1); apps.style.setProperty('--t', 1); return; }
+      var r = apps.getBoundingClientRect();
+      var range = r.height - window.innerHeight;
+      var prog = range > 0 ? clamp(-r.top / range, 0, 1) : 1;
+      var t = clamp(prog / 0.6, 0, 1);
+      var e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+      apps.style.setProperty('--s', e.toFixed(3));
+      apps.style.setProperty('--t', clamp((e - 0.55) / 0.45, 0, 1).toFixed(3));
+    };
+    var rafA = 0;
+    window.addEventListener('scroll', function () {
+      if (!rafA) rafA = requestAnimationFrame(function () { rafA = 0; tickApps(); });
+    }, { passive: true });
+    window.addEventListener('resize', tickApps);
+    tickApps();
+  }
+
   /* ---------- 숫자 카운트업 ---------- */
   var stats = document.querySelector('.stats');
   if (stats && !reduce) {
@@ -109,7 +131,7 @@
     });
 
     var run = function () {
-      var start = performance.now(), dur = 1800;
+      var start = performance.now(), dur = 2400;
       (function step(now) {
         var t = clamp((now - start) / dur, 0, 1);
         var e = 1 - Math.pow(1 - t, 3);
@@ -121,8 +143,8 @@
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries) {
         if (entries[0].isIntersecting) { io.disconnect(); run(); }
-      }, { threshold: 0.35 });
-      io.observe(stats);
+      }, { threshold: 0.9, rootMargin: '0px 0px -15% 0px' });
+      io.observe(stats.querySelector('.stats__list'));
     } else { nums.forEach(function (el) { render(el, 1); }); }
   }
 
