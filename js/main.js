@@ -46,7 +46,7 @@
     var end = sec.querySelector('[data-expand-end]');
     var media = sec.querySelector('[data-expand-media]');
     var title = sec.querySelector('[data-expand-title]');
-    var S, E;
+    var S, E, liveTimer = 0;
 
     var rect = function (el) { return { l: el.offsetLeft, t: el.offsetTop, w: el.offsetWidth, h: el.offsetHeight }; };
     var measure = function () { S = rect(slot); E = rect(end); tick(); };
@@ -65,8 +65,15 @@
       media.style.width = lerp(S.w, E.w, e) + 'px';
       media.style.height = lerp(S.h, E.h, e) + 'px';
       media.style.setProperty('--shade', e.toFixed(3));
-      media.style.setProperty('--content', clamp((t - 0.7) / 0.3, 0, 1).toFixed(3));
-      media.classList.toggle('is-live', t > 0.9);
+      // 확대가 끝나면 한 템포 쉬고 글자 등장, 다시 줄어들면 즉시 숨김
+      if (t >= 0.999) {
+        if (!liveTimer && !media.classList.contains('is-live')) {
+          liveTimer = setTimeout(function () { media.classList.add('is-live'); liveTimer = 0; }, 500);
+        }
+      } else {
+        if (liveTimer) { clearTimeout(liveTimer); liveTimer = 0; }
+        media.classList.remove('is-live');
+      }
       title.style.opacity = clamp(1 - t * 2, 0, 1).toFixed(3);
     };
 

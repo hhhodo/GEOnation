@@ -23,7 +23,7 @@
 }
 html{scroll-behavior:smooth;}
 body{word-break:keep-all;overflow-wrap:break-word;}
-section[id],footer[id]{scroll-margin-top:var(--space-9);}
+section[id],footer[id]{scroll-margin-top:var(--space-8);}
 img{max-width:none;}
 
 /* wide container = Figma 1600 content */
@@ -32,9 +32,9 @@ img{max-width:none;}
 
 /* ---------- header (full-bleed, fixed) ---------- */
 .site-header{position:fixed;inset:0 0 auto 0;z-index:50;color:var(--text-default-inverse);transition:background .3s;}
-.site-header.is-solid{background:var(--ink-night);}
+.site-header.is-solid{background:var(--color-canvas);color:var(--text-default);border-bottom:var(--border-1);}
 .site-header__inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
-  height:var(--space-9);padding-inline:var(--space-7);}
+  height:var(--space-8);padding-inline:var(--space-7);}
 .logo{display:flex;align-items:center;}
 .logo img{height:var(--space-7);width:auto;}
 .main-nav{display:flex;}
@@ -57,9 +57,6 @@ img{max-width:none;}
 .hero__line{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:var(--space-6);width:100%;}
 .hero__line h1,.hero__line p{font-size:var(--fs-title);font-weight:var(--fw-strong);line-height:var(--lh-h3);white-space:nowrap;}
 .hero__line hr{border:0;border-top:2px solid var(--line-inverse);}
-.hero__ring{position:absolute;left:50%;z-index:1;width:var(--space-9);aspect-ratio:1;
-  border:2px solid var(--line-inverse);border-radius:var(--radius-circle);transform:translateX(-50%);}
-.hero__ring--top{top:29%;} .hero__ring--bottom{top:80%;}
 .hero__ctrl{position:absolute;z-index:2;left:50%;bottom:0;transform:translateX(-50%);
   display:flex;align-items:center;gap:var(--space-5);padding-bottom:var(--space-7);}
 .hero__nav{display:grid;place-items:center;width:var(--space-6);height:var(--space-6);background:none;border:0;padding:0;cursor:pointer;}
@@ -73,9 +70,9 @@ img{max-width:none;}
 @keyframes heroFill{from{width:var(--space-4);}to{width:100%;}}
 
 /* ---------- GCM → banner (scroll expand) ---------- */
-.intro__title{grid-column:1 / span 8;justify-self:start;text-align:center;font-size:var(--fs-title);font-weight:var(--fw-strong);
+.intro__title{grid-column:5 / span 8;justify-self:end;text-align:center;font-size:var(--fs-title);font-weight:var(--fw-strong);
   line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
-.intro__media{grid-column:9 / span 4;aspect-ratio:517/280;visibility:hidden;}
+.intro__media{grid-column:1 / span 4;aspect-ratio:517/280;visibility:hidden;}
 .expand{position:relative;height:250vh;}
 .expand__stage{position:sticky;top:0;height:100vh;overflow:hidden;}
 .expand__row{position:absolute;inset:0;display:flex;align-items:center;}
@@ -93,8 +90,8 @@ img{max-width:none;}
 .expand__shade--b{background:linear-gradient(var(--scrim),var(--scrim)),linear-gradient(var(--scrim-green-soft),var(--scrim-green-soft));opacity:0;}
 .expand__media[data-state="b"] .expand__shade--a{opacity:0;}
 .expand__media[data-state="b"] .expand__shade--b{opacity:1;}
-.expand__content{position:absolute;inset:0;opacity:var(--content,0);pointer-events:none;}
-.expand__media.is-live .expand__content{pointer-events:auto;}
+.expand__content{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .2s;}
+.expand__media.is-live .expand__content{opacity:1;pointer-events:auto;transition:opacity .7s;}
 
 /* banner content (inside expand) */
 .banner__title{position:absolute;left:0;right:0;top:25%;text-align:center;
@@ -205,7 +202,7 @@ img{max-width:none;}
 @media (max-width:1024px){
   .site-header__inner{padding-inline:var(--gutter);grid-template-columns:1fr auto;}
   .main-nav{display:none;}
-  .intro__title,.intro__media{grid-column:1 / -1;}
+  .intro__title,.intro__media{grid-column:1 / -1;justify-self:start;}
   .card{grid-column:span 6;}
   .footer__grid{grid-template-columns:repeat(2,minmax(0,1fr));}
   .apps__head{flex-direction:column;}
@@ -252,5 +249,4 @@ img{max-width:none;}
     --hero-pill:calc(95px * var(--k));
   }
   .hero__line hr{border-top-width:calc(2px * var(--k));}
-  .hero__ring{border-width:calc(2px * var(--k));}
 }
