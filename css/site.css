@@ -242,24 +242,3 @@ img{max-width:none;}
 @media (prefers-reduced-motion:reduce){
   .hero__pill.is-active::before{animation:none;width:100%;}
 }
-
-/* ---------- 2560+ : 모든 토큰을 4/3 배로 (1920 → 2560 비례) ---------- */
-@media (min-width:2200px){
-  :root{
-    --k:1.3333;
-    --fs-display-lg:calc(102px * var(--k)); --fs-display-md:calc(96px * var(--k)); --fs-display-sm:calc(80px * var(--k));
-    --fs-h0:calc(64px * var(--k)); --fs-h1:calc(56px * var(--k)); --fs-h2:calc(40px * var(--k)); --fs-h3:calc(32px * var(--k));
-    --fs-body-1:calc(20px * var(--k)); --fs-body-2:calc(18px * var(--k)); --fs-badge:calc(14px * var(--k));
-    --fs-title:calc(48px * var(--k)); --fs-stat:calc(88px * var(--k)); --fs-caption:calc(16px * var(--k));
-    --radius-sm:calc(12px * var(--k)); --radius-md:calc(24px * var(--k)); --radius-lg:calc(32px * var(--k));
-    --container-narrow:calc(1280px * var(--k)); --container-default:calc(1440px * var(--k)); --container-wide:calc(1600px * var(--k));
-    --gutter:calc(80px * var(--k));
-    --space-1:calc(4px * var(--k)); --space-2:calc(8px * var(--k)); --space-3:calc(12px * var(--k)); --space-4:calc(16px * var(--k));
-    --space-5:calc(24px * var(--k)); --space-6:calc(32px * var(--k)); --space-7:calc(48px * var(--k)); --space-8:calc(64px * var(--k));
-    --space-9:calc(96px * var(--k)); --space-10:calc(120px * var(--k)); --space-11:calc(160px * var(--k)); --space-12:calc(200px * var(--k));
-    --space-13:calc(240px * var(--k));
-    --grid-gutter-sm:calc(8px * var(--k)); --grid-gutter-md:calc(16px * var(--k)); --grid-gutter-lg:calc(24px * var(--k));
-    --hero-pill:calc(72px * var(--k));
-  }
-  .hero__line hr{border-top-width:calc(2px * var(--k));}
-}
