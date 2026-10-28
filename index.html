@@ -16,10 +16,8 @@ spacing=space-section (Figma 1920 sections mapped to space tokens)
 <!--
 Layout Declaration — main page (Figma node 17:9454)
 Header        — full-bleed (fixed) — 1-auto-1 (logo / GNB / KR)
-Hero          — full-bleed — headline | line | headline, static controls
-Intro (GCM)   — wide — 8-4
-Banner 1      — wide image card — centered title + 2 flush links
-Banner 2      — wide image card — centered title + 2 flush links
+Hero          — full-bleed — headline | line | headline, 2-slide autoplay slider
+GCM → Banner  — wide — 8-4, image scroll-expands into banner card (centered title + 2 flush links, hover swaps A/B)
 Stats         — wide — 4 items, space-between
 CTA           — full-bleed — centered
 Business      — wide — header 6-6, cards 4-4-4
@@ -57,55 +55,64 @@ Footer        — full-bleed — 3 x 2
 
 <main id="top">
 
-<!-- ============================== HERO ============================== -->
-<section class="hero">
-  <img class="hero__bg" src="assets/img/hero.jpg" alt="">
-  <div class="container hero__inner">
-    <div class="hero__line">
-      <h1>금속의 한계를 넘어</h1>
-      <hr>
-      <p>누수 제로를 완성하다</p>
+<!-- ============================== HERO (slider) ============================== -->
+<section class="hero" data-hero>
+  <div class="hero__slide is-active" aria-hidden="false">
+    <img class="hero__bg" src="assets/img/hero.jpg" alt="">
+    <div class="container hero__inner">
+      <div class="hero__line">
+        <h1>금속의 한계를 넘어</h1>
+        <hr>
+        <p>누수 제로를 완성하다</p>
+      </div>
     </div>
   </div>
-  <div class="hero__ctrl" aria-hidden="true">
-    <img src="assets/img/hero-prev.png" alt="">
-    <div class="hero__bar"><span class="hero__pill"></span><span class="hero__dot"></span></div>
-    <img src="assets/img/hero-next.png" alt="">
+  <div class="hero__slide" aria-hidden="true">
+    <img class="hero__bg" src="assets/img/globe.jpg" alt="">
+    <span class="hero__ring hero__ring--top"></span>
+    <div class="container hero__inner">
+      <div class="hero__line">
+        <p>금속의 한계를 넘어</p>
+        <hr>
+        <p>누수 제로를 완성하다</p>
+      </div>
+    </div>
+    <span class="hero__ring hero__ring--bottom"></span>
+  </div>
+  <div class="hero__ctrl">
+    <button class="hero__nav" type="button" data-hero-prev aria-label="이전 슬라이드"><img src="assets/img/hero-prev.png" alt=""></button>
+    <div class="hero__bar">
+      <button class="hero__pill is-active" type="button" aria-label="슬라이드 1"></button>
+      <button class="hero__pill" type="button" aria-label="슬라이드 2"></button>
+    </div>
+    <button class="hero__nav" type="button" data-hero-next aria-label="다음 슬라이드"><img src="assets/img/hero-next.png" alt=""></button>
   </div>
 </section>
 
-<!-- ============================== INTRO / GCM ============================== -->
-<section class="intro" id="gcm">
-  <div class="container container--wide">
-    <div class="grid">
-      <h2 class="intro__title">고밀도 AI Rack 부하를<br>50% 감소시키는 GCM</h2>
-      <figure class="intro__media">
-        <img src="assets/img/cover.jpg" alt="GCM 콜드플레이트 모듈" loading="lazy">
-      </figure>
+<!-- ============================== GCM → TECH BANNER (scroll expand) ============================== -->
+<section class="expand" id="gcm" data-expand>
+  <div class="expand__stage">
+    <div class="expand__row">
+      <div class="container container--wide">
+        <div class="grid">
+          <h2 class="intro__title" data-expand-title>고밀도 AI Rack 부하를<br>50% 감소시키는 GCM</h2>
+          <div class="intro__media" data-expand-slot></div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- ============================== BANNER 1 ============================== -->
-<section class="banner" id="tri">
-  <div class="banner__card">
-    <img class="banner__bg" src="assets/img/cover.jpg" alt="" loading="lazy">
-    <h2 class="banner__title">금속과 수지를 하나로,<br>누수 없는 접합 기술</h2>
-    <div class="banner__links">
-      <a class="banner__link is-on" href="#tech">GCM 핵심기술<span class="banner__dot" aria-hidden="true"></span></a>
-      <a class="banner__link" href="#contact">글로벌 네트워크<span class="banner__dot" aria-hidden="true"></span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== BANNER 2 ============================== -->
-<section class="banner banner--globe" id="network">
-  <div class="banner__card">
-    <img class="banner__bg" src="assets/img/globe.jpg" alt="" loading="lazy">
-    <h2 class="banner__title">글로벌 네트워크<br>관련 텍스트</h2>
-    <div class="banner__links">
-      <a class="banner__link" href="#tech">GCM 핵심기술<span class="banner__dot" aria-hidden="true"></span></a>
-      <a class="banner__link is-on" href="#contact">글로벌 네트워크<span class="banner__dot" aria-hidden="true"></span></a>
+    <div class="expand__end" data-expand-end></div>
+    <div class="expand__media" data-expand-media data-state="a">
+      <img class="expand__layer expand__layer--a" src="assets/img/cover.jpg" alt="GCM 콜드플레이트 모듈">
+      <img class="expand__layer expand__layer--b" src="assets/img/globe.jpg" alt="" loading="lazy">
+      <div class="expand__shades"><span class="expand__shade expand__shade--a"></span><span class="expand__shade expand__shade--b"></span></div>
+      <div class="expand__content">
+        <h2 class="banner__title banner__title--a">금속과 수지를 하나로,<br>누수 없는 접합 기술</h2>
+        <h2 class="banner__title banner__title--b" aria-hidden="true">글로벌 네트워크<br>관련 텍스트</h2>
+        <div class="banner__links" id="tri">
+          <a class="banner__link banner__link--a" href="#tech" data-state-link="a">GCM 핵심기술<span class="banner__dot" aria-hidden="true"></span></a>
+          <a class="banner__link banner__link--b" href="#contact" data-state-link="b">글로벌 네트워크<span class="banner__dot" aria-hidden="true"></span></a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -202,7 +209,7 @@ Footer        — full-bleed — 3 x 2
       <p class="tech__sub">GCM을 완성하는 핵심 기술을 소개합니다.</p>
     </div>
     <div class="grid tech__grid">
-      <article class="tcard tcard--light">
+      <article class="tcard">
         <div>
           <span class="tcard__tag">GCM</span>
           <h3 class="tcard__title">Zero-Leak을 완성하는 3중 실링</h3>
@@ -290,10 +297,6 @@ Footer        — full-bleed — 3 x 2
   </div>
 </footer>
 
-<script>
-  var h=document.getElementById('siteHeader');
-  function t(){h.classList.toggle('is-solid',window.scrollY>40);}
-  t();window.addEventListener('scroll',t,{passive:true});
-</script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
