@@ -153,7 +153,7 @@ img{max-width:none;}
 .card__title,.card__desc{opacity:0;transition:opacity .6s;}
 .apps.is-spread .card__title,.apps.is-spread .card__desc{opacity:1;}
 .card__title{padding-top:var(--space-5);font-size:var(--fs-h3);font-weight:var(--fw-strong);line-height:var(--lh-h3);}
-.card__desc{padding-top:var(--space-4);font-size:var(--fs-body-1);line-height:var(--lh-body);color:var(--text-subtle);}
+.card__desc{padding-top:var(--space-4);min-height:calc(var(--fs-body-1) * var(--lh-body) * 2 + var(--space-4));font-size:var(--fs-body-1);line-height:var(--lh-body);color:var(--text-subtle);}
 
 /* ---------- certificates / network marquee ---------- */
 .certs{padding-block:var(--space-10);overflow:hidden;}
@@ -241,4 +241,13 @@ img{max-width:none;}
 
 @media (prefers-reduced-motion:reduce){
   .hero__pill.is-active::before{animation:none;width:100%;}
+}
+
+/* ---------- 1921px+ : 글자·라운드는 그대로, 좌우 마진만 고정하고 콘텐츠 폭은 화면을 채움 ----------
+   1920 기준 마진: default = 320 (space-12 + space-10), wide = 160 (space-11) */
+@media (min-width:1921px){
+  .container{max-width:none;padding-inline:calc(var(--space-12) + var(--space-10));}
+  .container--wide{padding-inline:var(--space-11);}
+  .expand__end{width:calc(100% - 2 * var(--space-11));}
+  .tcard{aspect-ratio:auto;height:calc(var(--space-13) * 2);}
 }
