@@ -11,20 +11,21 @@ button-radius=round
 border=hairline
 button-style=outline+text
 fw=600/400
-spacing=space-section (Figma 1920 sections mapped to nearest space token)
+spacing=space-section (Figma 1920 sections mapped to space tokens)
 -->
 <!--
-Layout Declaration — main page (Figma node 17:7850)
-Header        — full-bleed (fixed) — 1-auto-1 (logo / nav / lang)
-Hero          — full-bleed — headline | line | headline, rings top/bottom
+Layout Declaration — main page (Figma node 17:9454)
+Header        — full-bleed (fixed) — 1-auto-1 (logo / GNB / KR)
+Hero          — full-bleed — headline | line | headline, static controls
 Intro (GCM)   — wide — 8-4
-Tech banner   — full-bleed section, wide image card — centered title + 2 flush links
+Banner 1      — wide image card — centered title + 2 flush links
+Banner 2      — wide image card — centered title + 2 flush links
 Stats         — wide — 4 items, space-between
-CTA           — full-bleed — centered, 100vh
-Applications  — wide — header 6-6 (label/title), cards 4-4-4
+CTA           — full-bleed — centered
+Business      — wide — header 6-6, cards 4-4-4
 Certificates  — full-bleed — centered heading + 2 opposite marquees
-Tech cards    — full-bleed bg, wide inner — 3-3-3-3
-Footer        — full-bleed — 4-4-4 x 2 rows
+TECH cards    — full-bleed bg, wide inner — 3-3-3-3
+Footer        — full-bleed — 3 x 2
 -->
 <!doctype html>
 <html lang="ko">
@@ -34,10 +35,6 @@ Footer        — full-bleed — 4-4-4 x 2 rows
 <title>GEO Nation — 금속과 수지의 하이브리드 콜드플레이트 GCM</title>
 <meta name="description" content="지오네이션은 금속과 수지의 접합 기술(TRI SYSTEM)로 AI 서버 냉각용 하이브리드 콜드플레이트 모듈 GCM을 개발·양산합니다.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css">
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/site.css">
 </head>
@@ -62,16 +59,19 @@ Footer        — full-bleed — 4-4-4 x 2 rows
 
 <!-- ============================== HERO ============================== -->
 <section class="hero">
-  <img class="hero__bg" src="assets/img/korea.jpg" alt="지오네이션 인천 본사 및 연구센터">
-  <span class="hero__ring hero__ring--top" aria-hidden="true"></span>
+  <img class="hero__bg" src="assets/img/hero.jpg" alt="">
   <div class="container hero__inner">
     <div class="hero__line">
-      <h1 class="h3">금속의 한계를 넘어</h1>
+      <h1>금속의 한계를 넘어</h1>
       <hr>
       <p>누수 제로를 완성하다</p>
     </div>
   </div>
-  <span class="hero__ring hero__ring--bottom" aria-hidden="true"></span>
+  <div class="hero__ctrl" aria-hidden="true">
+    <img src="assets/img/hero-prev.png" alt="">
+    <div class="hero__bar"><span class="hero__pill"></span><span class="hero__dot"></span></div>
+    <img src="assets/img/hero-next.png" alt="">
+  </div>
 </section>
 
 <!-- ============================== INTRO / GCM ============================== -->
@@ -80,20 +80,32 @@ Footer        — full-bleed — 4-4-4 x 2 rows
     <div class="grid">
       <h2 class="intro__title">고밀도 AI Rack 부하를<br>50% 감소시키는 GCM</h2>
       <figure class="intro__media">
-        <img src="assets/img/exploded.jpg" alt="GCM 분해 구조도: 오버 몰딩 커버, 스크류, 콜드플레이트, 베이스 플레이트" loading="lazy">
+        <img src="assets/img/cover.jpg" alt="GCM 콜드플레이트 모듈" loading="lazy">
       </figure>
     </div>
   </div>
 </section>
 
-<!-- ============================== TECH BANNER ============================== -->
+<!-- ============================== BANNER 1 ============================== -->
 <section class="banner" id="tri">
   <div class="banner__card">
     <img class="banner__bg" src="assets/img/cover.jpg" alt="" loading="lazy">
     <h2 class="banner__title">금속과 수지를 하나로,<br>누수 없는 접합 기술</h2>
     <div class="banner__links">
-      <a class="banner__link" href="#tech">GCM 핵심기술<span class="banner__dot" aria-hidden="true">+</span></a>
-      <a class="banner__link" href="#contact">글로벌 네트워크<span class="banner__dot" aria-hidden="true">+</span></a>
+      <a class="banner__link is-on" href="#tech">GCM 핵심기술<span class="banner__dot" aria-hidden="true"></span></a>
+      <a class="banner__link" href="#contact">글로벌 네트워크<span class="banner__dot" aria-hidden="true"></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== BANNER 2 ============================== -->
+<section class="banner banner--globe" id="network">
+  <div class="banner__card">
+    <img class="banner__bg" src="assets/img/globe.jpg" alt="" loading="lazy">
+    <h2 class="banner__title">글로벌 네트워크<br>관련 텍스트</h2>
+    <div class="banner__links">
+      <a class="banner__link" href="#tech">GCM 핵심기술<span class="banner__dot" aria-hidden="true"></span></a>
+      <a class="banner__link is-on" href="#contact">글로벌 네트워크<span class="banner__dot" aria-hidden="true"></span></a>
     </div>
   </div>
 </section>
@@ -114,35 +126,35 @@ Footer        — full-bleed — 4-4-4 x 2 rows
 
 <!-- ============================== CTA ============================== -->
 <section class="cta">
-  <img class="cta__bg" src="assets/img/vietnam.jpg" alt="" loading="lazy">
+  <img class="cta__bg" src="assets/img/korea.jpg" alt="" loading="lazy">
   <div class="cta__inner">
     <h2 class="cta__title">지오네이션은<br>최고의 제품과 최고의 기술을<br>전세계에 제공합니다.</h2>
     <a class="btn-outline" href="#contact">View More</a>
   </div>
 </section>
 
-<!-- ============================== APPLICATIONS ============================== -->
+<!-- ============================== BUSINESS ============================== -->
 <section class="apps" id="apps">
   <div class="container container--wide">
     <div class="apps__head">
       <p class="apps__label">Applications</p>
-      <h2 class="apps__title">고성능 프로세서를 위한,<br>현장에 최적화된 냉각 솔루션</h2>
+      <h2 class="apps__title">사업영역</h2>
     </div>
     <div class="grid apps__grid">
       <article class="card">
-        <div class="card__img"><img src="assets/img/gcm-front.png" alt="GCM 콜드플레이트 모듈 정면" loading="lazy"></div>
-        <h3 class="card__title">AI GPU Server</h3>
-        <p class="card__desc">추론·학습용 AI GPU 서버의<br>고밀도 열을 안정적으로 식힙니다.</p>
+        <div class="card__img"><img src="assets/img/biz-metal.png" alt="금속과 플라스틱 접합" loading="lazy"></div>
+        <h3 class="card__title">금속과 플라스틱 접합사업</h3>
+        <p class="card__desc">지오네이션의 모리오카연구소와 토아덴카와의 공동연구개발을 통해 금속과 수지의 접합기술 및 양산기술 확보를 실현</p>
       </article>
       <article class="card">
-        <div class="card__img"><img src="assets/img/gcm-pps-a.png" alt="GCM PPS 수지 커버 모델" loading="lazy"></div>
-        <h3 class="card__title">Data Center</h3>
-        <p class="card__desc">대규모 데이터 센터 구축에 맞춰<br>빠르고 유연하게 공급합니다.</p>
+        <div class="card__img"><img src="assets/img/biz-auto.png" alt="자동차 부품" loading="lazy"></div>
+        <h3 class="card__title">자동차 부품사업</h3>
+        <p class="card__desc">자동차 경량화, 방수, 강성 등 자동차 부품별 고객 니즈에 맞춘 최적화된 접합 솔루션 제공</p>
       </article>
       <article class="card">
-        <div class="card__img"><img src="assets/img/gcm-pps-c.png" alt="GCM 400W급 소형 모델" loading="lazy"></div>
-        <h3 class="card__title">SSD &amp; Gaming PC</h3>
-        <p class="card__desc">GPU/CPU 400W급 시스템까지<br>가볍고 조용하게 대응합니다.</p>
+        <div class="card__img"><img src="assets/img/biz-electronic.png" alt="전기·전자 부품" loading="lazy"></div>
+        <h3 class="card__title">전기 · 전자 부품사업</h3>
+        <p class="card__desc">금속 소재별 최적화된 접합 기술을 보유하고 있으며, 고객의 요구에 맞춰 표면처리 및 사출 · 접합까지 One Stop 진행 가능</p>
       </article>
     </div>
   </div>
@@ -185,12 +197,9 @@ Footer        — full-bleed — 4-4-4 x 2 rows
 <section class="tech" id="tech">
   <img class="tech__bg" src="assets/img/thermal.jpg" alt="" loading="lazy">
   <div class="container container--wide">
-    <div class="tech__head">
-      <div>
-        <h2 class="tech__title">TECH</h2>
-        <p class="tech__sub">GCM을 완성하는 핵심 기술을 소개합니다.</p>
-      </div>
-      <a class="tech__more" href="#contact">기술 자료 문의</a>
+    <div>
+      <h2 class="tech__title">TECH</h2>
+      <p class="tech__sub">GCM을 완성하는 핵심 기술을 소개합니다.</p>
     </div>
     <div class="grid tech__grid">
       <article class="tcard tcard--light">
@@ -234,10 +243,9 @@ Footer        — full-bleed — 4-4-4 x 2 rows
 <!-- ============================== FOOTER ============================== -->
 <footer class="footer" id="contact">
   <div class="container container--wide">
-    <h2 class="footer__title">Best Goods, Best Engineering,<br>Offered to the World</h2>
     <div class="footer__grid">
       <section class="fcol">
-        <h3>본사·공장 — INCHEON Factory / R&amp;D Center</h3>
+        <h3>본사·공장 - INCHEON Factory / R&amp;D Center</h3>
         <dl>
           <dt>ADDR</dt><dd>인천시 검단구 마중4로 9 (인천검단산업단지)</dd>
           <dt>TEL</dt><dd>032-858-4283</dd>
@@ -245,7 +253,7 @@ Footer        — full-bleed — 4-4-4 x 2 rows
         </dl>
       </section>
       <section class="fcol">
-        <h3>JAPAN — TOKYO Office</h3>
+        <h3>JAPAN - TOKYO Office</h3>
         <dl>
           <dt>ADDR</dt><dd>1F Imaizumi Bldg, 2-11-5, Hirakawa-Cho, Chiyoda-Ku, Tokyo, Japan</dd>
           <dt>TEL</dt><dd>+81-3-6268-9501</dd>
@@ -253,26 +261,26 @@ Footer        — full-bleed — 4-4-4 x 2 rows
         </dl>
       </section>
       <section class="fcol">
-        <h3>VIETNAM — YEN PHONG Factory</h3>
+        <h3>VIETNAM - YEN PHONG Factory</h3>
         <dl>
           <dt>ADDR</dt><dd>Lot CN07-7, Yen Phong Industrial Zone(Expansion), Yen Phong Bac Ninh Province, Vietnam</dd>
           <dt>TEL</dt><dd>+84-222-369-9375</dd>
         </dl>
       </section>
       <section class="fcol">
-        <h3>CHINA — DONGGUAN Factory</h3>
+        <h3>CHINA - DONGGUAN Factory</h3>
         <dl>
           <dt>ADDR</dt><dd>Room 202, Building 3, No.10, South Fourth Street, Baiyunqian, Dalang Town, DongGuan City, GuangDong Province, China</dd>
         </dl>
       </section>
       <section class="fcol">
-        <h3>JAPAN — MORIOKA R&amp;D Center</h3>
+        <h3>JAPAN - MORIOKA R&amp;D Center</h3>
         <dl>
           <dt>ADDR</dt><dd>20-7, Iwahana, Shibutami Tamayama-Ku, Morioka-Shi, Iwate-Ken, Japan (028-4132)</dd>
         </dl>
       </section>
       <section class="fcol">
-        <h3>TOADENKA — MORIOKA Head Office</h3>
+        <h3>TOADENKA - MORIOKA Head Office</h3>
         <dl>
           <dt>ADDR</dt><dd>20-7, Iwahana, Shibutami Tamayama-Ku, Morioka-Shi, Iwate-Ken, Japan (028-4132)</dd>
         </dl>
