@@ -100,14 +100,14 @@
   if (apps) {
     var small = window.matchMedia('(max-width: 1024px)');
     var tickApps = function () {
-      if (small.matches) { apps.style.setProperty('--s', 1); apps.style.setProperty('--t', 1); return; }
+      if (small.matches) { apps.style.setProperty('--s', 1); apps.classList.add('is-spread'); return; }
       var r = apps.getBoundingClientRect();
       var range = r.height - window.innerHeight;
       var prog = range > 0 ? clamp(-r.top / range, 0, 1) : 1;
       var t = clamp(prog / 0.6, 0, 1);
       var e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
       apps.style.setProperty('--s', e.toFixed(3));
-      apps.style.setProperty('--t', clamp((e - 0.55) / 0.45, 0, 1).toFixed(3));
+      apps.classList.toggle('is-spread', t >= 0.999);   // 다 펼쳐지면 글자 등장
     };
     var rafA = 0;
     window.addEventListener('scroll', function () {
