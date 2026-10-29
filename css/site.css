@@ -23,7 +23,7 @@
 }
 html{scroll-behavior:smooth;}
 body{word-break:keep-all;overflow-wrap:break-word;}
-section[id],footer[id]{scroll-margin-top:var(--space-8);}
+section[id],footer[id]{scroll-margin-top:var(--space-9);}
 img{max-width:none;}
 
 /* wide container = Figma 1600 content */
@@ -34,12 +34,12 @@ img{max-width:none;}
 .site-header{position:fixed;inset:0 0 auto 0;z-index:50;color:var(--text-default-inverse);transition:background .3s;}
 .site-header.is-solid{background:var(--color-canvas);color:var(--text-default);border-bottom:var(--border-1);}
 .site-header__inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
-  height:var(--space-8);padding-inline:var(--space-7);}
+  height:var(--space-9);padding-inline:var(--space-7);}
 .logo{display:flex;align-items:center;}
 .logo img{height:var(--space-7);width:auto;}
 .main-nav{display:flex;}
 .main-nav a,.lang a{position:relative;display:block;padding:var(--space-3) var(--space-4);white-space:nowrap;text-align:center;
-  font-size:var(--fs-body-2);font-weight:var(--fw-strong);line-height:var(--lh-h3);}
+  font-size:var(--fs-body-1);font-weight:var(--fw-strong);line-height:var(--lh-h3);}
 .lang{justify-self:end;}
 .lang a{padding-inline:0;}
 .main-nav a::after,.lang a::after{content:"";position:absolute;left:50%;bottom:calc(var(--space-2) * -1);
