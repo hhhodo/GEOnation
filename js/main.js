@@ -121,28 +121,6 @@
     measure();
   }
 
-  /* ---------- 사업영역: 모여 있다가 스크롤하면 펼쳐짐 ---------- */
-  var apps = document.querySelector('[data-apps]');
-  if (apps) {
-    var small = window.matchMedia('(max-width: 1024px)');
-    var tickApps = function () {
-      if (small.matches) { apps.style.setProperty('--s', 1); apps.classList.add('is-spread'); return; }
-      var r = apps.getBoundingClientRect();
-      var range = r.height - window.innerHeight;
-      var prog = range > 0 ? clamp(-r.top / range, 0, 1) : 1;
-      var t = clamp(prog / 0.6, 0, 1);
-      var e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
-      apps.style.setProperty('--s', e.toFixed(3));
-      apps.classList.toggle('is-spread', t >= 0.999);   // 다 펼쳐지면 글자 등장
-    };
-    var rafA = 0;
-    window.addEventListener('scroll', function () {
-      if (!rafA) rafA = requestAnimationFrame(function () { rafA = 0; tickApps(); });
-    }, { passive: true });
-    window.addEventListener('resize', tickApps);
-    tickApps();
-  }
-
   /* ---------- CTA: 배경 고정 + 스크롤에 따라 글자가 한 글자씩 채워짐 ---------- */
   var cta = document.querySelector('[data-cta]');
   if (cta) {
