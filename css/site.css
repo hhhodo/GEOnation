@@ -56,7 +56,13 @@ img{max-width:none;}
 .hero__inner{position:relative;z-index:1;height:100%;display:flex;align-items:center;}
 .hero__line{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:var(--space-6);width:100%;}
 .hero__line h1,.hero__line p{font-size:var(--fs-title);font-weight:var(--fw-strong);line-height:var(--lh-h3);white-space:nowrap;}
-.hero__line hr{border:0;border-top:2px solid var(--line-inverse);}
+.hero__line hr{border:0;border-top:2px solid var(--line-inverse);transform-origin:left center;transform:scaleX(0);}
+/* 순차 등장: 왼쪽 글자(한 글자씩) → 가운데 선(좌→우) → 오른쪽 글자(한 글자씩) */
+.hero__line .ch{display:inline-block;white-space:pre;opacity:0;}
+.hero__slide.is-active .hero__line .ch{animation:heroCh .45s ease both;}
+.hero__slide.is-active .hero__line hr{animation:heroLine .8s cubic-bezier(.65,0,.35,1) both;}
+@keyframes heroCh{from{opacity:0;}to{opacity:1;}}
+@keyframes heroLine{from{transform:scaleX(0);}to{transform:scaleX(1);}}
 .hero__ctrl{position:absolute;z-index:2;left:50%;bottom:0;transform:translateX(-50%);
   display:flex;align-items:center;gap:var(--space-4);padding-bottom:var(--space-6);}
 .hero__nav{display:grid;place-items:center;width:var(--space-5);height:var(--space-5);background:none;border:0;padding:0;cursor:pointer;}
@@ -241,6 +247,8 @@ img{max-width:none;}
 
 @media (prefers-reduced-motion:reduce){
   .hero__pill.is-active::before{animation:none;width:100%;}
+  .hero__line .ch{opacity:1;animation:none !important;}
+  .hero__line hr{transform:none;animation:none !important;}
 }
 
 /* ---------- 1921px+ : 글자·라운드는 그대로, 좌우 마진만 고정하고 콘텐츠 폭은 화면을 채움 ----------

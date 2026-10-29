@@ -17,6 +17,32 @@
     var pills = [].slice.call(hero.querySelectorAll('.hero__pill'));
     var cur = 0;
 
+    // 히어로 문구를 한 글자씩 쪼개고 등장 타이밍(왼쪽 글자 → 선 → 오른쪽 글자)을 지정
+    var STEP = 80, BASE = 350, LINE = 800;
+    var splitChars = function (el, startDelay) {
+      var text = el.textContent;
+      el.setAttribute('aria-label', text);
+      el.textContent = '';
+      var chars = text.split('');
+      chars.forEach(function (ch, i) {
+        var s = document.createElement('span');
+        s.className = 'ch';
+        s.setAttribute('aria-hidden', 'true');
+        s.textContent = ch;
+        s.style.animationDelay = (startDelay + i * STEP) + 'ms';
+        el.appendChild(s);
+      });
+      return startDelay + chars.length * STEP;
+    };
+    slides.forEach(function (s) {
+      var line = s.querySelector('.hero__line');
+      var left = line.firstElementChild, hr = line.querySelector('hr'), right = line.lastElementChild;
+      var leftEnd = splitChars(left, BASE);
+      hr.style.animationDelay = (leftEnd + 100) + 'ms';
+      hr.style.animationDuration = LINE + 'ms';
+      splitChars(right, leftEnd + 100 + LINE);
+    });
+
     var go = function (n) {
       cur = (n + slides.length) % slides.length;
       slides.forEach(function (s, k) {
