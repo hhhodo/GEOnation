@@ -177,6 +177,18 @@ img{max-width:none;}
 @keyframes marquee-left{to{transform:translateX(-50%);}}
 @keyframes marquee-right{from{transform:translateX(-50%);}to{transform:translateX(0);}}
 
+/* ---------- clients (주요 고객사 · 국내외 협력사) ---------- */
+.clients{padding-block:var(--space-10);}
+.clients__label{text-align:center;font-size:var(--fs-body-1);line-height:var(--lh-label);}
+.clients__title{text-align:center;padding-top:var(--space-3);font-size:var(--fs-title);font-weight:var(--fw-strong);
+  line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
+.clients__group{margin-top:var(--space-10);}
+.clients__group + .clients__group{margin-top:var(--space-9);}
+.clients__name{padding-bottom:var(--space-4);font-size:var(--fs-body-1);font-weight:var(--fw-strong);line-height:var(--lh-h3);}
+.clients__grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:var(--border-1);border-left:var(--border-1);}
+.clients__item{position:relative;aspect-ratio:2.2/1;border-right:var(--border-1);border-bottom:var(--border-1);}
+.clients__item img{position:absolute;inset:0;margin:auto;width:70%;height:55%;object-fit:contain;}
+
 /* ---------- tech cards (wide, 3-3-3-3) ---------- */
 .tech{position:relative;background:var(--ink-night);color:var(--text-default-inverse);overflow:hidden;
   padding-block:var(--space-13);}
@@ -218,6 +230,7 @@ img{max-width:none;}
   .stats__list{flex-wrap:wrap;gap:var(--space-8);padding-top:var(--space-10);}
   .stat{flex:1 1 40%;}
   .tcard{grid-column:span 6;}
+  .clients__grid{grid-template-columns:repeat(4,minmax(0,1fr));}
 }
 @media (max-width:1024px){
   .site-header__inner{padding-inline:var(--gutter);grid-template-columns:1fr auto;}
@@ -239,6 +252,7 @@ img{max-width:none;}
   .banner__title{top:var(--space-9);padding-inline:var(--gutter);}
   .banner__links{grid-template-columns:1fr;top:auto;height:50%;}
   .banner__link + .banner__link{border-left:0;border-top:var(--border-1);border-color:var(--line-inverse);}
+  .clients__grid{grid-template-columns:repeat(2,minmax(0,1fr));}
   .card,.tcard{grid-column:1 / -1;}
   .tcard{min-height:0;}
   .stat{flex-basis:100%;}
