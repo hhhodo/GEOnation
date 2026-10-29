@@ -160,20 +160,21 @@
       });
       ctitle.replaceChild(f, n);
     });
-    var tickCta = function () {
-      var r = cta.getBoundingClientRect();
-      var range = r.height - window.innerHeight;
-      var p = range > 0 ? clamp(-r.top / range, 0, 1) : 1;
-      var t = clamp((p - 0.1) / 0.6, 0, 1) * cch.length;     // 10%~70% 구간에서 채움
-      cch.forEach(function (s, i) { s.style.opacity = (0.2 + 0.8 * clamp(t - i, 0, 1)).toFixed(3); });
-      cta.classList.toggle('is-done', t >= cch.length - 0.01);
+    // 스크롤 연동 없이: 섹션이 화면에 들어오면 한 글자씩 자동으로 채움
+    cch.forEach(function (s, i) { s.style.transitionDelay = (300 + i * 70) + 'ms'; });
+    var doneMs = 300 + cch.length * 70 + 500;
+    var played = false;
+    var play = function () {
+      if (played) return; played = true;
+      cta.classList.add('is-play');
+      setTimeout(function () { cta.classList.add('is-done'); }, doneMs);
     };
-    var rafC = 0;
-    window.addEventListener('scroll', function () {
-      if (!rafC) rafC = requestAnimationFrame(function () { rafC = 0; tickCta(); });
-    }, { passive: true });
-    window.addEventListener('resize', tickCta);
-    if (!reduce) tickCta();
+    if (reduce || !('IntersectionObserver' in window)) { play(); }
+    else {
+      new IntersectionObserver(function (en, ob) {
+        if (en[0].isIntersecting) { ob.disconnect(); play(); }
+      }, { threshold: 0.6 }).observe(cta.querySelector('.cta__stage'));
+    }
   }
 
   /* ---------- 숫자 카운트업 ---------- */
