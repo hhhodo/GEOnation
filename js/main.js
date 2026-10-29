@@ -143,6 +143,39 @@
     tickApps();
   }
 
+  /* ---------- CTA: 배경 고정 + 스크롤에 따라 글자가 한 글자씩 채워짐 ---------- */
+  var cta = document.querySelector('[data-cta]');
+  if (cta) {
+    var ctitle = cta.querySelector('.cta__title');
+    var label = ctitle.textContent;
+    ctitle.setAttribute('aria-label', label);
+    var cch = [];
+    [].slice.call(ctitle.childNodes).forEach(function (n) {
+      if (n.nodeType !== 3) return;
+      var f = document.createDocumentFragment();
+      n.textContent.split('').forEach(function (c) {
+        var s = document.createElement('span');
+        s.className = 'ch'; s.setAttribute('aria-hidden', 'true'); s.textContent = c;
+        f.appendChild(s); if (c.trim()) cch.push(s);
+      });
+      ctitle.replaceChild(f, n);
+    });
+    var tickCta = function () {
+      var r = cta.getBoundingClientRect();
+      var range = r.height - window.innerHeight;
+      var p = range > 0 ? clamp(-r.top / range, 0, 1) : 1;
+      var t = clamp((p - 0.1) / 0.6, 0, 1) * cch.length;     // 10%~70% 구간에서 채움
+      cch.forEach(function (s, i) { s.style.opacity = (0.2 + 0.8 * clamp(t - i, 0, 1)).toFixed(3); });
+      cta.classList.toggle('is-done', t >= cch.length - 0.01);
+    };
+    var rafC = 0;
+    window.addEventListener('scroll', function () {
+      if (!rafC) rafC = requestAnimationFrame(function () { rafC = 0; tickCta(); });
+    }, { passive: true });
+    window.addEventListener('resize', tickCta);
+    if (!reduce) tickCta();
+  }
+
   /* ---------- 숫자 카운트업 ---------- */
   var stats = document.querySelector('.stats');
   if (stats && !reduce) {
