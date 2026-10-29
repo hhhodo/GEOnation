@@ -151,7 +151,7 @@ img{max-width:none;}
 .apps__head{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--space-7);}
 .apps__label{font-size:var(--fs-body-1);line-height:var(--lh-h3);}
 .apps__title{font-size:var(--fs-title);font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
-.apps__grid{flex:none;margin-block:auto;margin-inline:auto;width:100%;max-width:var(--container-wide);grid-template-rows:auto;}
+.apps__grid{flex:none;margin-block:auto;width:100%;grid-template-rows:auto;}
 .card{grid-column:span 4;display:flex;flex-direction:column;min-height:0;will-change:transform;
 }
 .card:nth-child(1){z-index:1;transform:translateX(calc((1 - var(--s,1)) * (100% + var(--grid-gutter-lg)))) rotate(calc((1 - var(--s,1)) * -5deg));}
