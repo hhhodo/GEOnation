@@ -207,7 +207,7 @@ img{max-width:none;}
 
 /* ---------- footer (Figma 44:172 · 흰 바탕, 로고 + 회사 정보) ---------- */
 .footer{background:var(--color-canvas);color:var(--color-primary-500);}
-.footer__top{display:flex;align-items:center;gap:var(--space-8);padding-top:var(--space-7);padding-bottom:var(--space-9);}
+.footer__top{display:flex;align-items:center;gap:var(--space-8);padding-block:var(--space-7);}
 .footer__logo img{height:var(--footer-logo);width:auto;}
 .flinks{display:flex;flex-wrap:wrap;column-gap:var(--space-5);font-size:var(--fs-body-2);font-weight:var(--fw-strong);line-height:var(--lh-body);}
 .flinks li + li{position:relative;padding-left:var(--space-5);}
@@ -219,7 +219,7 @@ img{max-width:none;}
 .fcol dd::before{content:"";position:absolute;left:0;top:var(--space-2);width:1px;height:var(--space-4);background:var(--color-primary-500);}
 .fcol dt{padding-right:var(--space-3);}
 .fcol a:hover{text-decoration:underline;}
-.footer__copy{padding-block:var(--space-5);border-top:var(--border-1);font-size:var(--fs-body-2);line-height:var(--lh-body);opacity:.6;}
+.footer__copy{padding-block:var(--space-7);border-top:var(--border-1);font-size:var(--fs-body-2);line-height:var(--lh-body);opacity:.6;}
 
 /* ---------- responsive ---------- */
 @media (max-width:1100px){
