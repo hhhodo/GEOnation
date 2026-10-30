@@ -258,6 +258,7 @@
     };
     var side = function (n) { return n === 0 ? 'left' : 'right'; };
     tag('.subnav__list', 'up');
+    tag('.hist-intro .container', 'up');
     tag('#greeting .sec__side', 'left');
     tag('#greeting .prose', 'up');
     tag('#organization .sec__head--center', 'up');
@@ -289,6 +290,38 @@
       targets.forEach(function (el) { io2.observe(el); });
     }
   }
+
+  /* ---------- 연혁: 왼쪽 고정 · 연도가 스크롤 한 구간마다 하나씩 중앙에 머무름 ---------- */
+  [].slice.call(document.querySelectorAll('[data-hist]')).forEach(function (sec) {
+    var items = [].slice.call(sec.querySelectorAll('.hist-p__item'));
+    var track = sec.querySelector('.hist-p__track');
+    var view = sec.querySelector('.hist-p__view');
+    var cur = -1;
+    var place = function () {
+      if (cur < 0) return;
+      var el = items[cur];
+      var pb = parseFloat(getComputedStyle(el).paddingBottom) || 0;
+      var center = el.offsetTop + (el.offsetHeight - pb) / 2;
+      track.style.setProperty('--ty', (view.clientHeight / 2 - center) + 'px');
+    };
+    var step = function () {
+      var r = sec.getBoundingClientRect();
+      var range = r.height - window.innerHeight;
+      var prog = range > 0 ? clamp(-r.top / range, 0, 0.999) : 0;
+      var i = Math.floor(prog * items.length);
+      if (i === cur) return;
+      cur = i;
+      items.forEach(function (el, k) { el.classList.toggle('is-active', k === cur); });
+      place();
+    };
+    var raf = 0;
+    window.addEventListener('scroll', function () {
+      if (!raf) raf = requestAnimationFrame(function () { raf = 0; step(); });
+    }, { passive: true });
+    window.addEventListener('resize', function () { place(); step(); });
+    window.addEventListener('load', place);
+    step();
+  });
 
   /* ---------- 숫자 카운트업 ---------- */
   var stats = document.querySelector('.stats');
