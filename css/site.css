@@ -41,6 +41,13 @@ strong,b{font-weight:var(--fw-strong);}
 .logo{display:flex;align-items:center;}
 .logo img{height:var(--space-7);width:auto;}
 .main-nav{display:flex;}
+.main-nav__item{position:relative;}
+.main-nav__sub{position:absolute;top:100%;left:50%;z-index:60;min-width:100%;padding:var(--space-2);border:var(--border-1);border-radius:var(--radius-md);
+  background:var(--color-canvas);color:var(--text-default);opacity:0;visibility:hidden;transform:translate(-50%,var(--space-2));transition:opacity .2s,transform .2s,visibility .2s;}
+.main-nav__item:hover .main-nav__sub,.main-nav__item:focus-within .main-nav__sub{opacity:1;visibility:visible;transform:translate(-50%,0);}
+.main-nav__sub a{border-radius:var(--radius-sm);padding:var(--space-2) var(--space-4);text-align:left;}
+.main-nav__sub a::after{display:none;}
+.main-nav__sub a:hover,.main-nav__sub a[aria-current]{background:var(--color-primary-050);}
 .main-nav a,.lang a{position:relative;display:block;padding:var(--space-3) var(--space-4);white-space:nowrap;text-align:center;
   font-size:var(--fs-body-1);font-weight:var(--fw-strong);line-height:var(--lh-h3);}
 .lang{justify-self:end;}

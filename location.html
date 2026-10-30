@@ -1,0 +1,129 @@
+<!--
+variant:
+typo=medium
+image=medium
+color=accent
+
+image-radius=round
+card-radius=round
+button-radius=round
+
+border=hairline
+button-style=outline+solid
+fw=600/400
+spacing=space-10 (sections) / space-section
+-->
+<!--
+Layout Declaration — location.html
+Hero          — full-bleed bg, wide inner — 8 (title + lead)
+Page tabs     — pill sub-nav
+Location      — wide — 8-4 (map | info card)
+CTA           — full-bleed — centered + 6-6 link tiles
+Footer        — wide — logo | company facts
+-->
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오시는 길 — 회사 소개 — GEO Nation</title>
+<meta name="description" content="지오네이션 오시는 길: 주소, 대표전화, 대중교통 안내.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body data-solid>
+
+<!-- ============================== HEADER ============================== -->
+<header class="site-header is-solid" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="index.html" class="logo" aria-label="GEO Nation"><img src="assets/img/logo.png" alt="GEO Nation"></a>
+    <nav class="main-nav" aria-label="주요 메뉴">
+      <div class="main-nav__item"><a href="about.html" aria-current="page">회사 소개</a><ul class="main-nav__sub"><li><a href="about.html">어바웃 어스</a></li><li><a href="history.html">연혁</a></li><li><a href="certificates.html">인증</a></li><li><a href="location.html" aria-current=page>오시는 길</a></li></ul></div>
+      <a href="products.html">제품·서비스 소개</a>
+      <a href="business.html">사업 분야</a>
+      <a href="contact.html">문의하기</a>
+    </nav>
+    <div class="lang"><a href="index.html">KR</a></div>
+  </div>
+</header>
+
+<main id="top">
+<!-- ============================== HERO ============================== -->
+<section class="page-hero">
+  <img class="page-hero__bg" src="assets/img/globe.jpg" alt="글로벌 네트워크">
+  <div class="container container--wide">
+    <div class="grid">
+      <div class="s8">
+        <p class="page-hero__crumb"><a href="index.html">홈</a><span aria-hidden="true"> › </span><a href="about.html">회사 소개</a><span aria-hidden="true"> › </span>오시는 길</p>
+        <p class="page-hero__label">Location</p>
+        <h1 class="page-hero__title">오시는 길</h1>
+        <p class="page-hero__lead">인천광역시 검단구 마중4로 9 지오네이션(주)</p>
+      </div>
+    </div>
+  </div>
+</section>
+<nav class="subnav" aria-label="회사 소개 메뉴"><ul class="subnav__list"><li><a href="about.html">어바웃 어스</a></li><li><a href="history.html">연혁</a></li><li><a href="certificates.html">인증</a></li><li><a href="location.html" class=is-active aria-current=page>오시는 길</a></li></ul></nav>
+
+<!-- ============================== LOCATION ============================== -->
+<section class="sec" id="location">
+  <div class="container container--wide">
+    <div class="sec__head">
+      <p class="sec__label">Location</p>
+      <h2 class="sec__title">오시는 길</h2>
+    </div>
+    <div class="grid grid--top">
+      <div class="s8">
+      <figure class="fig fig--white"><img src="assets/img/pages/map.jpg" alt="지오네이션 오시는 길 지도" loading="lazy"></figure>
+      </div>
+      <div class="s4">
+      <div class="box box--fill box--full">
+      <h3 class="box__title">찾아오시는 길</h3>
+      <dl class="dl dl--sm"><div class="dl__row"><dt>우편번호</dt><dd>23516</dd></div><div class="dl__row"><dt>주소</dt><dd>인천광역시 검단구 마중4로 9 지오네이션(주)</dd></div><div class="dl__row"><dt>대표전화</dt><dd><a href="tel:0328584283">032-858-4283</a></dd></div><div class="dl__row"><dt>FAX</dt><dd>032-858-4284</dd></div></dl>
+      <h3 class="box__title mt-6">대중교통 이용시</h3>
+      <ul class="checks "><li>지하철 인천 2호선 <strong>검단오류(검단산업단지)역</strong> 하차 후 2번 출구</li><li>간선 <strong>66번</strong>(검단오류역) 또는 <strong>79번</strong> 버스 승차 후 검단지식산업센터 정류장 하차</li><li>도보 약 500m 이동 (약 7분)</li></ul>
+      <p class="mt-6"><a class="btn-line" href="https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EA%B2%80%EB%8B%A8%EA%B5%AC%20%EB%A7%88%EC%A4%914%EB%A1%9C%209" target="_blank" rel="noopener">네이버 지도에서 보기</a></p>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CTA ============================== -->
+<section class="band">
+  <img class="band__bg" src="assets/img/korea.jpg" alt="" loading="lazy">
+  <div class="container container--wide">
+    <div class="band__inner">
+      
+      <h2 class="band__title">지오네이션과 함께할 프로젝트가 있으신가요?</h2>
+      <div class="grid band__tiles"><a class="s6 band__tile" href="contact.html"><span class="band__tile-name">문의하기</span><span class="band__tile-desc">제품 · 기술 · 사업 제휴 문의</span></a><a class="s6 band__tile" href="products.html"><span class="band__tile-name">제품·서비스 소개</span><span class="band__tile-desc">GCM 콜드플레이트 모듈</span></a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="footer" id="contact">
+  <div class="container container--wide">
+    <div class="footer__top">
+      <a class="footer__logo" href="index.html" aria-label="GEO Nation"><img src="assets/img/logo.png" alt="GEO Nation"></a>
+      <div class="fcol">
+        <ul class="flinks">
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보취급방침</a></li>
+          <li><a href="#">이메일주소 무단수집 거부</a></li>
+        </ul>
+        <dl>
+          <div class="frow"><dt>설립일</dt><dd>2014년 6월 19일</dd><dt>대표이사</dt><dd>김효진</dd><dt>이메일</dt><dd><a href="mailto:cs@geo-nation.com">cs@geo-nation.com</a></dd><dt>사업자등록번호</dt><dd>131-86-*****</dd></div>
+          <div class="frow"><dt>주소</dt><dd>인천광역시 검단구 마중4로 9 지오네이션(주)</dd><dt>대표전화</dt><dd><a href="tel:0328584283">032) 858-4283</a></dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="footer__copy">Copyright ⓒ GEO Nation Co. Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

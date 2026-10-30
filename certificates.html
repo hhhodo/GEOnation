@@ -1,0 +1,172 @@
+<!--
+variant:
+typo=medium
+image=medium
+color=accent
+
+image-radius=round
+card-radius=round
+button-radius=round
+
+border=hairline
+button-style=outline+solid
+fw=600/400
+spacing=space-10 (sections) / space-section
+-->
+<!--
+Layout Declaration — certificates.html
+Hero          — full-bleed bg, wide inner — 8 (title + lead)
+Page tabs     — pill sub-nav
+Certificates  — wide — 3-3-3-3
+CTA           — full-bleed — centered + 6-6 link tiles
+Footer        — wide — logo | company facts
+-->
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>인증 — 회사 소개 — GEO Nation</title>
+<meta name="description" content="지오네이션 인증 및 특허: IATF 16949, ISO 9001, ISO 14001, SONY Green Partner, 금속-수지 접합 특허.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body data-solid>
+
+<!-- ============================== HEADER ============================== -->
+<header class="site-header is-solid" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="index.html" class="logo" aria-label="GEO Nation"><img src="assets/img/logo.png" alt="GEO Nation"></a>
+    <nav class="main-nav" aria-label="주요 메뉴">
+      <div class="main-nav__item"><a href="about.html" aria-current="page">회사 소개</a><ul class="main-nav__sub"><li><a href="about.html">어바웃 어스</a></li><li><a href="history.html">연혁</a></li><li><a href="certificates.html" aria-current=page>인증</a></li><li><a href="location.html">오시는 길</a></li></ul></div>
+      <a href="products.html">제품·서비스 소개</a>
+      <a href="business.html">사업 분야</a>
+      <a href="contact.html">문의하기</a>
+    </nav>
+    <div class="lang"><a href="index.html">KR</a></div>
+  </div>
+</header>
+
+<main id="top">
+<!-- ============================== HERO ============================== -->
+<section class="page-hero">
+  <img class="page-hero__bg" src="assets/img/thermal.jpg" alt="GCM 열 해석">
+  <div class="container container--wide">
+    <div class="grid">
+      <div class="s8">
+        <p class="page-hero__crumb"><a href="index.html">홈</a><span aria-hidden="true"> › </span><a href="about.html">회사 소개</a><span aria-hidden="true"> › </span>인증</p>
+        <p class="page-hero__label">Certificates</p>
+        <h1 class="page-hero__title">인증</h1>
+        <p class="page-hero__lead">품질경영 인증과 금속-수지 접합 특허로 기술력을 증명합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<nav class="subnav" aria-label="회사 소개 메뉴"><ul class="subnav__list"><li><a href="about.html">어바웃 어스</a></li><li><a href="history.html">연혁</a></li><li><a href="certificates.html" class=is-active aria-current=page>인증</a></li><li><a href="location.html">오시는 길</a></li></ul></nav>
+
+<!-- ============================== CERTIFICATES ============================== -->
+<section class="sec" id="certificates">
+  <div class="container container--wide">
+    <div class="sec__head">
+      <p class="sec__label">Patent &amp; Certificate</p>
+      <h2 class="sec__title">인증 및 특허</h2>
+      <p class="sec__lead">품질경영 인증과 금속-수지 접합 특허로 기술력을 증명합니다.</p>
+    </div>
+    <h3 class="sec__sub">인증 · 수상</h3>
+    <div class="grid grid--rows mt-6">
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-utac.jpg" alt="IATF 16949 CERTIFICATE" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">IATF 16949 CERTIFICATE</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-iso9001.jpg" alt="ISO 9001 인증서" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">ISO 9001 인증서</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-iso14001.jpg" alt="ISO 14001 인증서" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">ISO 14001 인증서</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-award.jpg" alt="중소벤처기업부 장관표창장" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">중소벤처기업부 장관표창장</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-startup.jpg" alt="창업스타기업 지정서" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">창업스타기업 지정서</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-toa-tri.jpg" alt="TOADENKA TRI-SYSTEM 협약서" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">TOADENKA TRI-SYSTEM 협약서</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-sony-jp.jpg" alt="일본 SONY GREEN PARTNER 인증서" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">일본 SONY GREEN PARTNER 인증서</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-sony-vn.jpg" alt="베트남 SONY GREEN PARTNER 인증서" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">베트남 SONY GREEN PARTNER 인증서</h3></div>
+      </article></div>
+    </div>
+    <h3 class="sec__sub">특허 · 상표</h3>
+    <div class="grid grid--rows mt-6">
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-patent-cooling.jpg" alt="냉각 모듈 및 그 제조방법 특허" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">냉각 모듈 및 그 제조방법 특허</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-patent-joint.jpg" alt="금속-수지 접합체 및 그 제조방법 특허" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">금속-수지 접합체 및 그 제조방법 특허</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-toa-mark.jpg" alt="TOA 상표등록증" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">TOA 상표등록증</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-patent-fe.jpg" alt="수지 Fe 금속 접합체 및 그 제조 방법 특허" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">수지 Fe 금속 접합체 및 그 제조 방법 특허</h3></div>
+      </article></div>
+    </div>
+    <h3 class="sec__sub">보유 특허 목록</h3>
+    <div class="mt-6"><ul class="checks checks--cols"><li>수지 Fe 금속 접합체 및 그 제조 방법 특허</li><li>수지 SUS 금속 접합체 및 그 제조 방법 특허</li><li>수지 Ti 금속 접합체 및 그 제조 방법 특허</li><li>수지 Mg 금속 접합체 및 그 제조 방법 특허</li><li>수지 금속 접합체 및 그 제조 방법 특허 (JP)</li><li>이종접합형 수지 금속 복합재 제조방법 특허</li><li>금속 · 수지접합체 및 그 제조방법</li><li>우수한 합성을 가지는 가스 저장탱크 및 그 제조방법</li><li>전자기기용 외장하우징 제조방법 특허</li><li>급냉각 및 급냉각이 가능한 몰드를 이용한 수지 이송 성형방법 특허</li><li>접이식 선풍기</li><li>수지 금속 접합체 및 그 제조 방법 특허 (KR)</li><li>엔지니어링 플라스틱을 이용한 전기에너지 저장장치 특허</li><li>전기화학 박리공정 기반 박리흑연 연속공급장치 특허</li><li>전기화학 박리공정 기반 박리흑연 카트리지 타입 공급장치 특허</li><li>전기화학 박리공정 기반 모듈타입 박리흑연 제조장치 특허</li><li>차량용 카울 크로스 멤버 금속-수지 복합재의 제조방법</li></ul></div>
+  </div>
+</section>
+
+<!-- ============================== CTA ============================== -->
+<section class="band">
+  <img class="band__bg" src="assets/img/korea.jpg" alt="" loading="lazy">
+  <div class="container container--wide">
+    <div class="band__inner">
+      
+      <h2 class="band__title">지오네이션과 함께할 프로젝트가 있으신가요?</h2>
+      <div class="grid band__tiles"><a class="s6 band__tile" href="contact.html"><span class="band__tile-name">문의하기</span><span class="band__tile-desc">제품 · 기술 · 사업 제휴 문의</span></a><a class="s6 band__tile" href="products.html"><span class="band__tile-name">제품·서비스 소개</span><span class="band__tile-desc">GCM 콜드플레이트 모듈</span></a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="footer" id="contact">
+  <div class="container container--wide">
+    <div class="footer__top">
+      <a class="footer__logo" href="index.html" aria-label="GEO Nation"><img src="assets/img/logo.png" alt="GEO Nation"></a>
+      <div class="fcol">
+        <ul class="flinks">
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보취급방침</a></li>
+          <li><a href="#">이메일주소 무단수집 거부</a></li>
+        </ul>
+        <dl>
+          <div class="frow"><dt>설립일</dt><dd>2014년 6월 19일</dd><dt>대표이사</dt><dd>김효진</dd><dt>이메일</dt><dd><a href="mailto:cs@geo-nation.com">cs@geo-nation.com</a></dd><dt>사업자등록번호</dt><dd>131-86-*****</dd></div>
+          <div class="frow"><dt>주소</dt><dd>인천광역시 검단구 마중4로 9 지오네이션(주)</dd><dt>대표전화</dt><dd><a href="tel:0328584283">032) 858-4283</a></dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="footer__copy">Copyright ⓒ GEO Nation Co. Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

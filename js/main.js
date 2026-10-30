@@ -208,7 +208,7 @@
 
   /* ---------- 서브 페이지: 고정 필 내비 (스크롤 위치에 따라 현재 구간 표시) ---------- */
   var subLinks = [].slice.call(document.querySelectorAll('.subnav__list a'));
-  if (subLinks.length) {
+  if (subLinks.length && subLinks.every(function (a) { return a.getAttribute('href').charAt(0) === '#'; })) {
     var targets = subLinks.map(function (a) { return document.querySelector(a.getAttribute('href')); });
     var spy = function () {
       var y = window.scrollY + window.innerHeight * 0.35, cur = -1;
