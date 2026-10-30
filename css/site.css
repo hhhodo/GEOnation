@@ -388,6 +388,18 @@ strong,b{font-weight:var(--fw-strong);}
 .sec--dark .pcard__tag,.sec--dark .site__tag{color:var(--brand-green);}
 .privacy{padding:var(--space-5);}
 
+/* logo grid (고객사·협력사 전체 노출, 8열) */
+.logos__head{text-align:center;margin-bottom:var(--space-9);}
+.logos__head .sec__title{padding-top:var(--space-3);}
+.logos{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:var(--grid-gutter-lg);}
+.logos__item{position:relative;aspect-ratio:5/3;border-radius:var(--radius-md);background:var(--color-primary-100);overflow:hidden;transition:background .3s;}
+.logos__item img{position:absolute;inset:0;margin:auto;width:70%;height:50%;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1);opacity:.7;transition:filter .3s,opacity .3s;}
+.logos__item:hover{background:var(--color-primary-050);}
+.logos__item:hover img{filter:none;opacity:1;}
+@media (hover:none){.logos__item img{filter:none;opacity:1;}}
+@media (max-width:1024px){.logos{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--grid-gutter-md);}}
+@media (max-width:768px){.logos{grid-template-columns:repeat(2,minmax(0,1fr));}}
+
 /* KPI */
 .kpi__num{font-size:var(--fs-stat);font-weight:var(--fw-strong);line-height:var(--lh-display);letter-spacing:var(--tracking-stat);}
 .kpi__name{margin-top:var(--space-3);font-size:var(--fs-body-1);font-weight:var(--fw-strong);line-height:var(--lh-body);}
