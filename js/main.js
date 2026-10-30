@@ -206,6 +206,20 @@
     });
   }
 
+  /* ---------- 서브 페이지: 고정 필 내비 (스크롤 위치에 따라 현재 구간 표시) ---------- */
+  var subLinks = [].slice.call(document.querySelectorAll('.subnav__list a'));
+  if (subLinks.length) {
+    var targets = subLinks.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+    var spy = function () {
+      var y = window.scrollY + window.innerHeight * 0.35, cur = -1;
+      targets.forEach(function (t, i) { if (t && t.getBoundingClientRect().top + window.scrollY <= y) cur = i; });
+      subLinks.forEach(function (a, i) { a.classList.toggle('is-active', i === cur); });
+    };
+    spy();
+    window.addEventListener('scroll', spy, { passive: true });
+    window.addEventListener('resize', spy);
+  }
+
   function render(el, e) {
     el.textContent = el._parts.map(function (p) {
       if (typeof p === 'string') return p;

@@ -25,8 +25,9 @@
 }
 html{scroll-behavior:smooth;}
 body{word-break:keep-all;overflow-wrap:break-word;}
-section[id],footer[id]{scroll-margin-top:var(--space-9);}
+section[id],footer[id]{scroll-margin-top:calc(var(--space-9) + var(--space-8));}
 img{max-width:none;}
+strong,b{font-weight:var(--fw-strong);}
 
 /* wide container = Figma 1600 content */
 .container--wide{padding-inline:var(--gutter);}
@@ -294,11 +295,11 @@ img{max-width:none;}
 /* section */
 .sec{padding-block:var(--space-10);}
 .sec--tint{background:var(--color-primary-050);}
-.sec__label{font-size:var(--fs-body-1);line-height:var(--lh-label);color:var(--text-subtle);}
+.sec__label{font-size:var(--fs-body-1);font-weight:var(--fw-strong);line-height:var(--lh-label);color:var(--brand-green-dark);}
 .sec__title{font-size:var(--fs-title);font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
 .sec__lead{margin-top:var(--space-5);font-size:var(--fs-body-1);line-height:var(--lh-body);color:var(--text-subtle);}
 .sec__head{margin-bottom:var(--space-9);}
-.sec__side{position:sticky;top:calc(var(--space-9) + var(--space-5));}
+.sec__side{position:sticky;top:calc(var(--space-9) + var(--space-9));}
 .sec__sub{margin-top:var(--space-7);font-size:var(--fs-h3);font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
 .sec__sub:first-child{margin-top:0;}
 
@@ -339,6 +340,47 @@ img{max-width:none;}
 .num-row__text{margin-top:var(--space-3);font-size:var(--fs-body-1);line-height:var(--lh-body);color:var(--text-subtle);}
 .num-row .chips{margin-top:var(--space-5);}
 
+/* breadcrumb · sticky pill sub-nav (레퍼런스: 동남·오상·효성) */
+.page-hero__crumb{margin-bottom:var(--space-3);font-size:var(--fs-body-2);line-height:var(--lh-body);color:var(--text-subtle-inverse);}
+.page-hero__crumb a:hover{text-decoration:underline;}
+.subnav{position:sticky;top:var(--space-9);z-index:40;display:flex;justify-content:center;padding:var(--space-4) var(--gutter);pointer-events:none;}
+.subnav__list{display:flex;gap:var(--space-1);max-width:100%;overflow-x:auto;padding:var(--space-1);border:var(--border-1);border-radius:var(--radius-circle);background:var(--color-canvas);pointer-events:auto;scrollbar-width:none;}
+.subnav__list::-webkit-scrollbar{display:none;}
+.subnav__list a{display:block;white-space:nowrap;padding:var(--space-2) var(--space-4);border-radius:var(--radius-circle);font-size:var(--fs-body-2);line-height:var(--lh-body);color:var(--text-subtle);transition:background .2s,color .2s;}
+.subnav__list a:hover{color:var(--text-default);}
+.subnav__list a.is-active{background:var(--ink-night);color:var(--text-default-inverse);font-weight:var(--fw-strong);}
+
+/* bento (회사개요) */
+.bento{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--grid-gutter-lg);}
+.bento__tile{padding:var(--space-6);border-radius:var(--radius-md);background:var(--color-primary-050);}
+.bento__tile--wide{grid-column:1 / -1;}
+.bento__tile--img{grid-column:1 / -1;padding:0;aspect-ratio:21/9;overflow:hidden;}
+.bento__tile--img img{width:100%;height:100%;object-fit:cover;}
+.bento__label{font-size:var(--fs-body-2);font-weight:var(--fw-strong);line-height:var(--lh-body);color:var(--brand-green-dark);}
+.bento__value{margin-top:var(--space-2);font-size:var(--fs-body-1);line-height:var(--lh-body);}
+.bento a:hover{text-decoration:underline;}
+
+/* org chart (레퍼런스: 동남) */
+.org{display:flex;flex-direction:column;align-items:center;margin-bottom:0;}
+.org__ceo{display:grid;place-items:center;width:var(--space-10);aspect-ratio:1;border-radius:var(--radius-circle);background:var(--ink-night);color:var(--text-default-inverse);font-size:var(--fs-body-2);font-weight:var(--fw-strong);line-height:var(--lh-body);}
+.org__exec{padding:var(--space-2) var(--space-6);border:var(--border-1);border-radius:var(--radius-circle);background:var(--color-canvas);font-size:var(--fs-body-1);font-weight:var(--fw-strong);line-height:var(--lh-body);}
+.org__line{width:1px;height:var(--space-6);background:var(--color-primary-300);}
+.org + .grid{margin-top:0;}
+
+/* history timeline (레퍼런스: 오상·동남) */
+.hist__period + .hist__period{margin-top:var(--space-10);padding-top:var(--space-10);border-top:var(--border-1);}
+.hist__era{font-size:var(--fs-title);font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
+.tline{border-left:var(--border-1);padding-left:var(--space-7);}
+.tline__item{position:relative;padding-bottom:var(--space-8);}
+.tline__item:last-child{padding-bottom:0;}
+.tline__item::before{content:"";position:absolute;left:calc(-1 * (var(--space-7) + var(--space-1) + 1px));top:var(--space-5);width:var(--space-2);aspect-ratio:1;border-radius:var(--radius-circle);background:var(--brand-green-dark);}
+.tline .hist__year{font-size:var(--fs-h1);line-height:var(--lh-h1);}
+.tline .hist__imgs{margin-top:var(--space-4);margin-bottom:var(--space-5);}
+.tline .hist__img{max-height:var(--space-11);}
+.site__tag{font-size:var(--fs-body-2);font-weight:var(--fw-strong);color:var(--brand-green-dark);}
+.sec--dark .pcard__tag,.sec--dark .site__tag{color:var(--brand-green);}
+.privacy{padding:var(--space-5);}
+
 /* KPI */
 .kpi__num{font-size:var(--fs-stat);font-weight:var(--fw-strong);line-height:var(--lh-display);letter-spacing:var(--tracking-stat);}
 .kpi__name{margin-top:var(--space-3);font-size:var(--fs-body-1);font-weight:var(--fw-strong);line-height:var(--lh-body);}
@@ -362,7 +404,8 @@ img{max-width:none;}
 
 /* dark section */
 .sec--dark{background:var(--ink-night);color:var(--text-default-inverse);}
-.sec--dark .sec__label,.sec--dark .sec__lead,.sec--dark .kpi__label,.sec--dark .dl__row dt{color:var(--text-subtle-inverse);}
+.sec--dark .sec__label{color:var(--brand-green);}
+.sec--dark .sec__lead,.sec--dark .kpi__label,.sec--dark .dl__row dt{color:var(--text-subtle-inverse);}
 .sec--dark .dl,.sec--dark .dl__row{border-color:var(--line-faint);}
 .sec--dark .pcard__title{color:var(--text-default-inverse);}
 
@@ -403,6 +446,7 @@ img{max-width:none;}
 .box__title{font-size:var(--fs-body-1);font-weight:var(--fw-strong);line-height:var(--lh-body);}
 .box .checks{margin-top:var(--space-3);}
 .box--full{height:100%;}
+.box--fill .dl,.box--fill .dl__row{border-color:var(--color-primary-200);}
 .box--fill{background:var(--color-primary-050);border:0;}
 .box--dark{background:var(--ink-night);color:var(--text-default-inverse);border:0;}
 .box--dark .checks li{color:var(--text-subtle-inverse);}
