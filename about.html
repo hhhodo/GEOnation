@@ -22,8 +22,8 @@ Mission+Philosophy — one sticky stage — card grows to full screen, text swap
 Organization  — wide — 3-3-3-3
 Operations    — wide — 4-4-4
 Merit         — wide — 7-5 (list bleeds to the right edge)
-Network       — wide — full image + sites 4-4-4
 Customers     — wide — centered heading + logo grid 6 columns
+Network       — wide — full image + sites 4-4-4
 CTA           — full-bleed — centered + 6-6 links
 Footer        — wide — logo | company facts
 -->
@@ -34,11 +34,12 @@ Footer        — wide — logo | company facts
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>어바웃 어스 — 회사 소개 — GEO Nation</title>
 <meta name="description" content="지오네이션 주식회사 소개: 인사말, 경영이념, 조직도, 주요 운영 방향, 글로벌 네트워크.">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/styles.css?v=202610301723">
-<link rel="stylesheet" href="css/site.css?v=202610301723">
+<link rel="stylesheet" href="css/styles.css?v=202610301753">
+<link rel="stylesheet" href="css/site.css?v=202610301753">
 </head>
-<body data-solid>
+<body data-solid data-fly-page>
 
 <!-- ============================== HEADER ============================== -->
 <header class="site-header is-solid" id="siteHeader">
@@ -69,7 +70,7 @@ Footer        — wide — logo | company facts
     </div>
   </div>
 </section>
-<nav class="subnav subnav--static" aria-label="회사 소개 메뉴"><ul class="subnav__list"><li><a href="about.html" class=is-active aria-current=page>어바웃 어스</a></li><li><a href="history.html">연혁</a></li><li><a href="certificates.html">인증</a></li><li><a href="location.html">오시는 길</a></li></ul></nav>
+<nav class="subnav subnav--static" aria-label="회사 소개 메뉴"><ul class="subnav__list"><li><a href="about.html" class=is-active aria-current=page>About Us</a></li><li><a href="history.html">연혁</a></li><li><a href="certificates.html">인증</a></li><li><a href="location.html">오시는 길</a></li></ul></nav>
 
 <!-- ============================== GREETING ============================== -->
 <section class="sec" id="greeting">
@@ -200,6 +201,17 @@ Footer        — wide — logo | company facts
   </div>
 </section>
 
+<!-- ============================== CUSTOMERS ============================== -->
+<section class="sec" id="customers">
+  <div class="container container--wide">
+    <div class="logos__head">
+      <p class="sec__label">Customers &amp; Partners</p>
+      <h2 class="sec__title">글로벌 고객이 신뢰하는 품질,<br>인증과 네트워크로 증명합니다.</h2>
+    </div>
+    <ul class="logos" aria-label="주요 고객사 및 국내외 협력사"><li class="logos__item"><img src="assets/img/logos/samsung.svg" alt="삼성전자" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/motorola.svg" alt="Motorola" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/hyundaigroup.svg" alt="Hyundai Motor Group" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/donghee.png" alt="동희오토" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/kia.svg" alt="Kia" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/hanon.png" alt="Hanon Systems" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/sony.svg" alt="Sony" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/kyocera.svg" alt="Kyocera" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/mobis.svg" alt="Hyundai Mobis" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/sambo.png" alt="Sambo Motors" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/ket.png" alt="KET" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/lge.png" alt="LG전자" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/foxconn.svg" alt="Foxconn" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/byd.svg" alt="BYD" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/kefico.png" alt="Hyundai Kefico" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/infac.png" alt="INFAC" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/tng.png" alt="T&amp;G" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/woory.png" alt="WOORY" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/panasonic.svg" alt="Panasonic" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/bkav.png" alt="Bkav" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/transys.svg" alt="Hyundai Transys" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/kftec.png" alt="코리아에프티" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/innotek.png" alt="LG Innotek" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/klemove.png" alt="HL Klemove" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/khvatec.png" alt="KH Vatec" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/google.svg" alt="Google" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/wia.svg" alt="Hyundai Wia" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/kais.png" alt="KAIS" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/ajin.png" alt="AJIN" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/lgchem.svg" alt="LG화학" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/fujitsu.svg" alt="Fujitsu" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/huawei.png" alt="Huawei" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/lsmat.png" alt="LS Materials" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/skon.png" alt="SK On" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/sdi.svg" alt="삼성SDI" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/lgens.png" alt="LG에너지솔루션" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/basf.png" alt="BASF" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/envalior.png" alt="Envalior" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/syensqo.png" alt="Syensqo" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/celanese.png" alt="Celanese" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/lgchem_p.svg" alt="LG화학" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/lotte.png" alt="Lotte Chemical" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/hanwha.png" alt="한화컴파운드" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/kolon.png" alt="코오롱이앤피" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/victrex.png" alt="Victrex" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/sabic.png" alt="SABIC" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/skchem.png" alt="SK케미칼" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/samyang.png" alt="Samyang" loading="lazy"></li></ul>
+  </div>
+</section>
+
 <!-- ============================== NETWORK ============================== -->
 <section class="sec" id="network">
   <div class="container container--wide">
@@ -219,26 +231,18 @@ Footer        — wide — logo | company facts
   </div>
 </section>
 
-<!-- ============================== CUSTOMERS ============================== -->
-<section class="sec" id="customers">
-  <div class="container container--wide">
-    <div class="logos__head">
-      <p class="sec__label">Customers &amp; Partners</p>
-      <h2 class="sec__title">글로벌 고객이 신뢰하는 품질,<br>인증과 네트워크로 증명합니다.</h2>
-    </div>
-    <ul class="logos" aria-label="주요 고객사 및 국내외 협력사"><li class="logos__item"><img src="assets/img/logos/samsung.svg" alt="삼성전자" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/motorola.svg" alt="Motorola" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/hyundaigroup.svg" alt="Hyundai Motor Group" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/donghee.png" alt="동희오토" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/kia.svg" alt="Kia" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/hanon.png" alt="Hanon Systems" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/sony.svg" alt="Sony" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/kyocera.svg" alt="Kyocera" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/mobis.svg" alt="Hyundai Mobis" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/sambo.png" alt="Sambo Motors" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/ket.png" alt="KET" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/lge.png" alt="LG전자" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/foxconn.svg" alt="Foxconn" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/byd.svg" alt="BYD" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/kefico.png" alt="Hyundai Kefico" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/infac.png" alt="INFAC" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/tng.png" alt="T&amp;G" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/woory.png" alt="WOORY" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/panasonic.svg" alt="Panasonic" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/bkav.png" alt="Bkav" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/transys.svg" alt="Hyundai Transys" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/kftec.png" alt="코리아에프티" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/innotek.png" alt="LG Innotek" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/klemove.png" alt="HL Klemove" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/khvatec.png" alt="KH Vatec" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/google.svg" alt="Google" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/wia.svg" alt="Hyundai Wia" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/kais.png" alt="KAIS" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/ajin.png" alt="AJIN" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/lgchem.svg" alt="LG화학" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/fujitsu.svg" alt="Fujitsu" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/huawei.png" alt="Huawei" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/lsmat.png" alt="LS Materials" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/skon.png" alt="SK On" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/sdi.svg" alt="삼성SDI" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/lgens.png" alt="LG에너지솔루션" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/basf.png" alt="BASF" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/envalior.png" alt="Envalior" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/syensqo.png" alt="Syensqo" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/celanese.png" alt="Celanese" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/lgchem_p.svg" alt="LG화학" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/lotte.png" alt="Lotte Chemical" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/hanwha.png" alt="한화컴파운드" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/kolon.png" alt="코오롱이앤피" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/victrex.png" alt="Victrex" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/sabic.png" alt="SABIC" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/skchem.png" alt="SK케미칼" loading="lazy"></li><li class="logos__item"><img src="assets/img/logos/samyang.png" alt="Samyang" loading="lazy"></li></ul>
-  </div>
-</section>
-
-<!-- ============================== CTA ============================== -->
-<section class="band band--links">
-  <img class="band__bg" src="assets/img/korea.jpg" alt="" loading="lazy">
+<!-- ============================== CTA (링크에 마우스를 올리면 배경·강조 교체) ============================== -->
+<section class="band band--links" data-cta-links data-state="b">
+  <img class="band__bg band__bg--a" src="assets/img/about/cta-a.jpg" alt="" loading="lazy">
+  <img class="band__bg band__bg--b" src="assets/img/about/cta-b.jpg" alt="" loading="lazy">
+  <span class="band__shade band__shade--a"></span>
+  <span class="band__shade band__shade--b"></span>
   <div class="container container--wide">
     <div class="band__inner">
       <h2 class="band__title">지오네이션과 함께할 프로젝트가 있으신가요?</h2>
       <div class="band__links">
-        <a class="band__link band__link--a" href="products.html"><span>제품·서비스 소개</span><i class="band__dot" aria-hidden="true"></i></a>
-        <a class="band__link band__link--b" href="contact.html"><span>문의하기</span><i class="band__dot" aria-hidden="true"></i></a>
+        <a class="band__link band__link--a" href="products.html" data-state-link="a"><span>제품·서비스 소개</span><i class="band__dot" aria-hidden="true"></i></a>
+        <a class="band__link band__link--b" href="contact.html" data-state-link="b"><span>문의하기</span><i class="band__dot" aria-hidden="true"></i></a>
       </div>
     </div>
   </div>
@@ -267,6 +271,6 @@ Footer        — wide — logo | company facts
   </div>
 </footer>
 
-<script src="js/main.js?v=202610301723" defer></script>
+<script src="js/main.js?v=202610301753" defer></script>
 </body>
 </html>

@@ -223,6 +223,62 @@
     step();
   });
 
+  /* ---------- CTA: 링크에 마우스를 올리면 배경 · 강조 교체 ---------- */
+  [].slice.call(document.querySelectorAll('[data-cta-links]')).forEach(function (band) {
+    var base = band.getAttribute('data-state');
+    [].slice.call(band.querySelectorAll('[data-state-link]')).forEach(function (a) {
+      var s = a.getAttribute('data-state-link');
+      a.addEventListener('mouseenter', function () { band.setAttribute('data-state', s); });
+      a.addEventListener('focus', function () { band.setAttribute('data-state', s); });
+    });
+    band.querySelector('.band__links').addEventListener('mouseleave', function () { band.setAttribute('data-state', base); });
+  });
+
+  /* ---------- 슝슝 날아 들어오는 등장 ---------- */
+  if (document.body.hasAttribute('data-fly-page')) {
+    var tag = function (sel, dir, step) {
+      var n = 0;
+      [].slice.call(document.querySelectorAll(sel)).forEach(function (el) {
+        if (el.closest('.grow, .phil, [data-fly]')) return;
+        el.setAttribute('data-fly', typeof dir === 'function' ? dir(n) : dir);
+        el.style.setProperty('--fd', ((step || 0) * n) + 'ms');
+        n++;
+      });
+    };
+    var side = function (n) { return n === 0 ? 'left' : 'right'; };
+    tag('.subnav__list', 'up');
+    tag('#greeting .sec__side', 'left');
+    tag('#greeting .prose p', 'right', 90);
+    tag('#organization .sec__head--center', 'up');
+    tag('.org__ceo', 'up'); tag('.org__line', 'up'); tag('.org__exec', 'up', 0);
+    tag('#organization .team', 'up', 90);
+    tag('#operations .sec__head--center', 'up');
+    tag('#operations .ops', function (n) { return n === 0 ? 'left' : (n === 2 ? 'right' : 'up'); }, 120);
+    tag('#merit .s7', 'left');
+    tag('#merit .merit', 'right', 120);
+    tag('#customers .logos__head', 'up');
+    tag('#customers .logos__item', 'up', 0);
+    [].slice.call(document.querySelectorAll('#customers .logos__item')).forEach(function (el, i) {
+      el.style.setProperty('--fd', ((i % 6) * 70 + Math.floor(i / 6) * 50) + 'ms');
+    });
+    tag('#network .sec__head', 'left');
+    tag('#network .net-fig', 'up');
+    tag('#network .grid > .s4', 'up', 110);
+    tag('.band__title', 'up');
+    tag('.band__link', side, 150);
+    tag('.footer .container > *', 'up', 120);
+
+    var targets = [].slice.call(document.querySelectorAll('[data-fly]'));
+    if (reduce || !('IntersectionObserver' in window)) {
+      targets.forEach(function (el) { el.classList.add('is-in'); });
+    } else {
+      var io2 = new IntersectionObserver(function (en) {
+        en.forEach(function (x) { if (x.isIntersecting || x.boundingClientRect.top < 0) { x.target.classList.add('is-in'); io2.unobserve(x.target); } });
+      }, { threshold: 0.05, rootMargin: '0px 0px -4% 0px' });
+      targets.forEach(function (el) { io2.observe(el); });
+    }
+  }
+
   /* ---------- 숫자 카운트업 ---------- */
   var stats = document.querySelector('.stats');
   if (stats && !reduce) {

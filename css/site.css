@@ -675,7 +675,7 @@ strong,b{font-weight:var(--fw-strong);}
 .merit-col .merit__text{font-size:var(--fs-body-2);}
 
 /* ---------- 글로벌 네트워크 ---------- */
-.net-fig{aspect-ratio:1600/740;margin-bottom:var(--space-9);border-radius:var(--radius-lg);overflow:hidden;background:var(--color-primary-050);}
+.net-fig{aspect-ratio:2/1;margin-bottom:var(--space-9);border-radius:var(--radius-lg);overflow:hidden;background:var(--color-primary-050);}
 .net-fig img{width:100%;height:100%;object-fit:cover;}
 .site__title{margin-bottom:var(--space-4);font-size:var(--fs-h3);font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
 
@@ -685,10 +685,6 @@ strong,b{font-weight:var(--fw-strong);}
   font-size:var(--fs-title);font-weight:var(--fw-base);line-height:var(--lh-h3);color:var(--text-subtle-inverse);transition:color .2s;}
 .band__link + .band__link{border-left:var(--border-1);border-color:var(--line-inverse);}
 .band__dot{flex:none;width:var(--space-8);aspect-ratio:1;background:url(../assets/img/icon-plus-glass.svg) center/100% 100% no-repeat;}
-.band__links:not(:has(.band__link:hover,.band__link:focus-visible)) .band__link--b,
-.band__link:hover,.band__link:focus-visible{font-weight:var(--fw-strong);color:var(--text-default-inverse);}
-.band__links:not(:has(.band__link:hover,.band__link:focus-visible)) .band__link--b .band__dot,
-.band__link:hover .band__dot,.band__link:focus-visible .band__dot{background-image:url(../assets/img/icon-plus-solid.svg);}
 
 @media (min-width:1921px){ .merit-col{margin-right:calc(var(--space-11) * -1);} }
 @media (max-width:1024px){
@@ -709,5 +705,35 @@ strong,b{font-weight:var(--fw-strong);}
   .org__exec{padding-inline:var(--space-6);}
   .net-fig{aspect-ratio:4/3;}
 }
-.subnav--static{position:static;}
 .net-fig img{object-position:center;}
+
+/* ---------- 회사 소개 서브 메뉴 (Figma 48:25): 초록 활성 탭 + 글자 탭 ---------- */
+.subnav--static{position:static;padding:var(--space-4) var(--gutter);}
+.subnav--static .subnav__list{gap:var(--space-1);padding:var(--space-1);border:0;border-radius:0;background:transparent;}
+.subnav--static .subnav__list a{padding:var(--space-2) var(--space-4);border-radius:var(--radius-circle);font-size:var(--fs-body-1);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);color:var(--text-subtle);}
+.subnav--static .subnav__list a:hover{color:var(--text-default);}
+.subnav--static .subnav__list a.is-active{padding:var(--space-3) var(--space-4);border-radius:var(--radius-sm);background:var(--brand-lime);color:var(--text-default-inverse);font-weight:var(--fw-strong);}
+
+/* ---------- CTA 두 가지 상태 (Figma 48:999 / 49:5578) ---------- */
+:root{--tint-sky:rgba(0,97,161,.2); --tint-moss:rgba(50,106,56,.4); --tint-moss-soft:rgba(50,106,56,.2); --scrim-soft:rgba(0,0,0,.2);}
+.band--links::after{display:none;}
+.band--links .band__bg{transition:opacity .6s;}
+.band__bg--a{opacity:0;}
+.band--links[data-state="a"] .band__bg--a{opacity:1;}
+.band--links[data-state="a"] .band__bg--b{opacity:0;}
+.band__shade{position:absolute;inset:0;transition:opacity .6s;}
+.band__shade--a{background:linear-gradient(var(--scrim-soft),var(--scrim-soft)),linear-gradient(var(--tint-moss-soft),var(--tint-moss-soft)),linear-gradient(var(--tint-sky),var(--tint-sky));opacity:0;}
+.band__shade--b{background:linear-gradient(var(--tint-sky),var(--tint-sky)),linear-gradient(var(--scrim),var(--scrim)),linear-gradient(var(--tint-moss),var(--tint-moss));}
+.band--links[data-state="a"] .band__shade--a{opacity:1;}
+.band--links[data-state="a"] .band__shade--b{opacity:0;}
+.band--links[data-state="a"] .band__link--a,.band--links[data-state="b"] .band__link--b{font-weight:var(--fw-strong);color:var(--text-default-inverse);}
+.band--links[data-state="a"] .band__link--a .band__dot,.band--links[data-state="b"] .band__link--b .band__dot{background-image:url(../assets/img/icon-plus-solid.svg);}
+
+/* ---------- 슝슝 날아 들어오는 등장 (body[data-fly]) ---------- */
+html.js main{overflow-x:clip;}
+html.js [data-fly]{opacity:0;transform:translate3d(var(--fx,0),var(--fy,var(--space-9)),0);will-change:transform,opacity;
+  transition:opacity .9s cubic-bezier(.16,1,.3,1) var(--fd,0ms),transform .9s cubic-bezier(.16,1,.3,1) var(--fd,0ms);}
+html.js [data-fly="left"]{--fx:calc(var(--space-12) * -1);--fy:0px;}
+html.js [data-fly="right"]{--fx:var(--space-12);--fy:0px;}
+html.js [data-fly].is-in{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){html.js [data-fly]{opacity:1;transform:none;transition:none;}}
