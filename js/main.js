@@ -291,33 +291,41 @@
     }
   }
 
-  /* ---------- 연혁: 왼쪽 고정 · 연도가 스크롤 한 구간마다 하나씩 중앙에 머무름 ---------- */
+  /* ---------- 연혁: 왼쪽 고정 · 오른쪽 연도가 스크롤에 맞춰 부드럽게 이어지며 연도마다 잠깐 머무름 ---------- */
   [].slice.call(document.querySelectorAll('[data-hist]')).forEach(function (sec) {
     var items = [].slice.call(sec.querySelectorAll('.hist-p__item'));
     var track = sec.querySelector('.hist-p__track');
-    var view = sec.querySelector('.hist-p__view');
-    var cur = -1;
-    var place = function () {
-      if (cur < 0) return;
-      track.style.setProperty('--ty', (-items[cur].offsetTop) + 'px');   // 현재 연도를 왼쪽 제목과 같은 높이에 맞춤
+    var n = items.length, offs = [], target = 0, cur = 0, pos = 0, running = false;
+    var hold = function (f) {                                  // 연도 근처에서는 머물고, 사이에서만 이동
+      if (f < 0.25) return 0;
+      if (f > 0.75) return 1;
+      var t = (f - 0.25) / 0.5;
+      return t * t * (3 - 2 * t);
     };
-    var step = function () {
+    var measure = function () { offs = items.map(function (el) { return el.offsetTop; }); calc(); };
+    var calc = function () {
       var r = sec.getBoundingClientRect();
       var range = r.height - window.innerHeight;
-      var prog = range > 0 ? clamp(-r.top / range, 0, 0.999) : 0;
-      var i = Math.floor(prog * items.length);
-      if (i === cur) return;
-      cur = i;
-      items.forEach(function (el, k) { el.classList.toggle('is-active', k === cur); });
-      place();
+      var prog = range > 0 ? clamp(-r.top / range / 0.92, 0, 1) : 0;
+      var p = prog * (n - 1), i = Math.min(n - 2, Math.floor(p)), f = hold(p - i);
+      pos = i + f;
+      target = lerp(offs[i], offs[i + 1], f);
+      if (!running) { running = true; requestAnimationFrame(frame); }
     };
-    var raf = 0;
-    window.addEventListener('scroll', function () {
-      if (!raf) raf = requestAnimationFrame(function () { raf = 0; step(); });
-    }, { passive: true });
-    window.addEventListener('resize', function () { place(); step(); });
-    window.addEventListener('load', place);
-    step();
+    var frame = function () {
+      cur += (target - cur) * 0.14;
+      if (Math.abs(target - cur) < 0.3) cur = target;
+      track.style.transform = 'translateY(' + (-cur) + 'px)';
+      items.forEach(function (el, k) {
+        var d = Math.min(1, Math.abs(pos - k));
+        el.style.opacity = (1 - 0.75 * d).toFixed(3);
+      });
+      if (cur !== target) requestAnimationFrame(frame); else running = false;
+    };
+    window.addEventListener('scroll', calc, { passive: true });
+    window.addEventListener('resize', measure);
+    window.addEventListener('load', measure);
+    measure();
   });
 
   /* ---------- 숫자 카운트업 ---------- */
