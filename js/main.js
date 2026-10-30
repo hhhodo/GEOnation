@@ -265,7 +265,7 @@
     tag('#organization .team', 'up', 90);
     tag('#operations .sec__head--center', 'up');
     tag('#operations .ops', function (n) { return n === 0 ? 'left' : (n === 2 ? 'right' : 'up'); }, 120);
-    tag('#merit .s7', 'left');
+    tag('#merit .s4', 'up');
     tag('#merit .merit', 'right', 120);
     tag('#customers .logos__head', 'up');
     tag('#customers .logos__item', 'up', 0);
