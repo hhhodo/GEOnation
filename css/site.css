@@ -633,12 +633,10 @@ strong,b{font-weight:var(--fw-strong);}
 .phil__head .container{position:relative;padding-top:var(--space-10);}
 .phil__head .sec__label{color:var(--brand-green);}
 .phil .grow__statement{opacity:calc(1 - var(--ph,0));}
-.phil__panel{position:absolute;z-index:2;inset:0 0 0 50%;transform:translateX(calc((1 - var(--ph,0)) * 100%));background:var(--color-canvas);color:var(--text-default);}
-.phil__list{list-style:none;}
-.phil__item{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
-  padding-left:calc(var(--space-12) + var(--space-6));padding-right:var(--space-9);
-  opacity:0;visibility:hidden;transform:translateY(var(--space-7));transition:opacity .5s,transform .5s,visibility .5s;}
-.phil__item.is-active{opacity:1;visibility:visible;transform:none;}
+.phil__panel{position:absolute;z-index:2;overflow:hidden;inset:0 0 0 50%;transform:translateX(calc((1 - var(--ph,0)) * 100%));background:var(--color-canvas);color:var(--text-default);}
+.phil__list{list-style:none;height:100%;transform:translateY(calc(var(--i,0) * -100%));transition:transform .9s cubic-bezier(.65,0,.35,1);}
+.phil__item{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;
+  padding-left:calc(var(--space-12) + var(--space-6));padding-right:var(--space-9);}
 .phil__row{display:grid;grid-template-columns:var(--space-7) 1fr;align-items:center;}
 .phil__no{font-size:var(--fs-body-2);line-height:var(--lh-body);color:var(--brand-lime);}
 .phil__title{position:relative;overflow:hidden;font-size:var(--fs-h2);font-weight:var(--fw-strong);line-height:var(--lh-h1);letter-spacing:var(--tracking-kr);}
@@ -664,9 +662,13 @@ strong,b{font-weight:var(--fw-strong);}
 /* ---------- 주요 운영 방향 ---------- */
 .ops{position:relative;display:flex;flex-direction:column;height:100%;min-height:calc(var(--space-13) * 2);padding:var(--space-5);
   border-radius:var(--radius-sm);overflow:hidden;color:var(--text-default-inverse);isolation:isolate;}
-.ops > img{position:absolute;inset:0;z-index:-1;width:100%;height:100%;object-fit:cover;}
+.ops > img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;}
+.ops--1 > img{object-position:55% 50%;}
+.ops::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--scrim);opacity:.5;transition:opacity .5s;}
+.ops:hover::before,.ops:focus-visible::before{opacity:1;}
+.ops:focus-visible{outline:2px solid var(--brand-lime);outline-offset:calc(var(--space-1) * -1);}
 .ops__title{padding-top:var(--space-4);text-align:center;font-size:var(--fs-h2);font-weight:var(--fw-strong);line-height:var(--lh-body);letter-spacing:var(--tracking-kr);}
-.ops__panel{margin-top:auto;padding:var(--space-5) var(--space-3);border-radius:var(--radius-sm);background:var(--glass);
+.ops__panel{margin-top:auto;transform:translateY(calc(100% + var(--space-5)));opacity:0;transition:transform .6s cubic-bezier(.16,1,.3,1),opacity .5s;padding:var(--space-5) var(--space-3);border-radius:var(--radius-sm);background:var(--glass);
   -webkit-backdrop-filter:blur(var(--space-7));backdrop-filter:blur(var(--space-7));}
 .ops__list{display:flex;flex-direction:column;gap:var(--space-1);list-style:none;text-align:center;font-size:var(--fs-body-2);line-height:var(--lh-body);letter-spacing:var(--tracking-kr);}
 
@@ -735,3 +737,10 @@ html.js [data-fly]{opacity:0;transform:translate3d(var(--fx,0),var(--fy,var(--sp
   transition:opacity .9s cubic-bezier(.16,1,.3,1) var(--fd,0ms),transform .9s cubic-bezier(.16,1,.3,1) var(--fd,0ms);}
 html.js [data-fly].is-in{opacity:1;transform:none;}
 @media (prefers-reduced-motion:reduce){html.js [data-fly]{opacity:1;transform:none;transition:none;}}
+.ops:hover .ops__panel,.ops:focus-visible .ops__panel{transform:none;opacity:1;}
+@media (hover:none){.ops__panel{transform:none;opacity:1;}.ops::before{opacity:1;}}
+
+/* 이미지가 화면을 가득 채우면 GNB 투명 */
+.site-header{transition:background .3s,color .3s,border-color .3s;}
+.site-header.is-solid.is-clear{background:transparent;border-color:transparent;color:var(--text-default-inverse);}
+.band--links{padding-bottom:var(--space-3);}

@@ -156,6 +156,16 @@
   }
 
   /* ---------- 어바웃 어스: 라운드 이미지가 스크롤하면 전체 화면으로 확대 ---------- */
+  var growSecs = [].slice.call(document.querySelectorAll('[data-grow]'));
+  var calcClear = function (sec) {                            // 이미지가 화면을 가득 채운 동안만 GNB 투명 (흰 패널이 나오면 해제)
+    var m = sec.querySelector('[data-grow-media]');
+    var e = parseFloat(m.style.getPropertyValue('--e')) || 0;
+    var ph = parseFloat(sec.style.getPropertyValue('--ph')) || 0;
+    var r = sec.getBoundingClientRect();
+    sec._clear = e > 0.98 && r.top <= 1 && r.bottom > (header ? header.offsetHeight : 0) && ph < 0.02;
+    syncHeader();
+  };
+  var syncHeader = function () { if (header) header.classList.toggle('is-clear', growSecs.some(function (s) { return s._clear; })); };
   [].slice.call(document.querySelectorAll('[data-grow]')).forEach(function (sec) {
     var stage = sec.querySelector('.grow__stage');
     var slot = sec.querySelector('.grow__slot');
@@ -183,6 +193,7 @@
       media.style.width = lerp(S.w, W, e) + 'px';
       media.style.height = lerp(S.h, H, e) + 'px';
       media.style.setProperty('--e', e.toFixed(3));
+      calcClear(sec);
       if (hasShade) media.style.setProperty('--shade', e.toFixed(3));
       if (text) {                                                 // 글자는 이미지 위쪽 → 화면 가운데로 이동하며 흰색으로
         var from = (head + S.t) / 2, to = H / 2;
@@ -209,10 +220,11 @@
       var prog = range > 0 ? clamp(-r.top / range, 0, 1) : 0;
       var from = parseFloat(sec.getAttribute('data-steps-from')) || 0;
       var gEnd = parseFloat(sec.getAttribute('data-grow-end')) || 0;
-      if (from > gEnd) sec.style.setProperty('--ph', clamp((prog - gEnd) / (from - gEnd), 0, 1).toFixed(3));  // 배경 위로 글자 교체 · 오른쪽 패널 등장
+      if (from > gEnd) { sec.style.setProperty('--ph', clamp((prog - gEnd) / (from - gEnd), 0, 1).toFixed(3)); if (sec.hasAttribute('data-grow')) calcClear(sec); }  // 배경 위로 글자 교체 · 오른쪽 패널 등장
       var i = Math.floor(clamp((prog - from) / (1 - from), 0, 0.999) * items.length);
       if (i === cur) return;
       cur = i;
+      sec.style.setProperty('--i', cur);
       items.forEach(function (el, k) { el.classList.toggle('is-active', k === cur); });
     };
     var raf = 0;
@@ -248,7 +260,7 @@
     var side = function (n) { return n === 0 ? 'left' : 'right'; };
     tag('.subnav__list', 'up');
     tag('#greeting .sec__side', 'left');
-    tag('#greeting .prose p', 'right', 90);
+    tag('#greeting .prose', 'up');
     tag('#organization .sec__head--center', 'up');
     tag('.org__ceo', 'up'); tag('.org__line', 'up'); tag('.org__exec', 'up', 0);
     tag('#organization .team', 'up', 90);
