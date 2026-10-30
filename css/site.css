@@ -338,6 +338,15 @@ img{max-width:none;}
 .num-row__text{margin-top:var(--space-3);font-size:var(--fs-body-1);line-height:var(--lh-body);color:var(--text-subtle);}
 .num-row .chips{margin-top:var(--space-5);}
 
+/* hexagon map (경영이념) */
+.hexmap{position:relative;aspect-ratio:1;max-width:var(--container-narrow);margin-inline:auto;}
+.hexmap__hex,.hexmap__core{position:absolute;display:grid;place-items:center;text-align:center;font-size:var(--fs-body-1);font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
+.hexmap__hex{width:38%;aspect-ratio:1/.87;background:color-mix(in srgb,var(--brand-green) 70%,var(--color-canvas));color:var(--text-default);
+  clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);}
+.hexmap__hex--a{left:0;top:8%;} .hexmap__hex--b{right:0;top:8%;} .hexmap__hex--c{left:31%;bottom:4%;}
+.hexmap__core{left:28%;top:26%;width:44%;aspect-ratio:1;border-radius:var(--radius-circle);background:var(--brand-gold);color:var(--text-default);}
+@media (max-width:768px){.hexmap__hex,.hexmap__core{font-size:var(--fs-body-2);}}
+
 /* dark feature card */
 .feature{display:flex;flex-direction:column;justify-content:space-between;gap:var(--space-9);height:100%;
   padding:var(--space-8);border-radius:var(--radius-md);background:var(--ink-night);color:var(--text-default-inverse);}
@@ -397,7 +406,8 @@ img{max-width:none;}
 .hist{border-top:var(--border-1);}
 .hist__row{padding-block:var(--space-8);border-bottom:var(--border-1);}
 .hist__year{font-size:var(--fs-display-sm);font-weight:var(--fw-strong);line-height:var(--lh-display);letter-spacing:var(--display-tracking);}
-.hist__img{margin-top:var(--space-5);max-height:var(--space-12);width:auto;max-width:100%;object-fit:contain;}
+.hist__imgs{display:flex;flex-wrap:wrap;align-items:flex-end;gap:var(--space-5);margin-top:var(--space-5);}
+.hist__img{max-height:var(--space-12);width:auto;max-width:100%;object-fit:contain;}
 .hist__list li{position:relative;padding-left:var(--space-5);font-size:var(--fs-body-1);line-height:var(--lh-body);}
 .hist__list li + li{margin-top:var(--space-3);}
 .hist__list li::before{content:"";position:absolute;left:0;top:var(--space-3);width:var(--space-2);aspect-ratio:1;border-radius:var(--radius-circle);background:var(--brand-green);}

@@ -15,7 +15,7 @@ spacing=space-10 (sections) / space-section
 -->
 <!--
 Layout Declaration — company.html
-Hero          — full-bleed bg, wide inner — 8-4 (title | page index)
+Hero          — full-bleed bg, wide inner — 8 (title + lead)
 Greeting      — wide — 4-8
 Philosophy    — wide — 7-5
 Overview      — wide — 4-8
@@ -66,7 +66,6 @@ Footer        — wide — logo | company facts
         <h1 class="page-hero__title">회사 소개</h1>
         <p class="page-hero__lead">최고의 제품과 최고의 기술을 전세계에 제공하는 기업, <strong>지오네이션 주식회사</strong></p>
       </div>
-      <nav class="s4 page-hero__index" aria-label="페이지 내 이동"><a href="#greeting">인사말<span>01</span></a><a href="#philosophy">경영이념<span>02</span></a><a href="#overview">회사개요<span>03</span></a><a href="#organization">조직도<span>04</span></a><a href="#history">연혁<span>05</span></a><a href="#certificates">인증 및 특허<span>06</span></a><a href="#network">글로벌 네트워크<span>07</span></a><a href="#location">오시는 길<span>08</span></a></nav>
     </div>
   </div>
 </section>
@@ -111,12 +110,11 @@ Footer        — wide — logo | company facts
         </div>
       </div>
       <div class="s5">
-        <div class="feature">
-          <div>
-            <p class="feature__label">GEO Nation</p>
-            <p class="feature__title">우수한 제품과<br>선진 기술 제공</p>
-          </div>
-          <ul class="checks checks--lg"><li>좋은 직장 만들기</li><li>인재 육성</li><li>고객 만족</li></ul>
+        <div class="hexmap" role="img" aria-label="좋은 직장 만들기, 인재 육성, 고객 만족이 우수한 제품과 선진 기술 제공으로 이어집니다">
+          <p class="hexmap__hex hexmap__hex--a">좋은 직장<br>만들기</p>
+          <p class="hexmap__hex hexmap__hex--b">인재 육성</p>
+          <p class="hexmap__hex hexmap__hex--c">고객 만족</p>
+          <p class="hexmap__core">우수한 제품과<br>선진 기술 제공</p>
         </div>
       </div>
     </div>
@@ -194,43 +192,43 @@ Footer        — wide — logo | company facts
     </div>
     <div class="hist">
       <div class="hist__row grid grid--top">
-        <div class="s5"><h3 class="hist__year">2023</h3><img class="hist__img" src="assets/img/pages/hist-y2023.jpg" alt="2023년 주요 제품" loading="lazy"></div>
+        <div class="s5"><h3 class="hist__year">2023</h3><div class="hist__imgs"><img class="hist__img" src="assets/img/pages/hist-y2023.jpg" alt="2023년 주요 제품" loading="lazy"><img class="hist__img" src="assets/img/pages/hist-car2023.jpg" alt="2023년 주요 제품" loading="lazy"></div></div>
         <ul class="s7 hist__list"><li>K社 EV INVERTER COOLER 개발</li><li>L社 OPU HOUSING 적용 검토 및 개발</li><li>H社 eM-Platform 열관리모듈 냉각수허브 통합드라이버 COVER 개발선정</li><li>H社 자동차 Camera REAR HOUSING 개발</li><li>H社 전기차 컴프레사 INVERTER PCB COVER TRI 적용 확정 개발 (SOP : 2025)</li><li>D社 수소고압용기(수소버스) TRI 기술 적용 확정 (SOP : 2025)</li><li>L社 8M급 초소형 플랫폼 카메라 개발</li><li>H社 열관리모듈 냉각수허브 통합드라이버 COVER HEATSINK 양산</li><li>IATF 16949 인증 획득</li><li>삼성전자 스마트폰 Metal Case 방수폰 개발 및 양산적용<small>삼성전자 S23/S24 Series /FOLD5/Z Flip5 외</small></li></ul>
       </div>
       <div class="hist__row grid grid--top">
-        <div class="s5"><h3 class="hist__year">2022</h3><img class="hist__img" src="assets/img/pages/hist-y2022.jpg" alt="2022년 주요 제품" loading="lazy"></div>
+        <div class="s5"><h3 class="hist__year">2022</h3><div class="hist__imgs"><img class="hist__img" src="assets/img/pages/hist-y2022.jpg" alt="2022년 주요 제품" loading="lazy"></div></div>
         <ul class="s7 hist__list"><li>삼성전자 스마트폰 Metal Case 방수폰 양산적용<small>삼성전자 S22/S22+/S22 Ultra/FOLD4/Z Flip4 외</small></li><li>W社 MV DRV Cover Heatsink 양산적용</li><li>GEO Nation 일본 SONY Green Partner 인증 획득</li><li>H社 FCEV 수소연료전지스택 Endplate/MANIFOLD BLOCK SIDE PLATE 개발</li><li>H社 EV 로어암 개발</li><li>L社 EDLC CASE 개발</li><li>C社 반도체 Chipset TRI-Cu 개발</li><li>L社 원통형 배터리케이스 개발</li><li>L社 Air Suspension Top Port 개발</li></ul>
       </div>
       <div class="hist__row grid grid--top">
-        <div class="s5"><h3 class="hist__year">2021</h3><img class="hist__img" src="assets/img/pages/hist-y2021.jpg" alt="2021년 주요 제품" loading="lazy"></div>
+        <div class="s5"><h3 class="hist__year">2021</h3><div class="hist__imgs"><img class="hist__img" src="assets/img/pages/hist-y2021.jpg" alt="2021년 주요 제품" loading="lazy"><img class="hist__img" src="assets/img/pages/hist-dji2021.jpg" alt="2021년 주요 제품" loading="lazy"><img class="hist__img" src="assets/img/pages/hist-fcev2021.jpg" alt="2021년 주요 제품" loading="lazy"></div></div>
         <ul class="s7 hist__list"><li>삼성전자 스마트폰 Metal Case 방수폰 양산적용<small>삼성전자 S21/S21+/S21 Ultra/S21 FE/FOLD3/Z Flip3 외</small></li><li>일본 Fujitsu ARROWS NX9 F-52A 스마트폰 Metal Case 방수폰 양산적용</li><li>중국 VIVO X70 Pro+ 스마트폰 Metal Case 방수폰 양산적용</li><li>중국 DJI Action 2 액션캠 양산적용</li><li>중국 HUAWEI Watch D 양산적용</li><li>중국 OPPO Find X5 스마트폰 Metal Case 방수폰 양산적용</li><li>D社 FCEV Tank TRI 기술 적용 및 수주 확정</li><li>W社 EV PTC Heater 개발</li><li>L社 EV Battery Housing 개발</li><li>S社 ESS 부품 개발</li><li>중국 C社 EV Battery Housing 개발</li></ul>
       </div>
       <div class="hist__row grid grid--top">
-        <div class="s5"><h3 class="hist__year">2020</h3><img class="hist__img" src="assets/img/pages/hist-y2020.jpg" alt="2020년 주요 제품" loading="lazy"></div>
+        <div class="s5"><h3 class="hist__year">2020</h3><div class="hist__imgs"><img class="hist__img" src="assets/img/pages/hist-y2020.jpg" alt="2020년 주요 제품" loading="lazy"></div></div>
         <ul class="s7 hist__list"><li>삼성전자 / LG전자 스마트폰 Metal Case 방수폰 양산적용<small>삼성전자 S20/S20+/S20 Ultra/S20 FE/FOLD2/Z Flip/Z Flip 5G/Note20/Note20 Ultra, LG전자 V60/VELVET/WING 외</small></li><li>L社 초소형 플랫폼 카메라 개발</li><li>C社 EV INDUCTOR AL CASE 개발</li></ul>
       </div>
       <div class="hist__row grid grid--top">
-        <div class="s5"><h3 class="hist__year">2019</h3><img class="hist__img" src="assets/img/pages/hist-y2019.jpg" alt="2019년 주요 제품" loading="lazy"></div>
+        <div class="s5"><h3 class="hist__year">2019</h3><div class="hist__imgs"><img class="hist__img" src="assets/img/pages/hist-y2019.jpg" alt="2019년 주요 제품" loading="lazy"></div></div>
         <ul class="s7 hist__list"><li>삼성전자 / LG전자 스마트폰 Metal Case 방수폰 양산적용<small>삼성전자 S10e/S10/S10+/S10 5G/S10 Lite/FOLD/Note10/Note10+/Note10 Lite/A 시리즈, LG전자 G8/V50/V50S/X6(Q60)/Q9/Q9 One/Q70 외</small></li><li>일본 SONY Xperia XZ 스마트폰 Metal Case 방수폰 양산적용</li><li>GEO Nation 베트남 SONY Green Partner 인증 획득</li><li>W社 EV Conductor 개발</li></ul>
       </div>
       <div class="hist__row grid grid--top">
-        <div class="s5"><h3 class="hist__year">2018</h3><img class="hist__img" src="assets/img/pages/hist-y2018.jpg" alt="2018년 주요 제품" loading="lazy"></div>
+        <div class="s5"><h3 class="hist__year">2018</h3><div class="hist__imgs"><img class="hist__img" src="assets/img/pages/hist-y2018.jpg" alt="2018년 주요 제품" loading="lazy"></div></div>
         <ul class="s7 hist__list"><li>지오네이션㈜ 베트남 공장 완공 (박닌 옌퐁공단內)</li><li>삼성전자 / LG전자 스마트폰 Metal Case 방수폰 양산적용<small>삼성전자 S9/S9+/Note9/A 시리즈, LG전자 G7/V40/Q7/Q7+/Q8 외</small></li><li>베트남 BKAV B-phone 스마트폰 Metal Case 방수폰 양산적용</li><li>중국 HUAWEI P30 Pro Metal Case 방수폰 양산적용</li><li>GEO Nation 베트남 ISO 9001/ISO 14001 인증 획득</li><li>현대자동차 전기 및 수소자동차 부품 개발</li></ul>
       </div>
       <div class="hist__row grid grid--top">
-        <div class="s5"><h3 class="hist__year">2017</h3><img class="hist__img" src="assets/img/pages/hist-y2017.jpg" alt="2017년 주요 제품" loading="lazy"></div>
+        <div class="s5"><h3 class="hist__year">2017</h3><div class="hist__imgs"><img class="hist__img" src="assets/img/pages/hist-y2017.jpg" alt="2017년 주요 제품" loading="lazy"><img class="hist__img" src="assets/img/pages/hist-trophy2017.jpg" alt="2017년 주요 제품" loading="lazy"></div></div>
         <ul class="s7 hist__list"><li>일본 PANASONIC TOUGHPAD 4K Back Case 양산 (GFRP)</li><li>대한민국 창업스타기업 선정 및 중소벤처 기업부장관 표창 수상</li><li>해외수출 1000만불 수출의 탑 수상</li><li>삼성전자 / LG전자 스마트폰 Metal Case 방수폰 양산적용<small>삼성전자 S8/S8+/Note8/A 시리즈, LG전자 G6/V30/V35/Q6/Q6+/Q8 외</small></li></ul>
       </div>
       <div class="hist__row grid grid--top">
-        <div class="s5"><h3 class="hist__year">2016</h3><img class="hist__img" src="assets/img/pages/hist-y2016.jpg" alt="2016년 주요 제품" loading="lazy"></div>
+        <div class="s5"><h3 class="hist__year">2016</h3><div class="hist__imgs"><img class="hist__img" src="assets/img/pages/hist-y2016.jpg" alt="2016년 주요 제품" loading="lazy"><img class="hist__img" src="assets/img/pages/hist-trophy2016.jpg" alt="2016년 주요 제품" loading="lazy"></div></div>
         <ul class="s7 hist__list"><li>삼성전자 / LG전자 스마트폰 Metal Case 방수폰 양산적용<small>삼성전자 S7/S7 Edge/Note7/NOTE FE/A 시리즈, LG전자 G5 외</small></li><li>해외수출 500만불 수출의 탑 수상</li><li>GEO Nation R&amp;D Center 설립 (일본 이와테현 ㈜토아덴카內)</li><li>GEO Nation 베트남 법인 설립</li><li>일본 Fujitsu 1차 협력사 등록 및 Tablet PC ARROWS Tab(F-04H) Rear Panel 양산 (GFRP)</li><li>SONY, HUAWEI 스마트폰 Metal Case 방수 접합기술 양산적용</li></ul>
       </div>
       <div class="hist__row grid grid--top">
-        <div class="s5"><h3 class="hist__year">2015</h3><img class="hist__img" src="assets/img/logo.png" alt="2015년 주요 제품" loading="lazy"></div>
+        <div class="s5"><h3 class="hist__year">2015</h3><div class="hist__imgs"><img class="hist__img" src="assets/img/logo.png" alt="2015년 주요 제품" loading="lazy"></div></div>
         <ul class="s7 hist__list"><li>지오네이션㈜ 공장 및 R&amp;D센터 완공 (인천 검단산업단지內)</li><li>지오네이션㈜ ISO 9001/ISO 14001 인증 획득</li><li>삼성전자 / LG전자 스마트폰 Metal Case 방수 접합기술 개발 및 승인</li><li>지오네이션㈜ 중국 공장 설립 (중국 광동성 심천內)</li></ul>
       </div>
       <div class="hist__row grid grid--top">
-        <div class="s5"><h3 class="hist__year">2014</h3><img class="hist__img" src="assets/img/pages/hist-y2014.jpg" alt="2014년 주요 제품" loading="lazy"></div>
+        <div class="s5"><h3 class="hist__year">2014</h3><div class="hist__imgs"><img class="hist__img" src="assets/img/pages/hist-y2014.jpg" alt="2014년 주요 제품" loading="lazy"></div></div>
         <ul class="s7 hist__list"><li>GEO Nation Co.,LTD / 지오네이션㈜ 한국 설립</li><li>일본 TOADENKA Co.,LTD와 TRI-System World-wide 독점 Partnership 체결</li><li>일본 NTT Docomo향 Fujitsu ARROWS NX F-02G 스마트폰 Metal Case 방수폰 양산적용</li><li>중소기업진흥공단 기술 혁신 우수기업 선정</li><li>한국 기술보증기금 벤처기업 인증</li></ul>
       </div>
     </div>
