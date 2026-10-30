@@ -678,7 +678,7 @@ strong,b{font-weight:var(--fw-strong);}
 
 /* ---------- 글로벌 네트워크 ---------- */
 .net-fig{aspect-ratio:1600/740;margin-bottom:var(--space-9);border-radius:var(--radius-lg);overflow:hidden;background:var(--color-primary-050);}
-.net-fig img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;}
+.net-fig img{width:100%;height:100%;object-fit:cover;object-position:50% 58%;}
 .site__title{margin-bottom:var(--space-4);font-size:var(--fs-h3);font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
 
 /* ---------- CTA: 큰 링크 두 개 ---------- */
@@ -749,3 +749,4 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 .dl--plain .dl__row{grid-template-columns:var(--space-9) 1fr;column-gap:var(--space-1);border:0;padding-block:var(--space-3);}
 .dl--plain .dl__row:first-child{padding-top:var(--space-4);}
 @media (max-width:768px){.dl--plain .dl__row{grid-template-columns:1fr;}}
+#network{padding-bottom:calc(var(--space-13) - var(--space-6));}
