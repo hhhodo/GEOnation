@@ -731,9 +731,7 @@ strong,b{font-weight:var(--fw-strong);}
 
 /* ---------- 슝슝 날아 들어오는 등장 (body[data-fly]) ---------- */
 html.js main{overflow-x:clip;}
-html.js [data-fly]{opacity:0;transform:translate3d(var(--fx,0),var(--fy,var(--space-9)),0);will-change:transform,opacity;
+html.js [data-fly]{opacity:0;transform:translate3d(var(--fx,0),var(--fy,var(--space-7)),0);will-change:transform,opacity;
   transition:opacity .9s cubic-bezier(.16,1,.3,1) var(--fd,0ms),transform .9s cubic-bezier(.16,1,.3,1) var(--fd,0ms);}
-html.js [data-fly="left"]{--fx:calc(var(--space-12) * -1);--fy:0px;}
-html.js [data-fly="right"]{--fx:var(--space-12);--fy:0px;}
 html.js [data-fly].is-in{opacity:1;transform:none;}
 @media (prefers-reduced-motion:reduce){html.js [data-fly]{opacity:1;transform:none;transition:none;}}

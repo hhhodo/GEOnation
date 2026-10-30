@@ -240,7 +240,7 @@
       var n = 0;
       [].slice.call(document.querySelectorAll(sel)).forEach(function (el) {
         if (el.closest('.grow, .phil, [data-fly]')) return;
-        el.setAttribute('data-fly', typeof dir === 'function' ? dir(n) : dir);
+        el.setAttribute('data-fly', 'up');
         el.style.setProperty('--fd', ((step || 0) * n) + 'ms');
         n++;
       });
