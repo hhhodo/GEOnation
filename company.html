@@ -1,0 +1,416 @@
+<!--
+variant:
+typo=medium
+image=medium
+color=accent
+
+image-radius=round
+card-radius=round
+button-radius=round
+
+border=hairline
+button-style=outline+solid
+fw=600/400
+spacing=space-10 (sections) / space-section
+-->
+<!--
+Layout Declaration — company.html
+Hero          — full-bleed bg, wide inner — 8-4 (title | page index)
+Greeting      — wide — 4-8
+Philosophy    — wide — 7-5
+Overview      — wide — 4-8
+Organization  — wide — 3-3-3-3
+Operations    — wide — 4-4-4
+History       — wide — header + rows 5-7
+Certificates  — wide — 3-3-3-3
+Network       — wide — 4-4-4
+Customers     — full-bleed — centered heading + 2 opposite logo marquees
+Location      — wide — 8-4
+Footer        — wide — logo | company facts
+-->
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>회사 소개 — GEO Nation</title>
+<meta name="description" content="지오네이션 주식회사 소개: 인사말, 경영이념, 회사개요, 조직도, 연혁, 인증 및 특허, 글로벌 네트워크, 오시는 길.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body data-solid>
+
+<!-- ============================== HEADER ============================== -->
+<header class="site-header is-solid" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="index.html" class="logo" aria-label="GEO Nation"><img src="assets/img/logo.png" alt="GEO Nation"></a>
+    <nav class="main-nav" aria-label="주요 메뉴">
+      <a href="company.html" aria-current="page">회사 소개</a>
+      <a href="products.html">제품·서비스 소개</a>
+      <a href="business.html">사업 분야</a>
+      <a href="contact.html">문의하기</a>
+    </nav>
+    <div class="lang"><a href="index.html">KR</a></div>
+  </div>
+</header>
+
+<main id="top">
+<!-- ============================== HERO ============================== -->
+<section class="page-hero">
+  <img class="page-hero__bg" src="assets/img/korea.jpg" alt="지오네이션 본사 전경">
+  <div class="container container--wide">
+    <div class="grid">
+      <div class="s8">
+        <p class="page-hero__label">Company</p>
+        <h1 class="page-hero__title">회사 소개</h1>
+        <p class="page-hero__lead">최고의 제품과 최고의 기술을 전세계에 제공하는 기업, <strong>지오네이션 주식회사</strong></p>
+      </div>
+      <nav class="s4 page-hero__index" aria-label="페이지 내 이동"><a href="#greeting">인사말<span>01</span></a><a href="#philosophy">경영이념<span>02</span></a><a href="#overview">회사개요<span>03</span></a><a href="#organization">조직도<span>04</span></a><a href="#history">연혁<span>05</span></a><a href="#certificates">인증 및 특허<span>06</span></a><a href="#network">글로벌 네트워크<span>07</span></a><a href="#location">오시는 길<span>08</span></a></nav>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== GREETING ============================== -->
+<section class="sec" id="greeting">
+  <div class="container container--wide">
+    <div class="grid grid--top">
+      <div class="s4">
+        <div class="sec__side">
+      <p class="sec__label">Greeting</p>
+      <h2 class="sec__title">인사말</h2>
+          <p class="sign">GEO Nation 주식회사<br>대표 김 효 진</p>
+        </div>
+      </div>
+      <div class="s8 prose">
+        <p class="lead">GEO Nation 주식회사는 인류와 사회에 공헌하기 위하여 Goods(최고의 제품)과 Engineering(최고의 기술)을 Offer(전세계에 제공)하고자 합니다.</p>
+        <p>안녕하십니까.</p>
+        <p>저희 회사의 홈페이지를 방문하여 주셔서 대단히 감사드립니다. 저희 GEO Nation은 인류발전에 기여하기 위하여 우수한 제품(GOODS)과 우수한 기술(ENGINEERING)을 제공(OFFER)할 목적으로 설립되었습니다. 우수한 제품(GOODS)과 우수한 기술(ENGINEERING)은 우수한 인재로부터 탄생되므로 저희 GEO Nation은 인재양성을 통하여 그 목표를 실현하고자 합니다. 언제나 긍정적인 생각과 자기 일에 대한 뜨거운 열정을 가지고 있는 GEO Nation의 인재야말로 인류발전에 기여할 수 있음을 우리는 믿어 의심치 않습니다.</p>
+        <p>저희 GEO Nation은 임직원들이 자부심을 가지고 일할 수 있는 좋은 직장을 만들기 위하여 이익공유 및 복리후생제도를 발전시켜 나아갈 계획입니다. 앞에서 언급한 긍정적인 생각과 자기 일에 대한 뜨거운 열정 그리고 자부심을 가질 수 있는 좋은 직장이 존재함으로 인하여 얻어지는 시너지효과는 우리의 설립목적인 우수한 제품(GOODS)과 우수한 기술(ENGINEERING)이 탄생되어 시장에 기여하고 또 그것은 곧 인류에 기여하는 결과를 초래할 것입니다. 좋은 직장을 만들기 위한 이익공유 및 복리후생제도의 발전을 위하여 저희 경영진과 주주들은 초심을 잊지 않고 항상 최선을 다하겠습니다.</p>
+        <p>저희 GEO Nation은 지금 세계로의 첫발을 내딛었습니다. 앞으로 많은 시련과 고난들이 우리를 기다리고 있음을 우리는 잘 알고 있습니다만 그 길이 우리가 가야 할 길이므로 우리는 멈추지 않을 것입니다. 시련과 고난을 겪을 때마다 故 정주영 현대그룹 회장께서 말씀하신 &lt;시련은 있어도 실패는 없다&gt;와 일본 교세라그룹의 경영이념인 &lt;경천애인&gt;을 마음에 새기며 항상 긍정적인 생각과 자기 일에 대한 뜨거운 열정으로 시련과 고난을 이겨나갈 수 있는 GEO Nation이 될 수 있도록 최선을 다하겠습니다.</p>
+        <p>감사합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== PHILOSOPHY ============================== -->
+<section class="sec sec--tint" id="philosophy">
+  <div class="container container--wide">
+    <div class="grid grid--top">
+      <div class="s7">
+        <div class="sec__head">
+      <p class="sec__label">Philosophy</p>
+      <h2 class="sec__title">경영이념</h2>
+        </div>
+        <div>
+          <div class="num-row"><span class="num-row__no">01</span><div><h3 class="num-row__title">좋은 직장 만들기</h3><p class="num-row__text">GEO Nation 구성원으로서 자부심을 가질 수 있는 일터를 만든다.</p></div></div>
+          <div class="num-row"><span class="num-row__no">02</span><div><h3 class="num-row__title">인재 육성</h3><p class="num-row__text">GEO Nation Group은 우수한 인재육성을 통해 인류에 공헌하고 있습니다.</p></div></div>
+          <div class="num-row"><span class="num-row__no">03</span><div><h3 class="num-row__title">고객 만족</h3><p class="num-row__text">GEO Nation Group은 다음 6가지를 항상 실행하여 고객 만족을 실현 합니다.</p>
+            <ul class="chips"><li class="chip">Before service</li><li class="chip">High Technology</li><li class="chip">High Quality</li><li class="chip">Fast delivery</li><li class="chip">Cost Performance</li><li class="chip">After service</li></ul></div></div>
+        </div>
+      </div>
+      <div class="s5">
+        <div class="feature">
+          <div>
+            <p class="feature__label">GEO Nation</p>
+            <p class="feature__title">우수한 제품과<br>선진 기술 제공</p>
+          </div>
+          <ul class="checks checks--lg"><li>좋은 직장 만들기</li><li>인재 육성</li><li>고객 만족</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== OVERVIEW ============================== -->
+<section class="sec" id="overview">
+  <div class="container container--wide">
+    <div class="grid grid--top">
+      <div class="s4">
+        <div class="sec__side">
+      <p class="sec__label">Overview</p>
+      <h2 class="sec__title">회사개요</h2>
+        </div>
+      </div>
+      <div class="s8">
+        <dl class="dl "><div class="dl__row"><dt>기업명</dt><dd>지오네이션 주식회사 (GEO NATION CO., LTD.)</dd></div><div class="dl__row"><dt>대표자명</dt><dd>김 효 진</dd></div><div class="dl__row"><dt>업 종</dt><dd>제조, 도매 및 소매, 부동산, 서비스업</dd></div><div class="dl__row"><dt>사업내용</dt><dd>금속 및 플라스틱 가공제품, 플라스틱 성형, 무역, 연구 및 개발업</dd></div><div class="dl__row"><dt>기업형태</dt><dd>중소기업, 외국인 투자기업, 주식회사, 법인사업체</dd></div><div class="dl__row"><dt>설립일</dt><dd>2014년 6월 19일</dd></div><div class="dl__row"><dt>대표전화</dt><dd><a href="tel:0328584283">032-858-4283</a></dd></div><div class="dl__row"><dt>FAX</dt><dd>032-858-4284</dd></div><div class="dl__row"><dt>기업 주소</dt><dd>인천광역시 검단구 마중4로 9 지오네이션(주)</dd></div></dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ORGANIZATION ============================== -->
+<section class="sec sec--tint" id="organization">
+  <div class="container container--wide">
+    <div class="sec__head">
+      <p class="sec__label">Organization</p>
+      <h2 class="sec__title">조직도</h2>
+    </div>
+    <div class="grid grid--rows">
+      <div class="s3"><div class="box box--dark box--full"><h3 class="box__title">경영진</h3><ul class="checks "><li>대표이사</li><li>전무이사</li></ul></div></div>
+      <div class="s3"><div class="box box--full"><h3 class="box__title">통합품질팀</h3></div></div>
+      <div class="s3"><div class="box box--full"><h3 class="box__title">기술영업팀</h3></div></div>
+      <div class="s3"><div class="box box--full"><h3 class="box__title">생산관리팀</h3><ul class="checks "><li>구매 / 외주</li><li>생산</li></ul></div></div>
+      <div class="s3"><div class="box box--full"><h3 class="box__title">개발팀</h3><ul class="checks "><li>개발 (FRP)</li><li>개발 (연구)</li></ul></div></div>
+      <div class="s3"><div class="box box--full"><h3 class="box__title">표면처리팀</h3></div></div>
+      <div class="s3"><div class="box box--full"><h3 class="box__title">경영지원팀</h3><ul class="checks "><li>인사 / 재무</li><li>전산 (IT)</li></ul></div></div>
+      <div class="s3"><div class="box box--full"><h3 class="box__title">디자인연구팀</h3></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== OPERATIONS ============================== -->
+<section class="sec" id="operations">
+  <div class="container container--wide">
+    <div class="sec__head">
+      <p class="sec__label">Operations</p>
+      <h2 class="sec__title">주요 운영 방향</h2>
+    </div>
+    <div class="grid">
+      <div class="s4"><div class="box box--full">
+        <h3 class="box__title">품질관리 PART</h3>
+        <ol class="olist"><li>FRP 일본검사 폐지에 따른 출하검사 강화</li><li>수입, 공정, 출하 검사 및 부적합 관리 실시</li></ol><div class="mt-4"></div><ul class="checks "><li>부적합 통보서 발행</li><li>개선대책 접수</li><li>수입검사성적서 작성</li><li>부적합 이력 관리 실시</li></ul>
+      </div></div>
+      <div class="s4"><div class="box box--full">
+        <h3 class="box__title">품질보증 PART</h3>
+        <ol class="olist"><li>개발단계~양산단계 밀착관리를 통해 품질 안정화, 품평회 실시 (TRI/FRP)</li><li>해외 사업장 품질 Setting 및 Follow-Up</li><li>고객대응 (CS)</li></ol><div class="mt-4"></div><ul class="checks "><li>기술 품질 구축으로 Trouble issue 대응</li></ul>
+      </div></div>
+      <div class="s4"><div class="box box--full">
+        <h3 class="box__title">품질경영 PART</h3>
+        <ol class="olist"><li>ISO 인증 및 규격 사후 유지관리</li><li>품질 Cost 관리 (예방, 실패, 평가 Cost)</li><li>경영 혁신 활동</li><li>업무 매뉴얼, PROCESS 제정관리</li><li>시험 및 측정 설비 관리</li><li>협력사 점검 / 관리활동 강화 (협력사 평가, 공정개선 활동, 비정기 공정 점검 및 유효성 검증)</li></ol>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== HISTORY ============================== -->
+<section class="sec sec--tint" id="history">
+  <div class="container container--wide">
+    <div class="sec__head">
+      <p class="sec__label">History</p>
+      <h2 class="sec__title">연혁</h2>
+      <p class="sec__lead">2014년 설립 이후, 금속과 수지의 접합기술로 걸어온 길입니다.</p>
+    </div>
+    <div class="hist">
+      <div class="hist__row grid grid--top">
+        <div class="s5"><h3 class="hist__year">2023</h3><img class="hist__img" src="assets/img/pages/hist-y2023.jpg" alt="2023년 주요 제품" loading="lazy"></div>
+        <ul class="s7 hist__list"><li>K社 EV INVERTER COOLER 개발</li><li>L社 OPU HOUSING 적용 검토 및 개발</li><li>H社 eM-Platform 열관리모듈 냉각수허브 통합드라이버 COVER 개발선정</li><li>H社 자동차 Camera REAR HOUSING 개발</li><li>H社 전기차 컴프레사 INVERTER PCB COVER TRI 적용 확정 개발 (SOP : 2025)</li><li>D社 수소고압용기(수소버스) TRI 기술 적용 확정 (SOP : 2025)</li><li>L社 8M급 초소형 플랫폼 카메라 개발</li><li>H社 열관리모듈 냉각수허브 통합드라이버 COVER HEATSINK 양산</li><li>IATF 16949 인증 획득</li><li>삼성전자 스마트폰 Metal Case 방수폰 개발 및 양산적용<small>삼성전자 S23/S24 Series /FOLD5/Z Flip5 외</small></li></ul>
+      </div>
+      <div class="hist__row grid grid--top">
+        <div class="s5"><h3 class="hist__year">2022</h3><img class="hist__img" src="assets/img/pages/hist-y2022.jpg" alt="2022년 주요 제품" loading="lazy"></div>
+        <ul class="s7 hist__list"><li>삼성전자 스마트폰 Metal Case 방수폰 양산적용<small>삼성전자 S22/S22+/S22 Ultra/FOLD4/Z Flip4 외</small></li><li>W社 MV DRV Cover Heatsink 양산적용</li><li>GEO Nation 일본 SONY Green Partner 인증 획득</li><li>H社 FCEV 수소연료전지스택 Endplate/MANIFOLD BLOCK SIDE PLATE 개발</li><li>H社 EV 로어암 개발</li><li>L社 EDLC CASE 개발</li><li>C社 반도체 Chipset TRI-Cu 개발</li><li>L社 원통형 배터리케이스 개발</li><li>L社 Air Suspension Top Port 개발</li></ul>
+      </div>
+      <div class="hist__row grid grid--top">
+        <div class="s5"><h3 class="hist__year">2021</h3><img class="hist__img" src="assets/img/pages/hist-y2021.jpg" alt="2021년 주요 제품" loading="lazy"></div>
+        <ul class="s7 hist__list"><li>삼성전자 스마트폰 Metal Case 방수폰 양산적용<small>삼성전자 S21/S21+/S21 Ultra/S21 FE/FOLD3/Z Flip3 외</small></li><li>일본 Fujitsu ARROWS NX9 F-52A 스마트폰 Metal Case 방수폰 양산적용</li><li>중국 VIVO X70 Pro+ 스마트폰 Metal Case 방수폰 양산적용</li><li>중국 DJI Action 2 액션캠 양산적용</li><li>중국 HUAWEI Watch D 양산적용</li><li>중국 OPPO Find X5 스마트폰 Metal Case 방수폰 양산적용</li><li>D社 FCEV Tank TRI 기술 적용 및 수주 확정</li><li>W社 EV PTC Heater 개발</li><li>L社 EV Battery Housing 개발</li><li>S社 ESS 부품 개발</li><li>중국 C社 EV Battery Housing 개발</li></ul>
+      </div>
+      <div class="hist__row grid grid--top">
+        <div class="s5"><h3 class="hist__year">2020</h3><img class="hist__img" src="assets/img/pages/hist-y2020.jpg" alt="2020년 주요 제품" loading="lazy"></div>
+        <ul class="s7 hist__list"><li>삼성전자 / LG전자 스마트폰 Metal Case 방수폰 양산적용<small>삼성전자 S20/S20+/S20 Ultra/S20 FE/FOLD2/Z Flip/Z Flip 5G/Note20/Note20 Ultra, LG전자 V60/VELVET/WING 외</small></li><li>L社 초소형 플랫폼 카메라 개발</li><li>C社 EV INDUCTOR AL CASE 개발</li></ul>
+      </div>
+      <div class="hist__row grid grid--top">
+        <div class="s5"><h3 class="hist__year">2019</h3><img class="hist__img" src="assets/img/pages/hist-y2019.jpg" alt="2019년 주요 제품" loading="lazy"></div>
+        <ul class="s7 hist__list"><li>삼성전자 / LG전자 스마트폰 Metal Case 방수폰 양산적용<small>삼성전자 S10e/S10/S10+/S10 5G/S10 Lite/FOLD/Note10/Note10+/Note10 Lite/A 시리즈, LG전자 G8/V50/V50S/X6(Q60)/Q9/Q9 One/Q70 외</small></li><li>일본 SONY Xperia XZ 스마트폰 Metal Case 방수폰 양산적용</li><li>GEO Nation 베트남 SONY Green Partner 인증 획득</li><li>W社 EV Conductor 개발</li></ul>
+      </div>
+      <div class="hist__row grid grid--top">
+        <div class="s5"><h3 class="hist__year">2018</h3><img class="hist__img" src="assets/img/pages/hist-y2018.jpg" alt="2018년 주요 제품" loading="lazy"></div>
+        <ul class="s7 hist__list"><li>지오네이션㈜ 베트남 공장 완공 (박닌 옌퐁공단內)</li><li>삼성전자 / LG전자 스마트폰 Metal Case 방수폰 양산적용<small>삼성전자 S9/S9+/Note9/A 시리즈, LG전자 G7/V40/Q7/Q7+/Q8 외</small></li><li>베트남 BKAV B-phone 스마트폰 Metal Case 방수폰 양산적용</li><li>중국 HUAWEI P30 Pro Metal Case 방수폰 양산적용</li><li>GEO Nation 베트남 ISO 9001/ISO 14001 인증 획득</li><li>현대자동차 전기 및 수소자동차 부품 개발</li></ul>
+      </div>
+      <div class="hist__row grid grid--top">
+        <div class="s5"><h3 class="hist__year">2017</h3><img class="hist__img" src="assets/img/pages/hist-y2017.jpg" alt="2017년 주요 제품" loading="lazy"></div>
+        <ul class="s7 hist__list"><li>일본 PANASONIC TOUGHPAD 4K Back Case 양산 (GFRP)</li><li>대한민국 창업스타기업 선정 및 중소벤처 기업부장관 표창 수상</li><li>해외수출 1000만불 수출의 탑 수상</li><li>삼성전자 / LG전자 스마트폰 Metal Case 방수폰 양산적용<small>삼성전자 S8/S8+/Note8/A 시리즈, LG전자 G6/V30/V35/Q6/Q6+/Q8 외</small></li></ul>
+      </div>
+      <div class="hist__row grid grid--top">
+        <div class="s5"><h3 class="hist__year">2016</h3><img class="hist__img" src="assets/img/pages/hist-y2016.jpg" alt="2016년 주요 제품" loading="lazy"></div>
+        <ul class="s7 hist__list"><li>삼성전자 / LG전자 스마트폰 Metal Case 방수폰 양산적용<small>삼성전자 S7/S7 Edge/Note7/NOTE FE/A 시리즈, LG전자 G5 외</small></li><li>해외수출 500만불 수출의 탑 수상</li><li>GEO Nation R&amp;D Center 설립 (일본 이와테현 ㈜토아덴카內)</li><li>GEO Nation 베트남 법인 설립</li><li>일본 Fujitsu 1차 협력사 등록 및 Tablet PC ARROWS Tab(F-04H) Rear Panel 양산 (GFRP)</li><li>SONY, HUAWEI 스마트폰 Metal Case 방수 접합기술 양산적용</li></ul>
+      </div>
+      <div class="hist__row grid grid--top">
+        <div class="s5"><h3 class="hist__year">2015</h3><img class="hist__img" src="assets/img/logo.png" alt="2015년 주요 제품" loading="lazy"></div>
+        <ul class="s7 hist__list"><li>지오네이션㈜ 공장 및 R&amp;D센터 완공 (인천 검단산업단지內)</li><li>지오네이션㈜ ISO 9001/ISO 14001 인증 획득</li><li>삼성전자 / LG전자 스마트폰 Metal Case 방수 접합기술 개발 및 승인</li><li>지오네이션㈜ 중국 공장 설립 (중국 광동성 심천內)</li></ul>
+      </div>
+      <div class="hist__row grid grid--top">
+        <div class="s5"><h3 class="hist__year">2014</h3><img class="hist__img" src="assets/img/pages/hist-y2014.jpg" alt="2014년 주요 제품" loading="lazy"></div>
+        <ul class="s7 hist__list"><li>GEO Nation Co.,LTD / 지오네이션㈜ 한국 설립</li><li>일본 TOADENKA Co.,LTD와 TRI-System World-wide 독점 Partnership 체결</li><li>일본 NTT Docomo향 Fujitsu ARROWS NX F-02G 스마트폰 Metal Case 방수폰 양산적용</li><li>중소기업진흥공단 기술 혁신 우수기업 선정</li><li>한국 기술보증기금 벤처기업 인증</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CERTIFICATES ============================== -->
+<section class="sec" id="certificates">
+  <div class="container container--wide">
+    <div class="sec__head">
+      <p class="sec__label">Patent &amp; Certificate</p>
+      <h2 class="sec__title">인증 및 특허</h2>
+      <p class="sec__lead">품질경영 인증과 금속-수지 접합 특허로 기술력을 증명합니다.</p>
+    </div>
+    <h3 class="sec__sub">인증 · 수상</h3>
+    <div class="grid grid--rows mt-6">
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-utac.jpg" alt="IATF 16949 CERTIFICATE" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">IATF 16949 CERTIFICATE</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-iso9001.jpg" alt="ISO 9001 인증서" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">ISO 9001 인증서</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-iso14001.jpg" alt="ISO 14001 인증서" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">ISO 14001 인증서</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-award.jpg" alt="중소벤처기업부 장관표창장" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">중소벤처기업부 장관표창장</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-startup.jpg" alt="창업스타기업 지정서" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">창업스타기업 지정서</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-toa-tri.jpg" alt="TOADENKA TRI-SYSTEM 협약서" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">TOADENKA TRI-SYSTEM 협약서</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-sony-jp.jpg" alt="일본 SONY GREEN PARTNER 인증서" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">일본 SONY GREEN PARTNER 인증서</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-sony-vn.jpg" alt="베트남 SONY GREEN PARTNER 인증서" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">베트남 SONY GREEN PARTNER 인증서</h3></div>
+      </article></div>
+    </div>
+    <h3 class="sec__sub">특허 · 상표</h3>
+    <div class="grid grid--rows mt-6">
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-patent-cooling.jpg" alt="냉각 모듈 및 그 제조방법 특허" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">냉각 모듈 및 그 제조방법 특허</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-patent-joint.jpg" alt="금속-수지 접합체 및 그 제조방법 특허" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">금속-수지 접합체 및 그 제조방법 특허</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-toa-mark.jpg" alt="TOA 상표등록증" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">TOA 상표등록증</h3></div>
+      </article></div>
+      <div class="s3"><article class="pcard ">
+        <div class="pcard__img pcard__img--doc"><img src="assets/img/pages/cert-patent-fe.jpg" alt="수지 Fe 금속 접합체 및 그 제조 방법 특허" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">수지 Fe 금속 접합체 및 그 제조 방법 특허</h3></div>
+      </article></div>
+    </div>
+    <h3 class="sec__sub">보유 특허 목록</h3>
+    <div class="mt-6"><ul class="checks checks--cols"><li>수지 Fe 금속 접합체 및 그 제조 방법 특허</li><li>수지 SUS 금속 접합체 및 그 제조 방법 특허</li><li>수지 Ti 금속 접합체 및 그 제조 방법 특허</li><li>수지 Mg 금속 접합체 및 그 제조 방법 특허</li><li>수지 금속 접합체 및 그 제조 방법 특허 (JP)</li><li>이종접합형 수지 금속 복합재 제조방법 특허</li><li>금속 · 수지접합체 및 그 제조방법</li><li>우수한 합성을 가지는 가스 저장탱크 및 그 제조방법</li><li>전자기기용 외장하우징 제조방법 특허</li><li>급냉각 및 급냉각이 가능한 몰드를 이용한 수지 이송 성형방법 특허</li><li>접이식 선풍기</li><li>수지 금속 접합체 및 그 제조 방법 특허 (KR)</li><li>엔지니어링 플라스틱을 이용한 전기에너지 저장장치 특허</li><li>전기화학 박리공정 기반 박리흑연 연속공급장치 특허</li><li>전기화학 박리공정 기반 박리흑연 카트리지 타입 공급장치 특허</li><li>전기화학 박리공정 기반 모듈타입 박리흑연 제조장치 특허</li><li>차량용 카울 크로스 멤버 금속-수지 복합재의 제조방법</li></ul></div>
+  </div>
+</section>
+
+<!-- ============================== NETWORK ============================== -->
+<section class="sec sec--tint" id="network">
+  <div class="container container--wide">
+    <div class="sec__head">
+      <p class="sec__label">Global Network</p>
+      <h2 class="sec__title">글로벌 네트워크</h2>
+      <p class="sec__lead">한국 · 일본 · 베트남 · 중국, 4개국을 잇는 생산·연구 거점입니다.</p>
+    </div>
+    <div class="grid grid--top grid--rows">
+      <div class="s4"><article class="pcard pcard--flat">
+        <div class="pcard__img "><img src="assets/img/pages/site-korea.jpg" alt="KOREA" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title ">KOREA</h3></div>
+      </article>
+        <p class="site__name">GEO Nation – INCHEON Factory / R&amp;D Center</p>
+        <dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>인천시 검단구 마중4로 9 (인천검단산업단지)</dd></div><div class="dl__row"><dt>홈페이지</dt><dd><a href="http://www.geo-nation.com" target="_blank" rel="noopener">www.geo-nation.com</a></dd></div><div class="dl__row"><dt>대표전화</dt><dd>032-858-4283 / FAX 032-858-4284</dd></div><div class="dl__row"><dt>보유설비</dt><dd>TRI Line, 사출, ASS'Y Line</dd></div></dl></div><div class="s4"><article class="pcard pcard--flat">
+        <div class="pcard__img "><img src="assets/img/pages/site-vietnam.jpg" alt="VIETNAM" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title ">VIETNAM</h3></div>
+      </article>
+        <p class="site__name">GEO Nation – YEN PHONG Factory</p>
+        <dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>Lot CN07-7, Yen Phong Industrial Zone (Expansion), Yen Phong Bac Ninh Province, Vietnam</dd></div><div class="dl__row"><dt>홈페이지</dt><dd>www.geo-nation.vn</dd></div><div class="dl__row"><dt>대표전화</dt><dd>+84-222-369-9375</dd></div><div class="dl__row"><dt>보유설비</dt><dd>TRI Line, Anodizing Line, CNC, 사출, ASS'Y Line</dd></div></dl></div><div class="s4"><article class="pcard pcard--flat">
+        <div class="pcard__img "><img src="assets/img/pages/site-japan.jpg" alt="JAPAN" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title ">JAPAN</h3></div>
+      </article>
+        <p class="site__name">GEO Nation – TOKYO Office</p>
+        <dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>1F Imaizumi Bldg, 2-11-5, Hirakawa-Cho, Chiyoda-Ku, Tokyo, Japan (102-0093)</dd></div><div class="dl__row"><dt>홈페이지</dt><dd>www.geo-nation.co.jp</dd></div><div class="dl__row"><dt>대표전화</dt><dd>+81-3-6268-9501 / FAX +81-3-6268-9502</dd></div></dl></div><div class="s4"><article class="pcard pcard--flat">
+        <div class="pcard__img "><img src="assets/img/pages/site-morioka.jpg" alt="JAPAN R&amp;D Center" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title ">JAPAN R&amp;D Center</h3></div>
+      </article>
+        <p class="site__name">GEO Nation – MORIOKA R&amp;D Center</p>
+        <dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>20-7, Iwahana, Shibutamiaza, Morioka-Shi, Iwate-Ken, Japan (028-4132)</dd></div></dl></div><div class="s4"><article class="pcard pcard--flat">
+        <div class="pcard__img "><img src="assets/img/pages/site-china.jpg" alt="CHINA" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title ">CHINA</h3></div>
+      </article>
+        <p class="site__name">GEO Nation – DONGGUAN Factory</p>
+        <dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>Room 202, Building 3, No.10, South Fourth Street, Baiyunqian, Dalang Town, DongGuan City, GuangDong Province, China</dd></div><div class="dl__row"><dt>보유설비</dt><dd>TRI Line</dd></div></dl></div><div class="s4"><article class="pcard pcard--flat">
+        <div class="pcard__img "><img src="assets/img/pages/site-toadenka.jpg" alt="JAPAN TOADENKA" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title ">JAPAN TOADENKA</h3></div>
+      </article>
+        <p class="site__name">TOADENKA – MORIOKA Head Office / Factory / R&amp;D Center</p>
+        <dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>20-7, Iwahana, Shibutamiaza, Morioka-Shi, Iwate-Ken, Japan (028-4132)</dd></div></dl></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CUSTOMERS ============================== -->
+<section class="certs" id="customers">
+  <p class="certs__label">Customers &amp; Partners</p>
+  <h2 class="certs__title">글로벌 고객이 신뢰하는 품질,<br>인증과 네트워크로 증명합니다.</h2>
+
+  <div class="marquee marquee--logo" aria-label="주요 고객사">
+    <div class="marquee__track">
+      <ul class="marquee__group"><li class="marquee__item"><img src="assets/img/logos/samsung.svg" alt="삼성전자" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/motorola.svg" alt="Motorola" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/hyundaigroup.svg" alt="Hyundai Motor Group" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/donghee.png" alt="동희오토" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/kia.svg" alt="Kia" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/hanon.png" alt="Hanon Systems" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/sony.svg" alt="Sony" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/kyocera.svg" alt="Kyocera" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/mobis.svg" alt="Hyundai Mobis" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/sambo.png" alt="Sambo Motors" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/ket.png" alt="KET" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/lge.png" alt="LG전자" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/foxconn.svg" alt="Foxconn" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/byd.svg" alt="BYD" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/kefico.png" alt="Hyundai Kefico" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/infac.png" alt="INFAC" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/tng.png" alt="T&amp;G" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/woory.png" alt="WOORY" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/panasonic.svg" alt="Panasonic" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/bkav.png" alt="Bkav" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/transys.svg" alt="Hyundai Transys" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/kftec.png" alt="코리아에프티" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/innotek.png" alt="LG Innotek" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/klemove.png" alt="HL Klemove" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/khvatec.png" alt="KH Vatec" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/google.svg" alt="Google" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/wia.svg" alt="Hyundai Wia" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/kais.png" alt="KAIS" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/ajin.png" alt="AJIN" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/lgchem.svg" alt="LG화학" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/fujitsu.svg" alt="Fujitsu" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/huawei.png" alt="Huawei" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/lsmat.png" alt="LS Materials" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/skon.png" alt="SK On" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/sdi.svg" alt="삼성SDI" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/lgens.png" alt="LG에너지솔루션" loading="lazy"></li></ul>
+      <ul class="marquee__group" aria-hidden="true"><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/samsung.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/motorola.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/hyundaigroup.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/donghee.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/kia.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/hanon.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/sony.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/kyocera.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/mobis.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/sambo.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/ket.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/lge.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/foxconn.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/byd.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/kefico.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/infac.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/tng.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/woory.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/panasonic.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/bkav.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/transys.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/kftec.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/innotek.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/klemove.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/khvatec.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/google.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/wia.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/kais.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/ajin.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/lgchem.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/fujitsu.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/huawei.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/lsmat.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/skon.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/sdi.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/lgens.png" alt="" loading="lazy"></li></ul>
+    </div>
+  </div>
+  <div class="marquee marquee--logo marquee--rev" aria-label="국내외 협력사">
+    <div class="marquee__track">
+      <ul class="marquee__group"><li class="marquee__item"><img src="assets/img/logos/basf.png" alt="BASF" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/envalior.png" alt="Envalior" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/syensqo.png" alt="Syensqo" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/celanese.png" alt="Celanese" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/lgchem_p.svg" alt="LG화학" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/lotte.png" alt="Lotte Chemical" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/hanwha.png" alt="한화컴파운드" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/kolon.png" alt="코오롱이앤피" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/victrex.png" alt="Victrex" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/sabic.png" alt="SABIC" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/skchem.png" alt="SK케미칼" loading="lazy"></li><li class="marquee__item"><img src="assets/img/logos/samyang.png" alt="Samyang" loading="lazy"></li></ul>
+      <ul class="marquee__group" aria-hidden="true"><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/basf.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/envalior.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/syensqo.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/celanese.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/lgchem_p.svg" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/lotte.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/hanwha.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/kolon.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/victrex.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/sabic.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/skchem.png" alt="" loading="lazy"></li><li class="marquee__item" aria-hidden="true"><img src="assets/img/logos/samyang.png" alt="" loading="lazy"></li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== LOCATION ============================== -->
+<section class="sec" id="location">
+  <div class="container container--wide">
+    <div class="sec__head">
+      <p class="sec__label">Location</p>
+      <h2 class="sec__title">오시는 길</h2>
+    </div>
+    <div class="grid grid--top">
+      <div class="s8">
+      <figure class="fig fig--white"><img src="assets/img/pages/map.jpg" alt="지오네이션 오시는 길 지도" loading="lazy"></figure>
+      </div>
+      <div class="s4">
+      <dl class="dl "><div class="dl__row"><dt>우편번호</dt><dd>23516</dd></div><div class="dl__row"><dt>주소</dt><dd>인천광역시 검단구 마중4로 9 지오네이션(주)</dd></div><div class="dl__row"><dt>대표전화</dt><dd><a href="tel:0328584283">032-858-4283</a></dd></div><div class="dl__row"><dt>FAX</dt><dd>032-858-4284</dd></div></dl>
+      <h3 class="sec__sub">대중교통 이용시</h3>
+      <ul class="checks checks--lg"><li>지하철 인천 2호선 <strong>검단오류(검단산업단지)역</strong> 하차 후 2번 출구</li><li>간선 <strong>66번</strong>(검단오류역) 또는 <strong>79번</strong> 버스 승차 후 검단지식산업센터 정류장 하차</li><li>도보 약 500m 이동 (약 7분)</li></ul>
+      <p class="mt-6"><a class="btn-line" href="https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EA%B2%80%EB%8B%A8%EA%B5%AC%20%EB%A7%88%EC%A4%914%EB%A1%9C%209" target="_blank" rel="noopener">네이버 지도에서 보기</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="footer" id="contact">
+  <div class="container container--wide">
+    <div class="footer__top">
+      <a class="footer__logo" href="index.html" aria-label="GEO Nation"><img src="assets/img/logo.png" alt="GEO Nation"></a>
+      <div class="fcol">
+        <ul class="flinks">
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보취급방침</a></li>
+          <li><a href="#">이메일주소 무단수집 거부</a></li>
+        </ul>
+        <dl>
+          <div class="frow"><dt>설립일</dt><dd>2014년 6월 19일</dd><dt>대표이사</dt><dd>김효진</dd><dt>이메일</dt><dd><a href="mailto:cs@geo-nation.com">cs@geo-nation.com</a></dd><dt>사업자등록번호</dt><dd>131-86-*****</dd></div>
+          <div class="frow"><dt>주소</dt><dd>인천광역시 검단구 마중4로 9 지오네이션(주)</dd><dt>대표전화</dt><dd><a href="tel:0328584283">032) 858-4283</a></dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="footer__copy">Copyright ⓒ GEO Nation Co. Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

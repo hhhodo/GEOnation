@@ -1,0 +1,266 @@
+<!--
+variant:
+typo=medium
+image=medium
+color=accent
+
+image-radius=round
+card-radius=round
+button-radius=round
+
+border=hairline
+button-style=outline+solid
+fw=600/400
+spacing=space-10 (sections) / space-section
+-->
+<!--
+Layout Declaration — products.html
+Hero          — full-bleed bg, wide inner — 8-4 (title | slogan)
+GCM           — wide — 5-7
+Core tech     — wide — 7-5
+Structure     — wide — 4-8
+Advantage     — wide — 5-7
+Performance   — wide — 6-6
+Production    — wide — header + 3-3-3-3
+Q&A           — wide — 7-5
+CTA           — full-bleed — centered
+Footer        — wide — logo | company facts
+-->
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>제품·서비스 소개 — GEO Nation</title>
+<meta name="description" content="GCM(GEO Nation Cold Plate Module): 금속과 수지의 하이브리드 접합기술(K-TRI Cu, Over Molding)로 구현한 AI 서버 냉각용 콜드플레이트 솔루션.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body data-solid>
+
+<!-- ============================== HEADER ============================== -->
+<header class="site-header is-solid" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="index.html" class="logo" aria-label="GEO Nation"><img src="assets/img/logo.png" alt="GEO Nation"></a>
+    <nav class="main-nav" aria-label="주요 메뉴">
+      <a href="company.html">회사 소개</a>
+      <a href="products.html" aria-current="page">제품·서비스 소개</a>
+      <a href="business.html">사업 분야</a>
+      <a href="contact.html">문의하기</a>
+    </nav>
+    <div class="lang"><a href="index.html">KR</a></div>
+  </div>
+</header>
+
+<main id="top">
+<!-- ============================== HERO ============================== -->
+<section class="page-hero">
+  <img class="page-hero__bg" src="assets/img/cover.jpg" alt="GCM 콜드플레이트 모듈">
+  <div class="container container--wide">
+    <div class="grid">
+      <div class="s8">
+        <p class="page-hero__label">Products &amp; Service</p>
+        <h1 class="page-hero__title">제품·서비스 소개</h1>
+        <p class="page-hero__lead">금속과 수지의 하이브리드 접합기술로 완성한 AI 서버 냉각 솔루션, <strong>GCM (GEO Nation Cold Plate Module)</strong></p>
+      </div>
+      <p class="s4 page-hero__slogan">BEYOND METAL!<br>HALF THE WEIGHT!<br>ZERO LEAKS!</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== GCM ============================== -->
+<section class="sec" id="gcm">
+  <div class="container container--wide">
+    <div class="grid grid--top">
+      <div class="s5">
+        <div class="sec__side">
+      <p class="sec__label">GCM · GEO Nation Cold Plate Module</p>
+      <h2 class="sec__title">GCM이란?</h2>
+          <p class="sec__lead"><strong>GCM (GEO Nation Cold Plate Module)</strong>이란 금속과 수지의 하이브리드 접합기술을 적용하여 데이터 센터 서버 냉각에 최적화된 하이브리드 콜드플레이트 솔루션입니다.</p>
+          <p class="mt-6"><span class="chip chip--solid">특허출원완료</span></p>
+        </div>
+      </div>
+      <div class="s7">
+        <figure class="fig fig--white"><img src="assets/img/pages/gcm-models.jpg" alt="GCM 모델 3종" loading="lazy"></figure>
+        <dl class="dl "><div class="dl__row"><dt>모델 1 · 2</dt><dd>Ni도금 적용 — AI GPU/CPU 1,000W+ 대응</dd></div><div class="dl__row"><dt>모델 3</dt><dd>Ni도금 적용 — AI GPU/CPU 400W+ 대응</dd></div></dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CORE TECHNOLOGY ============================== -->
+<section class="sec sec--tint" id="core">
+  <div class="container container--wide">
+    <div class="grid grid--top">
+      <div class="s7">
+        <figure class="fig fig--white"><img src="assets/img/pages/gcm-core.jpg" alt="GCM 핵심기술: 금속과 수지 결합, 수지와 수지 결합, 구조적 결합" loading="lazy"></figure>
+      </div>
+      <div class="s5">
+      <p class="sec__label">GCM 핵심기술</p>
+      <h2 class="sec__title">Zero-Leak를 완성시키는<br>실링 메커니즘</h2>
+        <div class="mt-6">
+          <div class="num-row"><span class="num-row__no">01</span><div><h3 class="num-row__title">금속과 수지결합</h3><p class="num-row__text">K-TRI Cu 표면처리 후 PPS수지 인서트 사출로 일체화 접합</p></div></div>
+          <div class="num-row"><span class="num-row__no">02</span><div><h3 class="num-row__title">수지와 수지 결합</h3><p class="num-row__text">Over Molding 방식을 통한 수지간 접합. 동종수지의 고온성형에 의한 최종 기밀성</p></div></div>
+          <div class="num-row"><span class="num-row__no">03</span><div><h3 class="num-row__title">구조적 결합</h3><p class="num-row__text">Screw 적용으로 물리적 강도 및 수직 압력제어</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== STRUCTURE ============================== -->
+<section class="sec" id="structure">
+  <div class="container container--wide">
+    <div class="grid grid--top">
+      <div class="s4">
+        <div class="sec__side">
+      <p class="sec__label">Structure</p>
+      <h2 class="sec__title">GCM의 구조와<br>주요특징</h2>
+          <h3 class="sec__sub">가혹한 환경 및 장기간 누수 위험성 개선</h3>
+          <p class="sec__lead">O Ring의 한계를 정복한 금속과 수지의 접합기술(K-TRI Cu), Over Molding 기술</p>
+          <h3 class="sec__sub">경량화와 낮은 제조비용</h3>
+          <p class="sec__lead">Full Metal 가공 방식에서 고강도 수지 접합방식으로 무게 및 원가 감소</p>
+        </div>
+      </div>
+      <div class="s8">
+        <figure class="fig fig--white"><img src="assets/img/pages/gcm-structure.jpg" alt="GCM 분해 구조도: 오버 몰딩 커버, 스크류, 콜드플레이트, 베이스 플레이트" loading="lazy"></figure>
+        <dl class="dl dl--sm"><div class="dl__row"><dt>Over Molding</dt><dd>PPS + GF</dd></div><div class="dl__row"><dt>Cover</dt><dd>PPS + GF</dd></div><div class="dl__row"><dt>Screw</dt><dd>체결 구조</dd></div><div class="dl__row"><dt>Cold Plate</dt><dd>Cu + 도금</dd></div><div class="dl__row"><dt>Base Plate</dt><dd>PPS + GF</dd></div></dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ADVANTAGE ============================== -->
+<section class="sec sec--tint" id="advantage">
+  <div class="container container--wide">
+    <div class="grid grid--top">
+      <div class="s5">
+        <div class="sec__side">
+      <p class="sec__label">Advantage</p>
+      <h2 class="sec__title">GCM의 장점</h2>
+          <p class="sec__lead">기존(현재)의 Cold Plate와 GCM의 비교</p>
+        </div>
+      </div>
+      <div class="s7">
+        <div class="tbl-wrap"><table class="tbl"><thead><tr><th scope="col">비교항목</th><th scope="col">기존 ①<small>O-ring 사양</small></th><th scope="col">기존 ②<small>FULL METAL 사양</small></th><th scope="col" class=is-key>GCM<small>(이종접합사양)</small></th></tr></thead><tbody><tr><th scope="row">기밀방식</th><td>O-ring, 나사</td><td>브레이징(brazing) or 마찰교반접합(FWS) 등의 용접</td><td class="is-key">K-TRI Cu, TRI 나사, Over Molding</td></tr><tr><th scope="row">Leakage</th><td>고무부식/경화에 따른 누수 리스크</td><td>열중격시 용접부 균열 리스크 존재</td><td class="is-key"><strong>[완전 Block]</strong><br>K-TRI Cu접합, 수지 오버몰드 영구 접착</td></tr><tr><th scope="row">결로방지</th><td>METAL 표면의 온도저하에 따른 결로발생</td><td>FULL METAL 표면 결로발생 리스크 큼</td><td class="is-key"><strong>[우수]</strong><br>PPS수지의 단열효과 → 결로발생 없음</td></tr><tr><th scope="row">중량</th><td>상/하판 금속구조</td><td>전체 금속구조</td><td class="is-key"><strong>[경량화]</strong><br>커버 및 하우징의 수지화 가능 (50~55%)</td></tr><tr><th scope="row">내식성 &amp; 수질유지</th><td>고무성분의 이온 용출에 대한 우려</td><td>이종금속/용접 플럭스의 부식 위험</td><td class="is-key"><strong>[우수]</strong><br>화학적으로 비활성인 PPS + 구리핀구조</td></tr><tr><th scope="row">양산성 &amp; 가격장점</th><td><strong>[양호]</strong></td><td>높은 가격의 용접 고정 필수, 비싼 재료비</td><td class="is-key"><strong>[우수]</strong><br>커버 플라스틱화로 원가 절감</td></tr></tbody></table></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== PERFORMANCE ============================== -->
+<section class="sec" id="performance">
+  <div class="container container--wide">
+    <div class="grid grid--top">
+      <div class="s6">
+        <h2 class="sec__title">GCM의 적용분야와<br>냉각 퍼포먼스</h2>
+        <div class="mt-6">
+        <dl class="dl "><div class="dl__row"><dt>대응 TDP<br><small>열설계 전력에 대응가능</small></dt><dd>GPU/CPU 400W ~ 1,000W 등의 고성능 프로세서에 적합</dd></div><div class="dl__row"><dt>적용분야</dt><dd>추론AI, 학습용AI GPU 서버, 데이터 센터, SSD, 게이밍PC</dd></div><div class="dl__row"><dt>구조적 우위성</dt><dd>열교환의 90% 이상을 담당하는 하부 동(Cu) 마이크로핀과 수지커버의 조합에 의하여 최적화된 열저항(Thermal Resistance)을 구현</dd></div></dl>
+        <figure class="fig "><img src="assets/img/pages/gcm-cfd.jpg" alt="GCM 열 유동 해석" loading="lazy"></figure>
+        </div>
+      </div>
+      <div class="s6">
+        <h2 class="sec__title">Full Copper Plate와<br>GCM 성능 비교</h2>
+        <div class="mt-6">
+        <div class="tbl-wrap"><table class="tbl"><thead><tr><th scope="col">비교항목</th><th scope="col">Full Copper Cold Plate</th><th scope="col" class=is-key>GCM<small>(Copper + Plastic)</small></th></tr></thead><tbody><tr><th scope="row">전압 (V)</th><td>205</td><td class="is-key">205</td></tr><tr><th scope="row">출력전력 (W)</th><td>703</td><td class="is-key">703</td></tr><tr><th scope="row">Ambient 온도 (°C)</th><td>26.2</td><td class="is-key">25.8</td></tr><tr><th scope="row">CPU 온도 (°C)</th><td>50.6</td><td class="is-key">50.4</td></tr><tr><th scope="row">열저항</th><td>0.046</td><td class="is-key">0.046</td></tr></tbody></table></div>
+        <p class="form__note mt-4">TEST 조건 기준 비교 결과</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== PRODUCTION ============================== -->
+<section class="sec sec--tint" id="production">
+  <div class="container container--wide">
+    <div class="sec__head">
+      <p class="sec__label">Mass Production &amp; Quality</p>
+      <h2 class="sec__title">압도적인 양산성과<br>품질관리체계</h2>
+      <p class="sec__lead">GEO Nation Vietnam의 대규모 생산체제로 AI서버 수요의 확대에 즉각 대응합니다. 베트남 자사공장(GEO Nation Vietnam)의 최적시설을 활용하여 <strong>월 50만개(500,000 units/month)</strong>의 안정화된 생산능력이 구축되어 있으며, 급증하는 AI서버 수요와 대규모 데이터 센터 구축에 따른 스케일 향상에도 유연하고 신속하게 대응합니다.</p>
+    </div>
+    <div class="grid">
+      <div class="s3"><div class="box box--dark box--full"><p class="feature__label">Monthly Capacity</p><p class="feature__title">월 500,000</p><p class="feature__label">units / month</p></div></div>
+      <div class="s3"><div class="box box--full"><p class="num-row__no">01</p><h3 class="box__title mt-4">인서트성형에 의한 공정 단축</h3><p class="pcard__text pcard__text--sm mt-4">복잡한 조립이나 고가의 브레이징 공정대신 사출성형으로 변경하여 생산의 리드타임을 크게 단축</p></div></div>
+      <div class="s3"><div class="box box--full"><p class="num-row__no">02</p><h3 class="box__title mt-4">엄격한 품질보증</h3><p class="pcard__text pcard__text--sm mt-4">수작업 및 정밀 가공에 대한 의존도를 낮추어 대량생산시에도 높은 공정 능력지수(Cpk)와 균일한 품질을 보장</p></div></div>
+      <div class="s3"><div class="box box--full"><p class="num-row__no">03</p><h3 class="box__title mt-4">철저한 전수검사</h3><p class="pcard__text pcard__text--sm mt-4">ISO인증에 기반한 엄격한 기준을 적용한 출하검사, LEAK검사 100% 실시</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== Q&amp;A ============================== -->
+<section class="sec" id="qna">
+  <div class="container container--wide">
+    <div class="sec__head">
+      <p class="sec__label">Q&amp;A</p>
+      <h2 class="sec__title">기술적 신뢰성 Q&amp;A</h2>
+    </div>
+    <div class="grid grid--top">
+      <div class="s7 qa">
+        <div class="qa__group">
+          <h3 class="qa__group-title">이종재료 접합 및 소재의 신뢰성</h3>
+          <div class="qa__item"><p class="qa__q">이종재료(Cu vs PPS)의 열팽창계수 차이에 의한 Crack 위험성은?</p><p class="qa__a">K-TRI Cu의 접합 계면에 화학적 접합층을 형성하여 열수축으로 인한 틈이 생기지 않아 접착이 가능하며 높은 봉쇄성 및 내압 방수성을 기대할 수 있습니다.</p></div>
+          <div class="qa__item"><p class="qa__q">장기사용시 수지(플라스틱)의 부식이나 경화 우려는?</p><p class="qa__a">GCM에는 자동차의 워터 펌프 등에도 사용되는 내열 260°C 이상의 PPS수지를 채용하고 있습니다. 내식성에 뛰어나며 금속 이온 용출이 없어 냉각수의 수질 유지에도 최적화 되어 있습니다.</p></div>
+        </div>
+        <div class="qa__group">
+          <h3 class="qa__group-title">냉각성능 및 내압성</h3>
+          <div class="qa__item"><p class="qa__q">탑커버를 수지로 변경함에 따른 냉각성능 저하는 없는지?</p><p class="qa__a">열교환의 90% 이상은 하부 동(Cu) 핀으로 진행되기 때문에 성능 저하가 없으며, 수지의 낮은 전도율이 단열재 역할을 하여 결로현상을 완벽하게 방지합니다.</p></div>
+          <div class="qa__item"><p class="qa__q">고수압 환경에서 파손의 위험은 없는지?</p><p class="qa__a">스크류 체결과 K-TRI Cu의 접합 밀폐 구조에 의하여 요구되는 최대 동작 압력 및 파괴 압력의 사양을 초과하는 내압 성능을 이미 입증하였습니다.</p></div>
+        </div>
+      </div>
+      <div class="s5">
+        <div class="box box--fill">
+          <h3 class="box__title">K-TRI Cu 기술이란?</h3>
+          <ol class="olist olist--lg">
+            <li><strong>물리적 앵커 효과</strong> (Mechanical Interlock / Anchor Effect)가 가장 핵심인 1차 접합 원리로, 겉보기에는 매끄러워 보이는 구리 표면을 화학적 엣칭(Etching)하여 마이크로(Micro) 및 나노(Nano) 레벨의 미세한 홀(Pore)과 복잡한 동굴과 같은 요철 구조를 형성합니다. 고온·고압의 사출성형 공정에서 용융된 PPS 수지가 구리 표면의 미세한 동굴 구조 안쪽까지 침투한 뒤, 동굴 내부에서 냉각·고화되는 공정에서 마치 닻(앵커)을 내리거나 사슬이 얽히는 것처럼 금속과 물리적으로 강하게 맞물립니다(고화 및 기계적 Lock). 이로써 수직 방향의 박리(부풀어오름)는 물론 수평 방향의 틀어짐도 근본적으로 차단됩니다.</li>
+            <li><strong>화학적 결합</strong> — 단순히 홀에 플라스틱이 충진되는 물리적 결합을 뛰어넘어 금속과 수지간의 분자 레벨로 화학적 결합이 동시에 발생합니다. TRI처리 공정에서 동의 표면에는 플라스틱과 반응하기 쉬운 특수한 산화피막과 하이드록실기(-OH) 등의 화학적 관능기(Functional Group)가 형성되며, 사출 성형기에서 약 300°C 이상의 고온으로 용융된 PPS수지가 금속표면에 닿는 순간 수지의 고분자 사슬과 구리 표면의 관능기가 서로 결합(공유결합 및 수소결합)하여 강력한 화학적 계면을 형성합니다(고온열 융착 반응).</li>
+            <li><strong>표면의 습윤성 확대화</strong> — TRI처리를 통해 동의 표면 에너지를 높여 수지가 응집하거나 기포가 형성되지 않으며, 미세한 입자가 요철 깊숙이 빈틈없이 스며들어 누설경로(누출경로)의 발생을 방지합니다.</li>
+          </ol>
+          <p class="pcard__text pcard__text--sm mt-4"><strong>물리적결합(앵커효과) + 화학적결합 + 표면 습윤성 확대화</strong><br>이 세가지가 동시에 작용하여 강력하면서도 누출 없는 금속-수지접합을 구현합니다.</p>
+        </div>
+        <div class="box mt-6">
+          <h3 class="box__title">내압 리크 시험방법</h3>
+          <ul class="checks "><li>가스 or 냉각유체로 가압</li><li>최대 운용압력으로 5분간 가압 후 누출 확인</li><li>운용압의 3배(최대 15Bar)를 2분간 가압 후 누출 확인</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CTA ============================== -->
+<section class="band">
+  <img class="band__bg" src="assets/img/thermal.jpg" alt="" loading="lazy">
+  <div class="container container--wide">
+    <div class="band__inner">
+      <h2 class="band__title">GCM에 대해 궁금한 점이 있으신가요?</h2>
+      <a class="btn-outline" href="contact.html">문의하기</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="footer" id="contact">
+  <div class="container container--wide">
+    <div class="footer__top">
+      <a class="footer__logo" href="index.html" aria-label="GEO Nation"><img src="assets/img/logo.png" alt="GEO Nation"></a>
+      <div class="fcol">
+        <ul class="flinks">
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보취급방침</a></li>
+          <li><a href="#">이메일주소 무단수집 거부</a></li>
+        </ul>
+        <dl>
+          <div class="frow"><dt>설립일</dt><dd>2014년 6월 19일</dd><dt>대표이사</dt><dd>김효진</dd><dt>이메일</dt><dd><a href="mailto:cs@geo-nation.com">cs@geo-nation.com</a></dd><dt>사업자등록번호</dt><dd>131-86-*****</dd></div>
+          <div class="frow"><dt>주소</dt><dd>인천광역시 검단구 마중4로 9 지오네이션(주)</dd><dt>대표전화</dt><dd><a href="tel:0328584283">032) 858-4283</a></dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="footer__copy">Copyright ⓒ GEO Nation Co. Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

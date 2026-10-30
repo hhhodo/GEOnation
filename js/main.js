@@ -6,7 +6,7 @@
 
   /* ---------- header ---------- */
   var header = document.getElementById('siteHeader');
-  function onScrollHeader() { header.classList.toggle('is-solid', window.scrollY > 40); }
+  function onScrollHeader() { header.classList.toggle('is-solid', window.scrollY > 40 || document.body.hasAttribute('data-solid')); }
   onScrollHeader();
   window.addEventListener('scroll', onScrollHeader, { passive: true });
 
@@ -184,6 +184,26 @@
       }, { threshold: 0.9, rootMargin: '0px 0px -15% 0px' });
       io.observe(stats.querySelector('.stats__list'));
     } else { nums.forEach(function (el) { render(el, 1); }); }
+  }
+
+  /* ---------- 문의하기: 작성한 내용으로 메일(mailto) 열기 ---------- */
+  var mailForm = document.querySelector('[data-mailto]');
+  if (mailForm) {
+    mailForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!mailForm.reportValidity()) return;
+      var f = mailForm.elements;
+      var body = [
+        '업체명: ' + f.company.value, '담당자(직급): ' + f.name.value,
+        '이메일: ' + f.email.value, '연락처: ' + f.phone.value, '', '[문의내용]', f.message.value
+      ].join('\n');
+      var url = 'mailto:' + mailForm.getAttribute('data-mailto') +
+        '?subject=' + encodeURIComponent('[홈페이지 문의] ' + f.subject.value) +
+        '&body=' + encodeURIComponent(body);
+      var note = mailForm.querySelector('[data-mailto-note]');
+      if (note) note.hidden = false;
+      window.location.href = url;
+    });
   }
 
   function render(el, e) {

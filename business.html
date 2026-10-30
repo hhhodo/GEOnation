@@ -1,0 +1,304 @@
+<!--
+variant:
+typo=medium
+image=medium
+color=accent
+
+image-radius=round
+card-radius=round
+button-radius=round
+
+border=hairline
+button-style=outline+solid
+fw=600/400
+spacing=space-10 (sections) / space-section
+-->
+<!--
+Layout Declaration — business.html
+Hero          — full-bleed bg, wide inner — 8-4 (title | page index)
+Areas         — wide — 4-4-4
+TRI SYSTEM    — wide — 5-7
+Features      — wide — rows 4-8
+Keywords      — wide — 6-6
+Applications  — wide — 4-4-4
+Equipment     — wide — rows 5-7
+Analysis      — wide — 4-4-4
+CTA           — full-bleed — centered
+Footer        — wide — logo | company facts
+-->
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>사업 분야 — GEO Nation</title>
+<meta name="description" content="지오네이션 사업 분야: 금속과 플라스틱 접합사업, 자동차 부품사업, 전기·전자 부품사업과 TRI SYSTEM 접합기술.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body data-solid>
+
+<!-- ============================== HEADER ============================== -->
+<header class="site-header is-solid" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="index.html" class="logo" aria-label="GEO Nation"><img src="assets/img/logo.png" alt="GEO Nation"></a>
+    <nav class="main-nav" aria-label="주요 메뉴">
+      <a href="company.html">회사 소개</a>
+      <a href="products.html">제품·서비스 소개</a>
+      <a href="business.html" aria-current="page">사업 분야</a>
+      <a href="contact.html">문의하기</a>
+    </nav>
+    <div class="lang"><a href="index.html">KR</a></div>
+  </div>
+</header>
+
+<main id="top">
+<!-- ============================== HERO ============================== -->
+<section class="page-hero">
+  <img class="page-hero__bg" src="assets/img/thermal.jpg" alt="금속 열관리 부품">
+  <div class="container container--wide">
+    <div class="grid">
+      <div class="s8">
+        <p class="page-hero__label">Business</p>
+        <h1 class="page-hero__title">사업 분야</h1>
+        <p class="page-hero__lead">금속과 플라스틱의 접합 기술 <strong>TRI SYSTEM</strong>을 기반으로 금속과 플라스틱 접합 · 자동차 부품 · 전기전자 부품 사업을 영위합니다.</p>
+      </div>
+      <nav class="s4 page-hero__index" aria-label="페이지 내 이동"><a href="#areas">사업영역<span>01</span></a><a href="#tri">TRI SYSTEM<span>02</span></a><a href="#features">TRI 특징<span>03</span></a><a href="#keywords">TRI 키워드<span>04</span></a><a href="#applications">적용기술<span>05</span></a><a href="#equipment">주요설비<span>06</span></a><a href="#analysis">신뢰성 분석장비<span>07</span></a></nav>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== AREAS ============================== -->
+<section class="sec" id="areas">
+  <div class="container container--wide">
+    <div class="sec__head">
+      <p class="sec__label">Applications</p>
+      <h2 class="sec__title">사업영역</h2>
+    </div>
+    <div class="grid">
+      <div class="s4"><article class="pcard ">
+        <div class="pcard__img "><img src="assets/img/biz-metal.png" alt="금속과 플라스틱 접합" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title ">금속과 플라스틱 접합사업</h3><p class="pcard__text ">지오네이션의 모리오카연구소와 토아덴카와의 공동연구개발을 통해 금속과 수지의 접합기술 및 양산기술 확보를 실현</p></div>
+      </article></div>
+      <div class="s4"><article class="pcard ">
+        <div class="pcard__img "><img src="assets/img/biz-auto.png" alt="자동차 부품" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title ">자동차 부품사업</h3><p class="pcard__text ">자동차 경량화, 방수, 강성 등 자동차 부품별 고객 니즈에 맞춘 최적화된 접합 솔루션 제공</p></div>
+      </article></div>
+      <div class="s4"><article class="pcard ">
+        <div class="pcard__img "><img src="assets/img/biz-electronic.png" alt="전기·전자 부품" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title ">전기 · 전자 부품사업</h3><p class="pcard__text ">금속 소재별 최적화된 접합 기술을 보유하고 있으며, 고객의 요구에 맞춰 표면처리 및 사출 · 접합까지 One Stop 진행 가능</p></div>
+      </article></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== TRI SYSTEM ============================== -->
+<section class="sec sec--tint" id="tri">
+  <div class="container container--wide">
+    <div class="grid grid--top">
+      <div class="s5">
+        <div class="sec__side">
+      <p class="sec__label">TRI SYSTEM</p>
+      <h2 class="sec__title">금속과 플라스틱<br>접합기술</h2>
+          <p class="sec__lead">금속에 TRI막을 형성하여 수지와 접합을 통해 강력한 접합력과 기밀성을 확보하는 독자적인 기술로, 지오네이션(주)은 일본 (주)토아덴카와 독점적인 제휴를 통하여 시장상용화 및 기술개발 확보에 주력하고 있습니다.</p>
+          <h3 class="sec__sub">1. 금속과 플라스틱(이종 소재) 접합 사업</h3>
+          <p class="sec__lead">접착제를 사용하지 않고 금속과 수지를 접합하는 신개념 접합 기술입니다. 강력한 접합 강도, 우수한 기밀성(방수 성능), 높은 양산 적용성을 자랑하기 때문에 스마트폰, 자동차, 소형 가전 제품 등 다양한 분야에서 적용되고 있습니다. 접합력과 기밀성(방수 성능)이 뛰어나 방수나 기밀을 요하는 제품에 수요가 많을 것이며, 형상의 제약을 받지 않기 때문에 앞으로 더 넓은 분야에서 활용될 것으로 기대되고 있습니다. 현재 전세계 스마트폰에 당사 접합 기술이 수년간 적용되어 검증이 된 세계 최고의 기술입니다.</p>
+          <h3 class="sec__sub">2. TRI-SYSTEM 기술개요</h3>
+          <p class="sec__lead">보통의 인서트 성형에서는 금속과 수지와의 접합면에 접합기구가 없기 때문에 접착제나 기계가공이 필요하였습니다. 그로인해 접합면에 틈이 생기고 기계적 강도가 약하다는 약점이 있습니다. 그러나 본 기술에서는 금속에 표면처리를 통해 나노 구조체 접합막(화학적 결합)을 형성하여 강력하고 균일한 접합을 구현합니다. 따라서 접합면의 복잡한 가공이 필요없이 형상의 제약을 받지 않고 자유로운 설계가 가능하며, 우수한 기밀성과 방수성, 가혹조건의 환경에서도 동일한 성능을 발휘합니다.</p>
+        </div>
+      </div>
+      <div class="s7">
+        <figure class="fig fig--white"><img src="assets/img/pages/tri-process.jpg" alt="TRI SYSTEM 공정: 양극 산화 Process 후 인서트 사출" loading="lazy"><figcaption class="fig__cap">TRI SYSTEM이란? — 양극산화로 금속 표면에 TRI막을 형성한 뒤 수지를 인서트 사출하여 일체화합니다.</figcaption></figure>
+        <figure class="fig fig--white"><img src="assets/img/pages/tri-diagram.jpg" alt="양극산화 Process와 인서트 사출을 통한 일체 접합 공정도" loading="lazy"><figcaption class="fig__cap">양극산화 Process → 인서트 사출을 통한 일체 접합</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FEATURES ============================== -->
+<section class="sec" id="features">
+  <div class="container container--wide">
+    <div class="sec__head">
+      <p class="sec__label">TRI SYSTEM Features</p>
+      <h2 class="sec__title">TRI SYSTEM 특징</h2>
+    </div>
+    <div class="grid grid--top grid--rows">
+      <div class="s4"><div class="sec__side"><p class="num-row__no">01</p><h3 class="sec__sub">뛰어난 접합강도</h3><p class="sec__lead">금속표면에 TRI-System으로 형성되는 접합막에 의해 금속과 수지가 강력하게 접합하며, 접착제의 분자간 결합과는 비교되지 않을 정도의 접합강도를 보증합니다.</p></div></div>
+      <div class="s8"><figure class="fig fig--white"><img src="assets/img/pages/tri-strength.jpg" alt="접합강도 시험편: 수지 42mm, 금속 40mm, 폭 12mm, 접합부 3mm" loading="lazy"><figcaption class="fig__cap">시험편: 수지 42mm · 금속 40mm · 폭 12mm · 접합부 3mm</figcaption></figure><div class="tbl-wrap"><table class="tbl"><thead><tr><th scope="col">소재 (AI 6061 T6)</th><th scope="col">인장강도 (MPa)</th></tr></thead><tbody><tr><th scope="row">PP</th><td>15 MPa ~ 20 MPa</td></tr><tr><th scope="row">PPS</th><td>40 MPa ~ 50 MPa</td></tr><tr><th scope="row">PBT</th><td>35 MPa ~ 45 MPa</td></tr><tr><th scope="row">PA6</th><td>35 MPa ~ 50 MPa</td></tr><tr><th scope="row">PA66</th><td>45 MPa ~ 55 MPa</td></tr><tr><th scope="row">PPA</th><td>35 MPa ~ 50 MPa</td></tr></tbody></table></div></div>
+      <div class="s4"><div class="sec__side"><p class="num-row__no">02</p><h3 class="sec__sub">고기밀성</h3><p class="sec__lead">금속과 수지가 균일하게 접합되어 있으므로 고기밀 상태가 유지 가능합니다.</p></div></div>
+      <div class="s8"><div class="figs"><figure class="fig "><img src="assets/img/pages/tri-sem-100k.jpg" alt="TRI처리 피막 표면 SEM 이미지" loading="lazy"><figcaption class="fig__cap">TRI처리(알루미늄) 피막 표면 SEM 이미지 (100K)</figcaption></figure><figure class="fig "><img src="assets/img/pages/tri-sem-interface.jpg" alt="알루미늄-PPS 접합계면 SEM 이미지" loading="lazy"><figcaption class="fig__cap">알루미늄-PPS 접합계면 SEM 이미지</figcaption></figure></div><dl class="dl dl--sm"><div class="dl__row"><dt>TRI 처리</dt><dd>TRI 막이 금속 표면에 균일하게 생성되며, 사출 후 접합면 파괴 시 균일하게 수지가 남아있음</dd></div><div class="dl__row"><dt>에칭 공법 처리</dt><dd>금속표면에 불규칙하게 Hole이 형성되며, 사출 후 접합면 파괴 시 불규칙적으로 수지가 분포되어 있음</dd></div><div class="dl__row"><dt>헬륨 리크 시험<br><small>Helium Leak Test</small></dt><dd>물의 분자보다 작은 He(헬륨가스) 원자를 사용하여 방수성을 정확하게 검사 · 누설량 9×10⁻¹⁰ Pa·m³/sec 이하</dd></div></dl></div>
+      <div class="s4"><div class="sec__side"><p class="num-row__no">03</p><h3 class="sec__sub">복잡한 형상 적용가능</h3><p class="sec__lead">복잡한 형상에도 접합 가능하므로 형상의 제약을 받지 않고 설계 가능합니다.</p></div></div>
+      <div class="s8"><figure class="fig "><img src="assets/img/pages/tri-shapes.jpg" alt="복잡한 형상의 알루미늄 접합 부품 예시" loading="lazy"></figure></div>
+      <div class="s4"><div class="sec__side"><p class="num-row__no">04</p><h3 class="sec__sub">강력한 신뢰성</h3><p class="sec__lead">사출 후에 TRI 막은 후 처리공정(아노다이징 등) 후에도 표면손상 없이 초기의 신뢰성을 보장합니다.</p></div></div>
+      <div class="s8"><div class="figs"><figure class="fig fig--white"><img src="assets/img/pages/tri-chart-al.jpg" alt="알루미늄과 PPS의 접합강도" loading="lazy"><figcaption class="fig__cap">알루미늄과 PPS의 접합강도</figcaption></figure><figure class="fig fig--white"><img src="assets/img/pages/tri-chart-cu.jpg" alt="동(銅)과 PPS 수지의 접합강도" loading="lazy"><figcaption class="fig__cap">동(銅)과 PPS 수지의 접합강도</figcaption></figure></div><div class="tbl-wrap"><table class="tbl"><thead><tr><th scope="col">환경신뢰성 시험 조건</th><th scope="col">조건</th></tr></thead><tbody><tr><th scope="row">고온고습</th><td>85°C, 85%, 1,000h</td></tr><tr><th scope="row">열충격</th><td>-40°C ↔ 120°C / 30min, 1,000cycle</td></tr></tbody></table></div></div>
+      <div class="s4"><div class="sec__side"><p class="num-row__no">05</p><h3 class="sec__sub">높은 양산 적용성</h3><p class="sec__lead">TRI 처리 후 사출 적용 기간 1달 보증, 높은 후공정 호환조건, 99% 이상 수율.</p></div></div>
+      <div class="s8"><dl class="dl dl--sm"><div class="dl__row"><dt>시험목적</dt><dd>TRI처리 후, 각 환경하에 보관하여 접합강도 확인</dd></div><div class="dl__row"><dt>사용금속</dt><dd>AL 6061</dd></div><div class="dl__row"><dt>사용수지</dt><dd>PPS</dd></div></dl><div class="tbl-wrap"><table class="tbl"><thead><tr><th scope="col">온도 (°C)</th><th scope="col">습도 (%)</th><th scope="col">보관기간 (일)</th><th scope="col">초기</th><th scope="col">항온항습</th><th scope="col">냉열충격</th><th scope="col">비고</th></tr></thead><tbody><tr><td>TRI처리 후 바로 성형</td><td>—</td><td>—</td><td>43</td><td>42</td><td>46</td><td>기본조건</td></tr><tr><td>40</td><td>50</td><td>30</td><td>40</td><td>38</td><td>45</td><td>하계 조건 상정</td></tr></tbody></table></div><p class="form__note mt-4">접합강도 (MPa) · 초기 / 항온항습 / 냉열충격 시험 후</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== KEYWORDS ============================== -->
+<section class="sec sec--tint" id="keywords">
+  <div class="container container--wide">
+    <div class="grid grid--top">
+      <div class="s6">
+      <p class="sec__label">Keywords</p>
+      <h2 class="sec__title">TRI-SYSTEM 키워드</h2>
+      <p class="sec__lead">이종 소재 접합과 방수 기술을 아우르는 TRI-SYSTEM의 핵심 키워드입니다.</p>
+      </div>
+      <div class="s6">
+        <ul class="chips"><li class="chip">이종 접합</li><li class="chip">이종 방수 접합</li><li class="chip">이종 소재 접합</li><li class="chip">이종 소재 방수 접합</li><li class="chip">금속 플라스틱 접합</li><li class="chip">메탈 플라스틱 접합</li><li class="chip">금속 수지 접합</li><li class="chip">방수 접합</li><li class="chip">접합 기술</li><li class="chip">접합 공법</li><li class="chip">금속 표면처리</li><li class="chip">이종 접합 공법</li><li class="chip">이종 접합 기술</li><li class="chip">방수 표면처리</li><li class="chip">방수 공법</li><li class="chip">금속 폴리머 접합</li><li class="chip">금속 접합 기술</li><li class="chip">금속 표면처리 접합</li><li class="chip">금속 인서트 사출 접합</li><li class="chip">방수 기술</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== APPLICATIONS ============================== -->
+<section class="sec" id="applications">
+  <div class="container container--wide">
+    <div class="sec__head">
+      <p class="sec__label">Applications</p>
+      <h2 class="sec__title">적용기술</h2>
+      <p class="sec__lead">TRI SYSTEM이 적용된 대표 분야입니다.</p>
+    </div>
+    <div class="grid grid--rows">
+      <div class="s4"><article class="pcard ">
+        <div class="pcard__img pcard__img--contain"><img src="assets/img/pages/app-honda.jpg" alt="Honda Ultra Capacitor" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">Honda Ultra Capacitor 적용</h3><p class="pcard__text pcard__text--sm">Poly Phenylene Sulfide 수지(PPS) + AL(알루미늄) 접합</p></div>
+      </article></div>
+      <div class="s4"><article class="pcard ">
+        <div class="pcard__img pcard__img--contain"><img src="assets/img/pages/app-liion.jpg" alt="자동차용 Lithium-ion 2차 전지 Cover 전극 Module" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">자동차용 Lithium-ion 2차 전지 Cover 전극 Module</h3><p class="pcard__text pcard__text--sm">고압력 방수, 내구성 및 고강도접합 · 소형화, 원가절감, 생산성 향상</p></div>
+      </article></div>
+      <div class="s4"><article class="pcard ">
+        <div class="pcard__img pcard__img--contain"><img src="assets/img/pages/app-parts.jpg" alt="고기밀 connector, 방열·절연 부품, Digital Camera 부품" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">고기밀 connector · 방열 절연 부품 · Digital Camera 부품</h3><p class="pcard__text pcard__text--sm">고기밀·절연이 요구되는 소형 정밀 부품</p></div>
+      </article></div>
+      <div class="s4"><article class="pcard ">
+        <div class="pcard__img pcard__img--contain"><img src="assets/img/pages/app-fcev.jpg" alt="FCEV Tank" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">FCEV Tank</h3><p class="pcard__text pcard__text--sm">수소연료전지차 수소 탱크에 TRI 기술 적용</p></div>
+      </article></div>
+      <div class="s4"><article class="pcard ">
+        <div class="pcard__img pcard__img--contain"><img src="assets/img/pages/app-ptc.jpg" alt="PTC heater" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">PTC heater</h3><p class="pcard__text pcard__text--sm">전기차용 PTC Heater</p></div>
+      </article></div>
+      <div class="s4"><article class="pcard ">
+        <div class="pcard__img pcard__img--contain"><img src="assets/img/pages/app-ultracap.jpg" alt="Ultra Capacitor" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">Ultra Capacitor</h3><p class="pcard__text pcard__text--sm">3000F / 2.7V Supercapacitor</p></div>
+      </article></div>
+      <div class="s4"><article class="pcard ">
+        <div class="pcard__img pcard__img--contain"><img src="assets/img/pages/app-actioncam.jpg" alt="방수 초소형 액션캠" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">방수 초소형 액션캠</h3><p class="pcard__text pcard__text--sm">방수 성능이 요구되는 초소형 액션캠 · 드론 카메라</p></div>
+      </article></div>
+      <div class="s4"><article class="pcard ">
+        <div class="pcard__img pcard__img--contain"><img src="assets/img/pages/app-watch.jpg" alt="Waterproof Watch" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">Waterproof Watch</h3><p class="pcard__text pcard__text--sm">방수 스마트 워치 (HUAWEI WATCH D)</p></div>
+      </article></div>
+      <div class="s4"><article class="pcard ">
+        <div class="pcard__img pcard__img--contain"><img src="assets/img/pages/app-smartphone.jpg" alt="Smart Phone Metal Case" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">Smart Phone Metal Case</h3><p class="pcard__text pcard__text--sm">삼성전자 · LG전자 · SONY · HUAWEI · OPPO · VIVO 등 스마트폰 Metal Case 방수 접합</p></div>
+      </article></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== EQUIPMENT ============================== -->
+<section class="sec sec--tint" id="equipment">
+  <div class="container container--wide">
+    <div class="sec__head">
+      <p class="sec__label">Equipment</p>
+      <h2 class="sec__title">주요설비</h2>
+      <p class="sec__lead">GEO Nation KOREA 보유설비 현황</p>
+    </div>
+    <div class="grid grid--top grid--rows">
+      <div class="s5"><figure class="fig "><img src="assets/img/pages/eq-tri.jpg" alt="TRI 표면처리 LINE" loading="lazy"></figure></div>
+      <div class="s7"><h3 class="sec__sub">TRI 표면처리 LINE</h3><dl class="dl "><div class="dl__row"><dt>메이커</dt><dd>창안</dd></div><div class="dl__row"><dt>사양</dt><dd>자동 LINE</dd></div><div class="dl__row"><dt>수량</dt><dd>2</dd></div><div class="dl__row"><dt>생산 Capa (월)<br><small>모바일 기준</small></dt><dd>3600K</dd></div><div class="dl__row"><dt>비고</dt><dd>자동 표면처리 LINE</dd></div></dl></div>
+      <div class="s5"><figure class="fig "><img src="assets/img/pages/eq-inj1.jpg" alt="사출기 1" loading="lazy"></figure></div>
+      <div class="s7"><h3 class="sec__sub">사출기 1</h3><dl class="dl "><div class="dl__row"><dt>메이커</dt><dd>우진프라임</dd></div><div class="dl__row"><dt>사양</dt><dd>150T</dd></div><div class="dl__row"><dt>수량</dt><dd>1</dd></div><div class="dl__row"><dt>생산 Capa (월)<br><small>모바일 기준</small></dt><dd>50K</dd></div><div class="dl__row"><dt>비고</dt><dd>수직 사출기</dd></div></dl></div>
+      <div class="s5"><figure class="fig "><img src="assets/img/pages/eq-inj2.jpg" alt="사출기 2" loading="lazy"></figure></div>
+      <div class="s7"><h3 class="sec__sub">사출기 2</h3><dl class="dl "><div class="dl__row"><dt>메이커</dt><dd>우진프라임</dd></div><div class="dl__row"><dt>사양</dt><dd>110T</dd></div><div class="dl__row"><dt>수량</dt><dd>1</dd></div><div class="dl__row"><dt>생산 Capa (월)<br><small>모바일 기준</small></dt><dd>50K</dd></div><div class="dl__row"><dt>비고</dt><dd>수직 사출기</dd></div></dl></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ANALYSIS ============================== -->
+<section class="sec" id="analysis">
+  <div class="container container--wide">
+    <div class="sec__head">
+      <p class="sec__label">Reliability Analysis</p>
+      <h2 class="sec__title">신뢰성 분석장비</h2>
+      <p class="sec__lead">신뢰성 분석장비 현황</p>
+    </div>
+    <div class="grid grid--rows">
+      <div class="s4"><article class="pcard pcard--flat">
+        <div class="pcard__img "><img src="assets/img/pages/an-specimen.jpg" alt="시편사출기" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">시편사출기</h3></div>
+      </article></div><div class="s4"><article class="pcard pcard--flat">
+        <div class="pcard__img "><img src="assets/img/pages/an-tensile.jpg" alt="인장력 시험기 (정밀하중측정)" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">인장력 시험기 (정밀하중측정)</h3></div>
+      </article></div><div class="s4"><article class="pcard pcard--flat">
+        <div class="pcard__img "><img src="assets/img/pages/an-helium.jpg" alt="헬륨리크시험기" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">헬륨리크시험기</h3></div>
+      </article></div>
+      <div class="s4"><article class="pcard pcard--flat">
+        <div class="pcard__img "><img src="assets/img/pages/an-thermal.jpg" alt="열충격설비" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">열충격설비</h3></div>
+      </article></div><div class="s4"><article class="pcard pcard--flat">
+        <div class="pcard__img "><img src="assets/img/pages/an-humid.jpg" alt="항온항습기" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">항온항습기</h3></div>
+      </article></div><div class="s4"><article class="pcard pcard--flat">
+        <div class="pcard__img "><img src="assets/img/pages/an-salt.jpg" alt="염수분무설비" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">염수분무설비</h3></div>
+      </article></div>
+      <div class="s4"><article class="pcard pcard--flat">
+        <div class="pcard__img "><img src="assets/img/pages/an-3d.jpg" alt="3차원 측정기" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">3차원 측정기</h3></div>
+      </article></div><div class="s4"><article class="pcard pcard--flat">
+        <div class="pcard__img "><img src="assets/img/pages/an-2d.jpg" alt="비접촉 측정기 (2D)" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">비접촉 측정기 (2D)</h3></div>
+      </article></div><div class="s4"><article class="pcard pcard--flat">
+        <div class="pcard__img "><img src="assets/img/pages/an-sem.jpg" alt="FEG - SEM" loading="lazy"></div>
+        <div class="pcard__body"><h3 class="pcard__title pcard__title--sm">FEG - SEM</h3></div>
+      </article></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CTA ============================== -->
+<section class="band">
+  <img class="band__bg" src="assets/img/cover.jpg" alt="" loading="lazy">
+  <div class="container container--wide">
+    <div class="band__inner">
+      <h2 class="band__title">접합 기술 적용을 검토 중이신가요?</h2>
+      <a class="btn-outline" href="contact.html">문의하기</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="footer" id="contact">
+  <div class="container container--wide">
+    <div class="footer__top">
+      <a class="footer__logo" href="index.html" aria-label="GEO Nation"><img src="assets/img/logo.png" alt="GEO Nation"></a>
+      <div class="fcol">
+        <ul class="flinks">
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보취급방침</a></li>
+          <li><a href="#">이메일주소 무단수집 거부</a></li>
+        </ul>
+        <dl>
+          <div class="frow"><dt>설립일</dt><dd>2014년 6월 19일</dd><dt>대표이사</dt><dd>김효진</dd><dt>이메일</dt><dd><a href="mailto:cs@geo-nation.com">cs@geo-nation.com</a></dd><dt>사업자등록번호</dt><dd>131-86-*****</dd></div>
+          <div class="frow"><dt>주소</dt><dd>인천광역시 검단구 마중4로 9 지오네이션(주)</dd><dt>대표전화</dt><dd><a href="tel:0328584283">032) 858-4283</a></dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="footer__copy">Copyright ⓒ GEO Nation Co. Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
