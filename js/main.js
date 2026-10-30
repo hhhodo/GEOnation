@@ -175,7 +175,8 @@
       var r = sec.getBoundingClientRect();
       var range = r.height - H;
       var prog = range > 0 ? clamp(-r.top / range, 0, 1) : 1;
-      var t = reduce ? 1 : clamp(prog / 0.6, 0, 1);              // 앞 60% 구간에서 확대, 이후 고정
+      var gEnd = parseFloat(sec.getAttribute('data-grow-end')) || 0.6;
+      var t = reduce ? 1 : clamp(prog / gEnd, 0, 1);            // 앞 구간에서 확대, 이후 고정
       var e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
       media.style.left = lerp(S.l, 0, e) + 'px';
       media.style.top = lerp(S.t, 0, e) + 'px';
@@ -205,8 +206,11 @@
     var step = function () {
       var r = sec.getBoundingClientRect();
       var range = r.height - window.innerHeight;
-      var prog = range > 0 ? clamp(-r.top / range, 0, 0.999) : 0;
-      var i = Math.floor(prog * items.length);
+      var prog = range > 0 ? clamp(-r.top / range, 0, 1) : 0;
+      var from = parseFloat(sec.getAttribute('data-steps-from')) || 0;
+      var gEnd = parseFloat(sec.getAttribute('data-grow-end')) || 0;
+      if (from > gEnd) sec.style.setProperty('--ph', clamp((prog - gEnd) / (from - gEnd), 0, 1).toFixed(3));  // 배경 위로 글자 교체 · 오른쪽 패널 등장
+      var i = Math.floor(clamp((prog - from) / (1 - from), 0, 0.999) * items.length);
       if (i === cur) return;
       cur = i;
       items.forEach(function (el, k) { el.classList.toggle('is-active', k === cur); });

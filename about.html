@@ -18,8 +18,7 @@ Layout Declaration — about.html
 Intro         — full-bleed sticky stage — centered title + rounded image that grows to full screen
 Page tabs     — pill sub-nav (about / history / certificates / location)
 Greeting      — wide — 4-8
-Mission       — full-bleed sticky stage — rounded card that grows to full screen
-Philosophy    — full-bleed sticky stage — 6-6 (fixed image | steps change on scroll)
+Mission+Philosophy — one sticky stage — card grows to full screen, text swaps, then 6-6 (fixed image | steps change on scroll)
 Organization  — wide — 3-3-3-3
 Operations    — wide — 4-4-4
 Merit         — wide — 7-5 (list bleeds to the right edge)
@@ -36,8 +35,8 @@ Footer        — wide — logo | company facts
 <title>어바웃 어스 — 회사 소개 — GEO Nation</title>
 <meta name="description" content="지오네이션 주식회사 소개: 인사말, 경영이념, 조직도, 주요 운영 방향, 글로벌 네트워크.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/styles.css?v=202610301716">
-<link rel="stylesheet" href="css/site.css?v=202610301716">
+<link rel="stylesheet" href="css/styles.css?v=202610301723">
+<link rel="stylesheet" href="css/site.css?v=202610301723">
 </head>
 <body data-solid>
 
@@ -94,8 +93,8 @@ Footer        — wide — logo | company facts
   </div>
 </section>
 
-<!-- ============================== MISSION (이미지 확대) ============================== -->
-<section class="grow grow--mission" data-grow>
+<!-- ============================== MISSION → PHILOSOPHY (배경 이어짐 · 확대 후 글자 교체) ============================== -->
+<section class="grow grow--mission phil" id="philosophy" data-grow data-grow-end="0.2" data-steps data-steps-from="0.3">
   <div class="grow__stage">
     <div class="grow__slot"></div>
     <div class="grow__media" data-grow-media>
@@ -103,15 +102,7 @@ Footer        — wide — logo | company facts
       <span class="grow__scrim"></span>
       <p class="grow__statement"><span>Goods · Engineering · Offer<br>최고의 제품과 최고의 기술을 전세계에 제공합니다</span></p>
     </div>
-  </div>
-</section>
-
-<!-- ============================== PHILOSOPHY (배경 고정 · 단계 교체) ============================== -->
-<section class="phil" id="philosophy" data-steps>
-  <div class="phil__stage">
     <div class="phil__head">
-      <img src="assets/img/about/mesh.jpg" alt="" loading="lazy">
-      <span class="phil__scrim"></span>
       <div class="container container--wide">
         <p class="sec__label">Philosophy</p>
         <h2 class="sec__title">경영이념</h2>
@@ -216,7 +207,7 @@ Footer        — wide — logo | company facts
       <p class="sec__label sec__label--lime">Global Network</p>
       <h2 class="sec__title">글로벌 네트워크</h2>
     </div>
-    <figure class="net-fig"><img src="assets/img/about/network.jpg" alt="지오네이션 글로벌 사업장 전경" loading="lazy"></figure>
+    <figure class="net-fig"><img src="assets/img/korea.jpg" alt="지오네이션 글로벌 사업장 전경" loading="lazy"></figure>
     <div class="grid grid--top grid--rows">
       <div class="s4"><h3 class="site__title">KOREA</h3><dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>인천시 검단구 마중4로 9 (인천검단산업단지)</dd></div><div class="dl__row"><dt>홈페이지</dt><dd><a href="http://www.geo-nation.com" target="_blank" rel="noopener">www.geo-nation.com</a></dd></div><div class="dl__row"><dt>대표전화</dt><dd>032-858-4283 / FAX 032-858-4284</dd></div><div class="dl__row"><dt>보유설비</dt><dd>TRI Line, 사출, ASS'Y Line</dd></div></dl></div>
       <div class="s4"><h3 class="site__title">VIETNAM</h3><dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>Lot CN07-7, Yen Phong Industrial Zone (Expansion), Yen Phong Bac Ninh Province, Vietnam</dd></div><div class="dl__row"><dt>홈페이지</dt><dd>www.geo-nation.vn</dd></div><div class="dl__row"><dt>대표전화</dt><dd>+84-222-369-9375</dd></div><div class="dl__row"><dt>보유설비</dt><dd>TRI Line, Anodizing Line, CNC, 사출, ASS'Y Line</dd></div></dl></div>
@@ -276,6 +267,6 @@ Footer        — wide — logo | company facts
   </div>
 </footer>
 
-<script src="js/main.js?v=202610301716" defer></script>
+<script src="js/main.js?v=202610301723" defer></script>
 </body>
 </html>

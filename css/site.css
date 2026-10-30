@@ -628,14 +628,12 @@ strong,b{font-weight:var(--fw-strong);}
   font-size:var(--fs-h1);font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
 
 /* ---------- 경영이념: 배경 고정 · 오른쪽 내용이 스크롤 단계마다 교체 ---------- */
-.phil{position:relative;height:400vh;background:var(--ink-night);color:var(--text-default-inverse);}
-.phil__stage{position:sticky;top:0;height:100vh;overflow:hidden;}
-.phil__head{position:absolute;inset:0;}
-.phil__head > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-.phil__scrim{position:absolute;inset:0;background:var(--scrim);}
+.phil.grow{height:600vh;background:var(--ink-night);color:var(--text-default-inverse);}
+.phil__head{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:var(--ph,0);}
 .phil__head .container{position:relative;padding-top:var(--space-10);}
-.phil__head .sec__label{color:var(--brand-green-dark);}
-.phil__panel{position:absolute;inset:0 0 0 50%;background:var(--color-canvas);color:var(--text-default);}
+.phil__head .sec__label{color:var(--brand-green);}
+.phil .grow__statement{opacity:calc(1 - var(--ph,0));}
+.phil__panel{position:absolute;z-index:2;inset:0 0 0 50%;transform:translateX(calc((1 - var(--ph,0)) * 100%));background:var(--color-canvas);color:var(--text-default);}
 .phil__list{list-style:none;}
 .phil__item{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
   padding-left:calc(var(--space-12) + var(--space-6));padding-right:var(--space-9);
@@ -694,14 +692,11 @@ strong,b{font-weight:var(--fw-strong);}
 
 @media (min-width:1921px){ .merit-col{margin-right:calc(var(--space-11) * -1);} }
 @media (max-width:1024px){
-  .phil{height:auto;}
-  .phil__stage{position:relative;height:auto;overflow:visible;}
-  .phil__head{position:relative;inset:auto;padding-bottom:var(--space-10);}
-  .phil__panel{position:static;}
-  .phil__item{position:static;opacity:1;visibility:visible;transform:none;padding:var(--space-9) var(--gutter);}
-  .phil__title{overflow:visible;}
+  .phil__head .container{padding-top:var(--space-9);}
+  .phil__panel{inset:50% 0 0 0;transform:translateY(calc((1 - var(--ph,0)) * 100%));}
+  .phil__item{padding:var(--space-5) var(--gutter);}
+  .phil__img{display:none;}
   .phil__t--b{display:none;}
-  .phil__img{margin-left:var(--space-7);}
   .merit-col{margin-right:0;}
   .band__links{grid-template-columns:1fr;}
   .band__link{min-height:var(--space-12);}
@@ -715,3 +710,4 @@ strong,b{font-weight:var(--fw-strong);}
   .net-fig{aspect-ratio:4/3;}
 }
 .subnav--static{position:static;}
+.net-fig img{object-position:center;}
