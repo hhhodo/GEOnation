@@ -35,7 +35,7 @@ strong,b{font-weight:var(--fw-strong);}
 
 /* ---------- header (full-bleed, fixed) ---------- */
 .site-header{position:fixed;inset:0 0 auto 0;z-index:50;color:var(--text-default-inverse);transition:background .3s;}
-.site-header.is-solid{background:var(--color-canvas);color:var(--text-default);border-bottom:var(--border-1);}
+.site-header.is-solid{background:var(--color-canvas);color:var(--text-default);}
 .site-header__inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
   height:var(--space-9);padding-inline:var(--space-7);}
 .logo{display:flex;align-items:center;}
@@ -786,3 +786,8 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
   .hist-p__item{opacity:1;}
   .hist-p__item::before{left:calc(var(--space-7) * -1 + var(--space-1) * -1 + var(--space-1));}
 }
+
+/* GNB: 하단 라인 제거 · 메뉴 간격 확대 · 푸터 글자 축소 */
+.site-header.is-solid.is-clear{border-color:transparent;}
+.main-nav{gap:var(--space-4);}
+.footer .flinks,.footer .fcol dt,.footer .fcol dd,.footer__copy{font-size:var(--fs-caption);}

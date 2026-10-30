@@ -33,11 +33,12 @@ Footer        — wide — logo | company facts
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>사업 분야 — GEO Nation</title>
 <meta name="description" content="지오네이션 사업 분야: 금속과 플라스틱 접합사업, 자동차 부품사업, 전기·전자 부품사업과 TRI SYSTEM 접합기술.">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/styles.css?v=202610301826">
-<link rel="stylesheet" href="css/site.css?v=202610301826">
+<link rel="stylesheet" href="css/styles.css?v=202610301903">
+<link rel="stylesheet" href="css/site.css?v=202610301903">
 </head>
-<body data-solid>
+<body data-solid data-fly-page>
 
 <!-- ============================== HEADER ============================== -->
 <header class="site-header is-solid" id="siteHeader">
@@ -54,17 +55,17 @@ Footer        — wide — logo | company facts
 </header>
 
 <main id="top">
-<!-- ============================== HERO ============================== -->
-<section class="page-hero">
-  <img class="page-hero__bg" src="assets/img/thermal.jpg" alt="금속 열관리 부품">
-  <div class="container container--wide">
-    <div class="grid">
-      <div class="s8">
-        <p class="page-hero__crumb"><a href="index.html">홈</a><span aria-hidden="true"> › </span>사업 분야</p>
-        <p class="page-hero__label">Business</p>
-        <h1 class="page-hero__title">사업 분야</h1>
-        <p class="page-hero__lead">금속과 플라스틱의 접합 기술 <strong>TRI SYSTEM</strong>을 기반으로 금속과 플라스틱 접합 · 자동차 부품 · 전기전자 부품 사업을 영위합니다.</p>
-      </div>
+<!-- ============================== HERO (이미지 확대) ============================== -->
+<section class="grow grow--hero" data-grow>
+  <div class="grow__stage">
+    <div class="grow__slot"></div>
+    <div class="grow__media" data-grow-media data-grow-shade>
+      <img src="assets/img/about/hero.jpg" alt="유리 외벽에 비친 지오네이션 본사 전경">
+      <span class="grow__scrim"></span>
+    </div>
+    <div class="grow__text" data-grow-text>
+      <p class="grow__lead">금속과 플라스틱의 접합 기술 TRI SYSTEM을 기반으로 금속과 플라스틱 접합 · 자동차 부품 · 전기전자 부품 사업을 영위합니다.</p>
+      <h1 class="grow__title">사업 분야</h1>
     </div>
   </div>
 </section>
@@ -266,14 +267,19 @@ Footer        — wide — logo | company facts
   </div>
 </section>
 
-<!-- ============================== CTA ============================== -->
-<section class="band">
-  <img class="band__bg" src="assets/img/cover.jpg" alt="" loading="lazy">
+<!-- ============================== CTA (링크에 마우스를 올리면 배경·강조 교체) ============================== -->
+<section class="band band--links" data-cta-links data-state="b">
+  <img class="band__bg band__bg--a" src="assets/img/about/cta-a.jpg" alt="" loading="lazy">
+  <img class="band__bg band__bg--b" src="assets/img/about/cta-b.jpg" alt="" loading="lazy">
+  <span class="band__shade band__shade--a"></span>
+  <span class="band__shade band__shade--b"></span>
   <div class="container container--wide">
     <div class="band__inner">
-      
-      <h2 class="band__title">접합 기술 적용을 검토 중이신가요?</h2>
-      <div class="grid band__tiles"><a class="s6 band__tile" href="contact.html"><span class="band__tile-name">문의하기</span><span class="band__tile-desc">사업 · 기술 제휴 문의</span></a><a class="s6 band__tile" href="products.html"><span class="band__tile-name">제품·서비스 소개</span><span class="band__tile-desc">GCM 콜드플레이트 모듈</span></a></div>
+      <h2 class="band__title">지오네이션과 함께할 프로젝트가 있으신가요?</h2>
+      <div class="band__links">
+        <a class="band__link band__link--a" href="products.html" data-state-link="a"><span>제품·서비스 소개</span><i class="band__dot" aria-hidden="true"></i></a>
+        <a class="band__link band__link--b" href="contact.html" data-state-link="b"><span>문의하기</span><i class="band__dot" aria-hidden="true"></i></a>
+      </div>
     </div>
   </div>
 </section>
@@ -289,7 +295,6 @@ Footer        — wide — logo | company facts
         <ul class="flinks">
           <li><a href="#">이용약관</a></li>
           <li><a href="#">개인정보취급방침</a></li>
-          <li><a href="#">이메일주소 무단수집 거부</a></li>
         </ul>
         <dl>
           <div class="frow"><dt>설립일</dt><dd>2014년 6월 19일</dd><dt>대표이사</dt><dd>김효진</dd><dt>이메일</dt><dd><a href="mailto:cs@geo-nation.com">cs@geo-nation.com</a></dd><dt>사업자등록번호</dt><dd>131-86-*****</dd></div>
@@ -301,6 +306,6 @@ Footer        — wide — logo | company facts
   </div>
 </footer>
 
-<script src="js/main.js?v=202610301826" defer></script>
+<script src="js/main.js?v=202610301903" defer></script>
 </body>
 </html>
