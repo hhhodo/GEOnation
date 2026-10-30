@@ -595,3 +595,123 @@ strong,b{font-weight:var(--fw-strong);}
   .container--wide{padding-inline:var(--space-11);}
   .expand__end{width:calc(100% - 2 * var(--space-11));}
 }
+
+/* =========================================================
+   about.html — Figma 48:2 (어바웃 어스)
+   ========================================================= */
+:root{--brand-lime:#6ba16f; --wash-from:rgba(107,161,111,.2); --wash-to:rgba(235,189,73,.2);}
+.sec__label--lime{color:var(--brand-lime);}
+.sec__head--center{text-align:center;margin-bottom:var(--space-8);}
+.sec__head--center + .grid{margin-top:0;}
+
+/* ---------- 이미지 확대 (작은 라운드 이미지 → 스크롤하면 전체 화면) ---------- */
+.grow{position:relative;height:220vh;}
+.grow__stage{position:sticky;top:0;height:100vh;overflow:hidden;background:var(--color-canvas);}
+.grow__slot{position:absolute;left:0;right:0;margin-inline:auto;visibility:hidden;pointer-events:none;
+  width:min(var(--container-wide),calc(100% - 2 * var(--space-8)));}
+.grow__media{position:absolute;z-index:1;overflow:hidden;background:var(--ink-night);
+  border-radius:calc(var(--r0,var(--radius-lg)) * (1 - var(--e,0)));}
+.grow__media > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.grow__scrim{position:absolute;inset:0;background:var(--scrim);opacity:var(--shade,1);}
+
+.grow--hero .grow__slot{bottom:var(--space-5);height:50%;}
+.grow__text{position:absolute;z-index:2;left:0;right:0;top:0;display:flex;flex-direction:column;align-items:center;gap:var(--space-2);
+  padding-inline:var(--gutter);text-align:center;}
+.grow__lead{font-size:var(--fs-body-1);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);
+  color:color-mix(in srgb,var(--text-subtle-inverse) calc(var(--tp,0) * 100%),var(--text-subtle));}
+.grow__title{font-size:var(--fs-display-sm);font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--display-tracking);
+  color:color-mix(in srgb,var(--text-default-inverse) calc(var(--tp,0) * 100%),var(--text-default));}
+
+.grow--mission{--r0:var(--radius-md);}
+.grow--mission .grow__slot{inset:0;margin:auto;aspect-ratio:2/1;max-height:calc(100% - 2 * var(--space-9));}
+.grow__statement{position:absolute;inset:0;z-index:1;display:grid;place-content:center;padding-inline:var(--space-6);text-align:center;color:var(--text-default-inverse);
+  font-size:var(--fs-h1);font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
+
+/* ---------- 경영이념: 배경 고정 · 오른쪽 내용이 스크롤 단계마다 교체 ---------- */
+.phil{position:relative;height:400vh;background:var(--ink-night);color:var(--text-default-inverse);}
+.phil__stage{position:sticky;top:0;height:100vh;overflow:hidden;}
+.phil__head{position:absolute;inset:0;}
+.phil__head > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.phil__scrim{position:absolute;inset:0;background:var(--scrim);}
+.phil__head .container{position:relative;padding-top:var(--space-10);}
+.phil__head .sec__label{color:var(--brand-green-dark);}
+.phil__panel{position:absolute;inset:0 0 0 50%;background:var(--color-canvas);color:var(--text-default);}
+.phil__list{list-style:none;}
+.phil__item{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
+  padding-left:calc(var(--space-12) + var(--space-6));padding-right:var(--space-9);
+  opacity:0;visibility:hidden;transform:translateY(var(--space-7));transition:opacity .5s,transform .5s,visibility .5s;}
+.phil__item.is-active{opacity:1;visibility:visible;transform:none;}
+.phil__row{display:grid;grid-template-columns:var(--space-7) 1fr;align-items:center;}
+.phil__no{font-size:var(--fs-body-2);line-height:var(--lh-body);color:var(--brand-lime);}
+.phil__title{position:relative;overflow:hidden;font-size:var(--fs-h2);font-weight:var(--fw-strong);line-height:var(--lh-h1);letter-spacing:var(--tracking-kr);}
+.phil__t{display:block;transition:transform .5s;}
+.phil__t--b{position:absolute;left:0;top:-100%;white-space:nowrap;}
+.phil__item:hover .phil__t--a,.phil__item:focus-within .phil__t--a{transform:translateY(100%);}
+.phil__item:hover .phil__t--b,.phil__item:focus-within .phil__t--b{transform:translateY(100%);}
+.phil__desc{margin:var(--space-5) 0 0 var(--space-7);font-size:var(--fs-body-2);line-height:var(--lh-body);}
+.phil__img{display:block;width:var(--space-13);aspect-ratio:1;object-fit:cover;margin:var(--space-9) 0 0 calc(var(--space-7) + var(--space-10));}
+
+/* ---------- 조직도 ---------- */
+.sec--wash{background:linear-gradient(150deg,var(--wash-from) 23%,var(--wash-to) 100%);}
+.org__ceo{width:var(--space-11);font-size:var(--fs-h3);background:linear-gradient(135deg,var(--brand-lime) 23%,var(--brand-gold) 100%);}
+.org__exec{padding:var(--space-4) var(--space-8);border-color:var(--brand-lime);border-radius:var(--radius-md);font-size:var(--fs-h3);line-height:var(--lh-h3);}
+.org__line{background:var(--color-primary-100);}
+.org + .grid{margin-top:var(--space-5);}
+.team{display:flex;flex-direction:column;align-items:center;gap:var(--space-5);height:100%;min-height:var(--space-11);padding:var(--space-6) var(--space-4);
+  border:1px solid var(--brand-lime);border-radius:var(--radius-md);background:var(--color-canvas);text-align:center;}
+.team__name{font-size:var(--fs-h3);font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
+.team__list{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:var(--space-2);list-style:none;font-size:var(--fs-body-1);line-height:var(--lh-h3);}
+.team__list li + li::before{content:"";display:inline-block;width:2px;height:var(--space-3);margin-right:var(--space-2);background:var(--color-primary-100);}
+
+/* ---------- 주요 운영 방향 ---------- */
+.ops{position:relative;display:flex;flex-direction:column;height:100%;min-height:calc(var(--space-13) * 2);padding:var(--space-5);
+  border-radius:var(--radius-sm);overflow:hidden;color:var(--text-default-inverse);isolation:isolate;}
+.ops > img{position:absolute;inset:0;z-index:-1;width:100%;height:100%;object-fit:cover;}
+.ops__title{padding-top:var(--space-4);text-align:center;font-size:var(--fs-h2);font-weight:var(--fw-strong);line-height:var(--lh-body);letter-spacing:var(--tracking-kr);}
+.ops__panel{margin-top:auto;padding:var(--space-5) var(--space-3);border-radius:var(--radius-sm);background:var(--glass);
+  -webkit-backdrop-filter:blur(var(--space-7));backdrop-filter:blur(var(--space-7));}
+.ops__list{display:flex;flex-direction:column;gap:var(--space-1);list-style:none;text-align:center;font-size:var(--fs-body-2);line-height:var(--lh-body);letter-spacing:var(--tracking-kr);}
+
+/* ---------- 신뢰로 완성하는 기술력 (오른쪽 목록은 화면 끝까지) ---------- */
+.merit-col{margin-right:calc(-1 * max(0px,(100vw - var(--container-wide)) / 2));}
+.merit-col .merit__text{font-size:var(--fs-body-2);}
+
+/* ---------- 글로벌 네트워크 ---------- */
+.net-fig{aspect-ratio:1600/740;margin-bottom:var(--space-9);border-radius:var(--radius-lg);overflow:hidden;background:var(--color-primary-050);}
+.net-fig img{width:100%;height:100%;object-fit:cover;}
+.site__title{margin-bottom:var(--space-4);font-size:var(--fs-h3);font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
+
+/* ---------- CTA: 큰 링크 두 개 ---------- */
+.band__links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;}
+.band__link{display:flex;align-items:center;justify-content:center;gap:var(--space-5);min-height:calc(var(--space-12) + var(--space-11));padding-inline:var(--space-6);
+  font-size:var(--fs-title);font-weight:var(--fw-base);line-height:var(--lh-h3);color:var(--text-subtle-inverse);transition:color .2s;}
+.band__link + .band__link{border-left:var(--border-1);border-color:var(--line-inverse);}
+.band__dot{flex:none;width:var(--space-8);aspect-ratio:1;background:url(../assets/img/icon-plus-glass.svg) center/100% 100% no-repeat;}
+.band__links:not(:has(.band__link:hover,.band__link:focus-visible)) .band__link--b,
+.band__link:hover,.band__link:focus-visible{font-weight:var(--fw-strong);color:var(--text-default-inverse);}
+.band__links:not(:has(.band__link:hover,.band__link:focus-visible)) .band__link--b .band__dot,
+.band__link:hover .band__dot,.band__link:focus-visible .band__dot{background-image:url(../assets/img/icon-plus-solid.svg);}
+
+@media (min-width:1921px){ .merit-col{margin-right:calc(var(--space-11) * -1);} }
+@media (max-width:1024px){
+  .phil{height:auto;}
+  .phil__stage{position:relative;height:auto;overflow:visible;}
+  .phil__head{position:relative;inset:auto;padding-bottom:var(--space-10);}
+  .phil__panel{position:static;}
+  .phil__item{position:static;opacity:1;visibility:visible;transform:none;padding:var(--space-9) var(--gutter);}
+  .phil__title{overflow:visible;}
+  .phil__t--b{display:none;}
+  .phil__img{margin-left:var(--space-7);}
+  .merit-col{margin-right:0;}
+  .band__links{grid-template-columns:1fr;}
+  .band__link{min-height:var(--space-12);}
+  .band__link + .band__link{border-left:0;border-top:var(--border-1);border-color:var(--line-inverse);}
+}
+@media (max-width:768px){
+  .grow__title{font-size:var(--fs-h0);}
+  .grow__statement{font-size:var(--fs-h2);}
+  .band__link{font-size:var(--fs-h2);}
+  .org__exec{padding-inline:var(--space-6);}
+  .net-fig{aspect-ratio:4/3;}
+}
+.subnav--static{position:static;}

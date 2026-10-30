@@ -15,18 +15,17 @@ spacing=space-10 (sections) / space-section
 -->
 <!--
 Layout Declaration — about.html
-Hero          — full-bleed bg, wide inner — 8 (title + lead)
+Intro         — full-bleed sticky stage — centered title + rounded image that grows to full screen
 Page tabs     — pill sub-nav (about / history / certificates / location)
-Mission       — full-bleed — centered statement
 Greeting      — wide — 4-8
-Philosophy    — wide — 7-5
-Overview      — wide — 4-8
+Mission       — full-bleed sticky stage — rounded card that grows to full screen
+Philosophy    — full-bleed sticky stage — 6-6 (fixed image | steps change on scroll)
 Organization  — wide — 3-3-3-3
 Operations    — wide — 4-4-4
-Merit         — wide — 6-6
-Network       — full-bleed dark, wide inner — KPI 3-3-3-3 + sites 4-4-4
+Merit         — wide — 7-5 (list bleeds to the right edge)
+Network       — wide — full image + sites 4-4-4
 Customers     — wide — centered heading + logo grid 6 columns
-CTA           — full-bleed — centered + 6-6 link tiles
+CTA           — full-bleed — centered + 6-6 links
 Footer        — wide — logo | company facts
 -->
 <!doctype html>
@@ -35,10 +34,10 @@ Footer        — wide — logo | company facts
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>어바웃 어스 — 회사 소개 — GEO Nation</title>
-<meta name="description" content="지오네이션 주식회사 소개: 인사말, 경영이념, 회사개요, 조직도, 글로벌 네트워크.">
+<meta name="description" content="지오네이션 주식회사 소개: 인사말, 경영이념, 조직도, 주요 운영 방향, 글로벌 네트워크.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/styles.css?v=202610301508">
-<link rel="stylesheet" href="css/site.css?v=202610301508">
+<link rel="stylesheet" href="css/styles.css?v=202610301716">
+<link rel="stylesheet" href="css/site.css?v=202610301716">
 </head>
 <body data-solid>
 
@@ -57,33 +56,21 @@ Footer        — wide — logo | company facts
 </header>
 
 <main id="top">
-<!-- ============================== HERO ============================== -->
-<section class="page-hero">
-  <img class="page-hero__bg" src="assets/img/korea.jpg" alt="지오네이션 본사 전경">
-  <div class="container container--wide">
-    <div class="grid">
-      <div class="s8">
-        <p class="page-hero__crumb"><a href="index.html">홈</a><span aria-hidden="true"> › </span><a href="about.html">회사 소개</a><span aria-hidden="true"> › </span>어바웃 어스</p>
-        <p class="page-hero__label">About Us</p>
-        <h1 class="page-hero__title">어바웃 어스</h1>
-        <p class="page-hero__lead">최고의 제품과 최고의 기술을 전세계에 제공하는 기업, <strong>지오네이션 주식회사</strong></p>
-      </div>
+<!-- ============================== INTRO (이미지 확대) ============================== -->
+<section class="grow grow--hero" data-grow>
+  <div class="grow__stage">
+    <div class="grow__slot"></div>
+    <div class="grow__media" data-grow-media data-grow-shade>
+      <img src="assets/img/about/hero.jpg" alt="유리 외벽에 비친 지오네이션 본사 전경">
+      <span class="grow__scrim"></span>
+    </div>
+    <div class="grow__text" data-grow-text>
+      <p class="grow__lead">최고의 제품과 최고의 기술을 전세계에 제공하는 기업, 지오네이션 주식회사</p>
+      <h1 class="grow__title">회사 소개</h1>
     </div>
   </div>
 </section>
-<nav class="subnav" aria-label="회사 소개 메뉴"><ul class="subnav__list"><li><a href="about.html" class=is-active aria-current=page>어바웃 어스</a></li><li><a href="history.html">연혁</a></li><li><a href="certificates.html">인증</a></li><li><a href="location.html">오시는 길</a></li></ul></nav>
-
-<!-- ============================== STATEMENT ============================== -->
-<section class="band band--statement">
-  <img class="band__bg" src="assets/img/hero.jpg" alt="" loading="lazy">
-  <div class="container container--wide">
-    <div class="band__inner">
-      <p class="band__label">Our Mission</p>
-      <h2 class="band__title">Goods · Engineering · Offer<br>최고의 제품과 최고의 기술을 전세계에 제공합니다</h2>
-      
-    </div>
-  </div>
-</section>
+<nav class="subnav subnav--static" aria-label="회사 소개 메뉴"><ul class="subnav__list"><li><a href="about.html" class=is-active aria-current=page>어바웃 어스</a></li><li><a href="history.html">연혁</a></li><li><a href="certificates.html">인증</a></li><li><a href="location.html">오시는 길</a></li></ul></nav>
 
 <!-- ============================== GREETING ============================== -->
 <section class="sec" id="greeting">
@@ -91,13 +78,12 @@ Footer        — wide — logo | company facts
     <div class="grid grid--top">
       <div class="s4">
         <div class="sec__side">
-      <p class="sec__label">Greeting</p>
-      <h2 class="sec__title">인사말</h2>
+          <p class="sec__label sec__label--lime">Greeting</p>
+          <h2 class="sec__title">인사말</h2>
           <p class="sign">GEO Nation 주식회사<br>대표 김 효 진</p>
         </div>
       </div>
       <div class="s8 prose">
-        <p class="lead">GEO Nation 주식회사는 인류와 사회에 공헌하기 위하여 Goods(최고의 제품)과 Engineering(최고의 기술)을 Offer(전세계에 제공)하고자 합니다.</p>
         <p>안녕하십니까.</p>
         <p>저희 회사의 홈페이지를 방문하여 주셔서 대단히 감사드립니다. 저희 GEO Nation은 인류발전에 기여하기 위하여 우수한 제품(GOODS)과 우수한 기술(ENGINEERING)을 제공(OFFER)할 목적으로 설립되었습니다. 우수한 제품(GOODS)과 우수한 기술(ENGINEERING)은 우수한 인재로부터 탄생되므로 저희 GEO Nation은 인재양성을 통하여 그 목표를 실현하고자 합니다. 언제나 긍정적인 생각과 자기 일에 대한 뜨거운 열정을 가지고 있는 GEO Nation의 인재야말로 인류발전에 기여할 수 있음을 우리는 믿어 의심치 않습니다.</p>
         <p>저희 GEO Nation은 임직원들이 자부심을 가지고 일할 수 있는 좋은 직장을 만들기 위하여 이익공유 및 복리후생제도를 발전시켜 나아갈 계획입니다. 앞에서 언급한 긍정적인 생각과 자기 일에 대한 뜨거운 열정 그리고 자부심을 가질 수 있는 좋은 직장이 존재함으로 인하여 얻어지는 시너지효과는 우리의 설립목적인 우수한 제품(GOODS)과 우수한 기술(ENGINEERING)이 탄생되어 시장에 기여하고 또 그것은 곧 인류에 기여하는 결과를 초래할 것입니다. 좋은 직장을 만들기 위한 이익공유 및 복리후생제도의 발전을 위하여 저희 경영진과 주주들은 초심을 잊지 않고 항상 최선을 다하겠습니다.</p>
@@ -108,67 +94,56 @@ Footer        — wide — logo | company facts
   </div>
 </section>
 
-<!-- ============================== PHILOSOPHY ============================== -->
-<section class="sec sec--tint" id="philosophy">
-  <div class="container container--wide">
-    <div class="grid grid--top">
-      <div class="s7">
-        <div class="sec__head">
-      <p class="sec__label">Philosophy</p>
-      <h2 class="sec__title">경영이념</h2>
-        </div>
-        <div>
-          <div class="num-row"><span class="num-row__no">01</span><div><h3 class="num-row__title">좋은 직장 만들기</h3><p class="num-row__text">GEO Nation 구성원으로서 자부심을 가질 수 있는 일터를 만든다.</p></div></div>
-          <div class="num-row"><span class="num-row__no">02</span><div><h3 class="num-row__title">인재 육성</h3><p class="num-row__text">GEO Nation Group은 우수한 인재육성을 통해 인류에 공헌하고 있습니다.</p></div></div>
-          <div class="num-row"><span class="num-row__no">03</span><div><h3 class="num-row__title">고객 만족</h3><p class="num-row__text">GEO Nation Group은 다음 6가지를 항상 실행하여 고객 만족을 실현 합니다.</p>
-            <ul class="chips"><li class="chip">Before service</li><li class="chip">High Technology</li><li class="chip">High Quality</li><li class="chip">Fast delivery</li><li class="chip">Cost Performance</li><li class="chip">After service</li></ul></div></div>
-        </div>
-      </div>
-      <div class="s5">
-        <div class="hexmap" role="img" aria-label="좋은 직장 만들기, 인재 육성, 고객 만족이 우수한 제품과 선진 기술 제공으로 이어집니다">
-          <p class="hexmap__hex hexmap__hex--a">좋은 직장<br>만들기</p>
-          <p class="hexmap__hex hexmap__hex--b">인재 육성</p>
-          <p class="hexmap__hex hexmap__hex--c">고객 만족</p>
-          <p class="hexmap__core">우수한 제품과<br>선진 기술 제공</p>
-        </div>
-      </div>
+<!-- ============================== MISSION (이미지 확대) ============================== -->
+<section class="grow grow--mission" data-grow>
+  <div class="grow__stage">
+    <div class="grow__slot"></div>
+    <div class="grow__media" data-grow-media>
+      <img src="assets/img/about/mesh.jpg" alt="" loading="lazy">
+      <span class="grow__scrim"></span>
+      <p class="grow__statement"><span>Goods · Engineering · Offer<br>최고의 제품과 최고의 기술을 전세계에 제공합니다</span></p>
     </div>
   </div>
 </section>
 
-<!-- ============================== OVERVIEW ============================== -->
-<section class="sec" id="overview">
-  <div class="container container--wide">
-    <div class="grid grid--top">
-      <div class="s4">
-        <div class="sec__side">
-      <p class="sec__label">Overview</p>
-      <h2 class="sec__title">회사개요</h2>
-        </div>
+<!-- ============================== PHILOSOPHY (배경 고정 · 단계 교체) ============================== -->
+<section class="phil" id="philosophy" data-steps>
+  <div class="phil__stage">
+    <div class="phil__head">
+      <img src="assets/img/about/mesh.jpg" alt="" loading="lazy">
+      <span class="phil__scrim"></span>
+      <div class="container container--wide">
+        <p class="sec__label">Philosophy</p>
+        <h2 class="sec__title">경영이념</h2>
       </div>
-      <div class="s8">
-        <div class="bento">
-          <div class="bento__tile bento__tile--img"><img src="assets/img/korea.jpg" alt="지오네이션 본사" loading="lazy"></div>
-          <div class="bento__tile"><p class="bento__label">기업명</p><p class="bento__value">지오네이션 주식회사<br>(GEO NATION CO., LTD.)</p></div>
-          <div class="bento__tile"><p class="bento__label">설립일</p><p class="bento__value">2014년 6월 19일</p></div>
-          <div class="bento__tile"><p class="bento__label">대표자명</p><p class="bento__value">김 효 진</p></div>
-          <div class="bento__tile"><p class="bento__label">기업형태</p><p class="bento__value">중소기업, 외국인 투자기업, 주식회사, 법인사업체</p></div>
-          <div class="bento__tile bento__tile--wide"><p class="bento__label">업 종</p><p class="bento__value">제조, 도매 및 소매, 부동산, 서비스업</p></div>
-          <div class="bento__tile bento__tile--wide"><p class="bento__label">사업내용</p><p class="bento__value">금속 및 플라스틱 가공제품, 플라스틱 성형, 무역, 연구 및 개발업</p></div>
-          <div class="bento__tile"><p class="bento__label">대표전화</p><p class="bento__value"><a href="tel:0328584283">032-858-4283</a></p></div>
-          <div class="bento__tile"><p class="bento__label">FAX</p><p class="bento__value">032-858-4284</p></div>
-          <div class="bento__tile bento__tile--wide"><p class="bento__label">기업 주소</p><p class="bento__value">인천광역시 검단구 마중4로 9 지오네이션(주)</p></div>
-        </div>
-      </div>
+    </div>
+    <div class="phil__panel">
+      <ol class="phil__list">
+        <li class="phil__item is-active">
+          <div class="phil__row"><span class="phil__no">01</span><h3 class="phil__title"><span class="phil__t phil__t--a">좋은 직장 만들기</span><span class="phil__t phil__t--b" aria-hidden="true">한국형 제조 DNA 이식</span></h3></div>
+          <p class="phil__desc">GEO Nation 구성원으로서 자부심을 가질 수 있는 일터를 만든다.</p>
+          <img class="phil__img" src="assets/img/about/phil-1.jpg" alt="" loading="lazy">
+        </li>
+        <li class="phil__item">
+          <div class="phil__row"><span class="phil__no">02</span><h3 class="phil__title"><span class="phil__t phil__t--a">인재 육성</span><span class="phil__t phil__t--b" aria-hidden="true">한국형 제조 DNA 이식</span></h3></div>
+          <p class="phil__desc">GEO Nation Group은 우수한 인재육성을 통해 인류에 공헌하고 있습니다.</p>
+          <img class="phil__img" src="assets/img/about/phil-2.jpg" alt="" loading="lazy">
+        </li>
+        <li class="phil__item">
+          <div class="phil__row"><span class="phil__no">03</span><h3 class="phil__title"><span class="phil__t phil__t--a">고객 만족</span><span class="phil__t phil__t--b" aria-hidden="true">한국형 제조 DNA 이식</span></h3></div>
+          <p class="phil__desc">GEO Nation Group은 다음 6가지를 항상 실행하여 고객 만족을 실현 합니다.</p>
+          <img class="phil__img" src="assets/img/about/phil-3.jpg" alt="" loading="lazy">
+        </li>
+      </ol>
     </div>
   </div>
 </section>
 
 <!-- ============================== ORGANIZATION ============================== -->
-<section class="sec sec--tint" id="organization">
+<section class="sec sec--wash" id="organization">
   <div class="container container--wide">
-    <div class="sec__head">
-      <p class="sec__label">Organization</p>
+    <div class="sec__head--center">
+      <p class="sec__label sec__label--lime">Organization</p>
       <h2 class="sec__title">조직도</h2>
     </div>
     <div class="org">
@@ -177,14 +152,14 @@ Footer        — wide — logo | company facts
       <p class="org__exec">전무이사</p>
       <span class="org__line" aria-hidden="true"></span>
     </div>
-    <div class="grid grid--rows">
-      <div class="s3"><div class="box box--full"><h3 class="box__title">통합품질팀</h3></div></div>
-      <div class="s3"><div class="box box--full"><h3 class="box__title">기술영업팀</h3></div></div>
-      <div class="s3"><div class="box box--full"><h3 class="box__title">생산관리팀</h3><ul class="checks "><li>구매 / 외주</li><li>생산</li></ul></div></div>
-      <div class="s3"><div class="box box--full"><h3 class="box__title">개발팀</h3><ul class="checks "><li>개발 (FRP)</li><li>개발 (연구)</li></ul></div></div>
-      <div class="s3"><div class="box box--full"><h3 class="box__title">표면처리팀</h3></div></div>
-      <div class="s3"><div class="box box--full"><h3 class="box__title">경영지원팀</h3><ul class="checks "><li>인사 / 재무</li><li>전산 (IT)</li></ul></div></div>
-      <div class="s3"><div class="box box--full"><h3 class="box__title">디자인연구팀</h3></div></div>
+    <div class="grid">
+      <div class="s3"><div class="team"><h3 class="team__name">통합품질팀</h3></div></div>
+      <div class="s3"><div class="team"><h3 class="team__name">기술영업팀</h3></div></div>
+      <div class="s3"><div class="team"><h3 class="team__name">생산관리팀</h3><ul class="team__list"><li>구매 / 외주</li><li>생산</li></ul></div></div>
+      <div class="s3"><div class="team"><h3 class="team__name">개발팀</h3><ul class="team__list"><li>개발 (FRP)</li><li>개발 (연구)</li></ul></div></div>
+      <div class="s3"><div class="team"><h3 class="team__name">표면처리팀</h3></div></div>
+      <div class="s3"><div class="team"><h3 class="team__name">경영지원팀</h3><ul class="team__list"><li>인사 / 재무</li><li>전산 (IT)</li></ul></div></div>
+      <div class="s3"><div class="team"><h3 class="team__name">디자인연구팀</h3></div></div>
     </div>
   </div>
 </section>
@@ -192,23 +167,26 @@ Footer        — wide — logo | company facts
 <!-- ============================== OPERATIONS ============================== -->
 <section class="sec" id="operations">
   <div class="container container--wide">
-    <div class="sec__head">
-      <p class="sec__label">Operations</p>
+    <div class="sec__head--center" style="margin-bottom:var(--space-7)">
+      <p class="sec__label sec__label--lime">Operations</p>
       <h2 class="sec__title">주요 운영 방향</h2>
     </div>
     <div class="grid">
-      <div class="s4"><div class="box box--full">
-        <h3 class="box__title">품질관리 PART</h3>
-        <ol class="olist"><li>FRP 일본검사 폐지에 따른 출하검사 강화</li><li>수입, 공정, 출하 검사 및 부적합 관리 실시</li></ol><div class="mt-4"></div><ul class="checks "><li>부적합 통보서 발행</li><li>개선대책 접수</li><li>수입검사성적서 작성</li><li>부적합 이력 관리 실시</li></ul>
-      </div></div>
-      <div class="s4"><div class="box box--full">
-        <h3 class="box__title">품질보증 PART</h3>
-        <ol class="olist"><li>개발단계~양산단계 밀착관리를 통해 품질 안정화, 품평회 실시 (TRI/FRP)</li><li>해외 사업장 품질 Setting 및 Follow-Up</li><li>고객대응 (CS)</li></ol><div class="mt-4"></div><ul class="checks "><li>기술 품질 구축으로 Trouble issue 대응</li></ul>
-      </div></div>
-      <div class="s4"><div class="box box--full">
-        <h3 class="box__title">품질경영 PART</h3>
-        <ol class="olist"><li>ISO 인증 및 규격 사후 유지관리</li><li>품질 Cost 관리 (예방, 실패, 평가 Cost)</li><li>경영 혁신 활동</li><li>업무 매뉴얼, PROCESS 제정관리</li><li>시험 및 측정 설비 관리</li><li>협력사 점검 / 관리활동 강화 (협력사 평가, 공정개선 활동, 비정기 공정 점검 및 유효성 검증)</li></ol>
-      </div></div>
+      <div class="s4"><article class="ops">
+        <img src="assets/img/about/ops-1.jpg" alt="" loading="lazy">
+        <h3 class="ops__title">품질관리</h3>
+        <div class="ops__panel"><ul class="ops__list"><li>FRP 일본검사 폐지에 따른 출하검사 강화</li><li>수입, 공정, 출하 검사 및 부적합 관리 실시</li></ul></div>
+      </article></div>
+      <div class="s4"><article class="ops">
+        <img src="assets/img/about/ops-2.jpg" alt="" loading="lazy">
+        <h3 class="ops__title">품질보증</h3>
+        <div class="ops__panel"><ul class="ops__list"><li>개발~양산 밀착관리를 통해 품질 안정화, 품평회 실시 (TRI/FRP)</li><li>해외 사업장 품질 Setting 및 Follow-Up</li><li>기술 품질 구축으로 Trouble issue 대응</li></ul></div>
+      </article></div>
+      <div class="s4"><article class="ops">
+        <img src="assets/img/about/ops-3.jpg" alt="" loading="lazy">
+        <h3 class="ops__title">품질경영</h3>
+        <div class="ops__panel"><ul class="ops__list"><li>ISO 인증 및 규격 사후 유지관리</li><li>품질 Cost 관리 (예방, 실패, 평가 Cost)</li><li>경영 혁신 활동</li><li>업무 매뉴얼, PROCESS 제정관리</li><li>시험 및 측정 설비 관리</li><li>협력사 점검 / 관리활동 강화 (협력사 평가, 공정개선 활동, 비정기 공정 점검 및 유효성 검증)</li></ul></div>
+      </article></div>
     </div>
   </div>
 </section>
@@ -217,11 +195,11 @@ Footer        — wide — logo | company facts
 <section class="sec" id="merit">
   <div class="container container--wide">
     <div class="grid grid--top">
-      <div class="s6">
-      <p class="sec__label">Merit</p>
-      <h2 class="sec__title">신뢰로 완성하는<br>기술력</h2>
+      <div class="s7">
+        <p class="sec__label sec__label--lime">Merit</p>
+        <h2 class="sec__title">신뢰로 완성하는 기술력</h2>
       </div>
-      <div class="s6">
+      <div class="s5 merit-col">
         <div class="merit"><p class="merit__word">Certified</p><p class="merit__text">IATF 16949 · ISO 9001 · ISO 14001 인증 보유</p></div>
         <div class="merit"><p class="merit__word">Patented</p><p class="merit__text">금속-수지 접합 특허 및 TOA 상표등록 (TRI SYSTEM)</p></div>
         <div class="merit"><p class="merit__word">Global</p><p class="merit__text">한국 · 일본 · 베트남 · 중국, 4개국 생산·연구 거점</p></div>
@@ -232,46 +210,20 @@ Footer        — wide — logo | company facts
 </section>
 
 <!-- ============================== NETWORK ============================== -->
-<section class="sec sec--dark" id="network">
+<section class="sec" id="network">
   <div class="container container--wide">
     <div class="sec__head">
-      <p class="sec__label">Global Network</p>
+      <p class="sec__label sec__label--lime">Global Network</p>
       <h2 class="sec__title">글로벌 네트워크</h2>
-      <p class="sec__lead">한국 · 일본 · 베트남 · 중국, 4개국을 잇는 생산·연구 거점입니다.</p>
     </div>
-    <div class="grid grid--top grid--rows kpi-row"><div class="s3 kpi"><p class="kpi__num">4</p><p class="kpi__name">개국</p><p class="kpi__label">한국 · 일본 · 베트남 · 중국</p></div><div class="s3 kpi"><p class="kpi__num">6</p><p class="kpi__name">생산·연구 거점</p><p class="kpi__label">공장 · 연구소 · 사무소</p></div><div class="s3 kpi"><p class="kpi__num">2014</p><p class="kpi__name">설립</p><p class="kpi__label">6월 19일</p></div><div class="s3 kpi"><p class="kpi__num">500,000</p><p class="kpi__name">월 생산능력</p><p class="kpi__label">UNITS / MONTH</p></div></div>
+    <figure class="net-fig"><img src="assets/img/about/network.jpg" alt="지오네이션 글로벌 사업장 전경" loading="lazy"></figure>
     <div class="grid grid--top grid--rows">
-      <div class="s4"><article class="pcard pcard--flat">
-        <div class="pcard__img "><img src="assets/img/pages/site-korea.jpg" alt="KOREA" loading="lazy"></div>
-        <div class="pcard__body"><span class="pcard__tag">대한민국 · 본사 · 공장 · 연구소</span><h3 class="pcard__title ">KOREA</h3></div>
-      </article>
-        <p class="site__name">GEO Nation – INCHEON Factory / R&amp;D Center</p>
-        <dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>인천시 검단구 마중4로 9 (인천검단산업단지)</dd></div><div class="dl__row"><dt>홈페이지</dt><dd><a href="http://www.geo-nation.com" target="_blank" rel="noopener">www.geo-nation.com</a></dd></div><div class="dl__row"><dt>대표전화</dt><dd>032-858-4283 / FAX 032-858-4284</dd></div><div class="dl__row"><dt>보유설비</dt><dd>TRI Line, 사출, ASS'Y Line</dd></div></dl></div><div class="s4"><article class="pcard pcard--flat">
-        <div class="pcard__img "><img src="assets/img/pages/site-vietnam.jpg" alt="VIETNAM" loading="lazy"></div>
-        <div class="pcard__body"><span class="pcard__tag">베트남 · 공장</span><h3 class="pcard__title ">VIETNAM</h3></div>
-      </article>
-        <p class="site__name">GEO Nation – YEN PHONG Factory</p>
-        <dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>Lot CN07-7, Yen Phong Industrial Zone (Expansion), Yen Phong Bac Ninh Province, Vietnam</dd></div><div class="dl__row"><dt>홈페이지</dt><dd>www.geo-nation.vn</dd></div><div class="dl__row"><dt>대표전화</dt><dd>+84-222-369-9375</dd></div><div class="dl__row"><dt>보유설비</dt><dd>TRI Line, Anodizing Line, CNC, 사출, ASS'Y Line</dd></div></dl></div><div class="s4"><article class="pcard pcard--flat">
-        <div class="pcard__img "><img src="assets/img/pages/site-japan.jpg" alt="JAPAN" loading="lazy"></div>
-        <div class="pcard__body"><span class="pcard__tag">일본 · 도쿄 사무소</span><h3 class="pcard__title ">JAPAN</h3></div>
-      </article>
-        <p class="site__name">GEO Nation – TOKYO Office</p>
-        <dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>1F Imaizumi Bldg, 2-11-5, Hirakawa-Cho, Chiyoda-Ku, Tokyo, Japan (102-0093)</dd></div><div class="dl__row"><dt>홈페이지</dt><dd>www.geo-nation.co.jp</dd></div><div class="dl__row"><dt>대표전화</dt><dd>+81-3-6268-9501 / FAX +81-3-6268-9502</dd></div></dl></div><div class="s4"><article class="pcard pcard--flat">
-        <div class="pcard__img "><img src="assets/img/pages/site-morioka.jpg" alt="JAPAN R&amp;D Center" loading="lazy"></div>
-        <div class="pcard__body"><span class="pcard__tag">일본 · 연구소</span><h3 class="pcard__title ">JAPAN R&amp;D Center</h3></div>
-      </article>
-        <p class="site__name">GEO Nation – MORIOKA R&amp;D Center</p>
-        <dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>20-7, Iwahana, Shibutamiaza, Morioka-Shi, Iwate-Ken, Japan (028-4132)</dd></div></dl></div><div class="s4"><article class="pcard pcard--flat">
-        <div class="pcard__img "><img src="assets/img/pages/site-china.jpg" alt="CHINA" loading="lazy"></div>
-        <div class="pcard__body"><span class="pcard__tag">중국 · 공장</span><h3 class="pcard__title ">CHINA</h3></div>
-      </article>
-        <p class="site__name">GEO Nation – DONGGUAN Factory</p>
-        <dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>Room 202, Building 3, No.10, South Fourth Street, Baiyunqian, Dalang Town, DongGuan City, GuangDong Province, China</dd></div><div class="dl__row"><dt>보유설비</dt><dd>TRI Line</dd></div></dl></div><div class="s4"><article class="pcard pcard--flat">
-        <div class="pcard__img "><img src="assets/img/pages/site-toadenka.jpg" alt="JAPAN TOADENKA" loading="lazy"></div>
-        <div class="pcard__body"><span class="pcard__tag">일본 · 제휴사 본사</span><h3 class="pcard__title ">JAPAN TOADENKA</h3></div>
-      </article>
-        <p class="site__name">TOADENKA – MORIOKA Head Office / Factory / R&amp;D Center</p>
-        <dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>20-7, Iwahana, Shibutamiaza, Morioka-Shi, Iwate-Ken, Japan (028-4132)</dd></div></dl></div>
+      <div class="s4"><h3 class="site__title">KOREA</h3><dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>인천시 검단구 마중4로 9 (인천검단산업단지)</dd></div><div class="dl__row"><dt>홈페이지</dt><dd><a href="http://www.geo-nation.com" target="_blank" rel="noopener">www.geo-nation.com</a></dd></div><div class="dl__row"><dt>대표전화</dt><dd>032-858-4283 / FAX 032-858-4284</dd></div><div class="dl__row"><dt>보유설비</dt><dd>TRI Line, 사출, ASS'Y Line</dd></div></dl></div>
+      <div class="s4"><h3 class="site__title">VIETNAM</h3><dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>Lot CN07-7, Yen Phong Industrial Zone (Expansion), Yen Phong Bac Ninh Province, Vietnam</dd></div><div class="dl__row"><dt>홈페이지</dt><dd>www.geo-nation.vn</dd></div><div class="dl__row"><dt>대표전화</dt><dd>+84-222-369-9375</dd></div><div class="dl__row"><dt>보유설비</dt><dd>TRI Line, Anodizing Line, CNC, 사출, ASS'Y Line</dd></div></dl></div>
+      <div class="s4"><h3 class="site__title">JAPAN</h3><dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>1F Imaizumi Bldg, 2-11-5, Hirakawa-Cho, Chiyoda-Ku, Tokyo, Japan (102-0093)</dd></div><div class="dl__row"><dt>홈페이지</dt><dd>www.geo-nation.co.jp</dd></div><div class="dl__row"><dt>대표전화</dt><dd>+81-3-6268-9501 / FAX +81-3-6268-9502</dd></div></dl></div>
+      <div class="s4"><h3 class="site__title">JAPAN R&amp;D Center</h3><dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>20-7, Iwahana, Shibutamiaza, Morioka-Shi, Iwate-Ken, Japan (028-4132)</dd></div></dl></div>
+      <div class="s4"><h3 class="site__title">CHINA</h3><dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>Room 202, Building 3, No.10, South Fourth Street, Baiyunqian, Dalang Town, DongGuan City, GuangDong Province, China</dd></div><div class="dl__row"><dt>보유설비</dt><dd>TRI Line</dd></div></dl></div>
+      <div class="s4"><h3 class="site__title">JAPAN TOADENKA</h3><dl class="dl dl--sm"><div class="dl__row"><dt>소재지</dt><dd>20-7, Iwahana, Shibutamiaza, Morioka-Shi, Iwate-Ken, Japan (028-4132)</dd></div></dl></div>
     </div>
   </div>
 </section>
@@ -288,13 +240,15 @@ Footer        — wide — logo | company facts
 </section>
 
 <!-- ============================== CTA ============================== -->
-<section class="band">
+<section class="band band--links">
   <img class="band__bg" src="assets/img/korea.jpg" alt="" loading="lazy">
   <div class="container container--wide">
     <div class="band__inner">
-      
       <h2 class="band__title">지오네이션과 함께할 프로젝트가 있으신가요?</h2>
-      <div class="grid band__tiles"><a class="s6 band__tile" href="contact.html"><span class="band__tile-name">문의하기</span><span class="band__tile-desc">제품 · 기술 · 사업 제휴 문의</span></a><a class="s6 band__tile" href="products.html"><span class="band__tile-name">제품·서비스 소개</span><span class="band__tile-desc">GCM 콜드플레이트 모듈</span></a></div>
+      <div class="band__links">
+        <a class="band__link band__link--a" href="products.html"><span>제품·서비스 소개</span><i class="band__dot" aria-hidden="true"></i></a>
+        <a class="band__link band__link--b" href="contact.html"><span>문의하기</span><i class="band__dot" aria-hidden="true"></i></a>
+      </div>
     </div>
   </div>
 </section>
@@ -322,6 +276,6 @@ Footer        — wide — logo | company facts
   </div>
 </footer>
 
-<script src="js/main.js?v=202610301508" defer></script>
+<script src="js/main.js?v=202610301716" defer></script>
 </body>
 </html>

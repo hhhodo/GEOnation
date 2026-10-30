@@ -155,6 +155,70 @@
     }
   }
 
+  /* ---------- 어바웃 어스: 라운드 이미지가 스크롤하면 전체 화면으로 확대 ---------- */
+  [].slice.call(document.querySelectorAll('[data-grow]')).forEach(function (sec) {
+    var stage = sec.querySelector('.grow__stage');
+    var slot = sec.querySelector('.grow__slot');
+    var media = sec.querySelector('[data-grow-media]');
+    var text = sec.querySelector('[data-grow-text]');
+    var hasShade = media.hasAttribute('data-grow-shade');
+    var head = header ? header.offsetHeight : 0;
+    var S, W, H;
+
+    var measure = function () {
+      S = { l: slot.offsetLeft, t: slot.offsetTop, w: slot.offsetWidth, h: slot.offsetHeight };
+      W = stage.clientWidth; H = stage.clientHeight;
+      tick();
+    };
+    var tick = function () {
+      if (!S) return;
+      var r = sec.getBoundingClientRect();
+      var range = r.height - H;
+      var prog = range > 0 ? clamp(-r.top / range, 0, 1) : 1;
+      var t = reduce ? 1 : clamp(prog / 0.6, 0, 1);              // 앞 60% 구간에서 확대, 이후 고정
+      var e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+      media.style.left = lerp(S.l, 0, e) + 'px';
+      media.style.top = lerp(S.t, 0, e) + 'px';
+      media.style.width = lerp(S.w, W, e) + 'px';
+      media.style.height = lerp(S.h, H, e) + 'px';
+      media.style.setProperty('--e', e.toFixed(3));
+      if (hasShade) media.style.setProperty('--shade', e.toFixed(3));
+      if (text) {                                                 // 글자는 이미지 위쪽 → 화면 가운데로 이동하며 흰색으로
+        var from = (head + S.t) / 2, to = H / 2;
+        text.style.transform = 'translateY(' + (lerp(from, to, e) - text.offsetHeight / 2) + 'px)';
+        text.style.setProperty('--tp', e.toFixed(3));
+      }
+    };
+    var raf = 0;
+    window.addEventListener('scroll', function () {
+      if (!raf) raf = requestAnimationFrame(function () { raf = 0; tick(); });
+    }, { passive: true });
+    window.addEventListener('resize', measure);
+    window.addEventListener('load', measure);
+    measure();
+  });
+
+  /* ---------- 경영이념: 스크롤 단계마다 오른쪽 내용 교체 ---------- */
+  [].slice.call(document.querySelectorAll('[data-steps]')).forEach(function (sec) {
+    var items = [].slice.call(sec.querySelectorAll('.phil__item'));
+    var cur = -1;
+    var step = function () {
+      var r = sec.getBoundingClientRect();
+      var range = r.height - window.innerHeight;
+      var prog = range > 0 ? clamp(-r.top / range, 0, 0.999) : 0;
+      var i = Math.floor(prog * items.length);
+      if (i === cur) return;
+      cur = i;
+      items.forEach(function (el, k) { el.classList.toggle('is-active', k === cur); });
+    };
+    var raf = 0;
+    window.addEventListener('scroll', function () {
+      if (!raf) raf = requestAnimationFrame(function () { raf = 0; step(); });
+    }, { passive: true });
+    window.addEventListener('resize', step);
+    step();
+  });
+
   /* ---------- 숫자 카운트업 ---------- */
   var stats = document.querySelector('.stats');
   if (stats && !reduce) {
