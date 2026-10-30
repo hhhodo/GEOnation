@@ -791,3 +791,10 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 .site-header.is-solid.is-clear{border-color:transparent;}
 .main-nav{gap:var(--space-4);}
 .footer .flinks,.footer .fcol dt,.footer .fcol dd,.footer__copy{font-size:var(--fs-caption);}
+
+/* 페이지 내 서브 카테고리: 회사 소개 서브 메뉴와 같은 탭 디자인 (스크롤 시 상단 고정) */
+.subnav--tabs{background:var(--color-canvas);padding-block:var(--space-4);}
+.subnav--tabs .subnav__list{gap:var(--space-1);padding:var(--space-1);border:0;border-radius:0;background:transparent;}
+.subnav--tabs .subnav__list a{padding:var(--space-2) var(--space-4);border-radius:var(--radius-circle);font-size:var(--fs-body-1);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);color:var(--text-subtle);}
+.subnav--tabs .subnav__list a:hover{color:var(--text-default);}
+.subnav--tabs .subnav__list a.is-active{padding:var(--space-3) var(--space-4);border-radius:var(--radius-sm);background:var(--brand-lime);color:var(--text-default-inverse);font-weight:var(--fw-strong);}
