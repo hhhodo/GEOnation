@@ -677,7 +677,7 @@ strong,b{font-weight:var(--fw-strong);}
 .merit-col .merit__text{font-size:var(--fs-body-2);}
 
 /* ---------- 글로벌 네트워크 ---------- */
-.net-fig{aspect-ratio:2/1;margin-bottom:var(--space-9);border-radius:var(--radius-lg);overflow:hidden;background:var(--color-primary-050);}
+.net-fig{aspect-ratio:1600/740;margin-bottom:var(--space-9);border-radius:var(--radius-lg);overflow:hidden;background:var(--color-primary-050);}
 .net-fig img{width:100%;height:100%;object-fit:cover;}
 .site__title{margin-bottom:var(--space-4);font-size:var(--fs-h3);font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
 
