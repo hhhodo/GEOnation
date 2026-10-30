@@ -630,10 +630,10 @@ strong,b{font-weight:var(--fw-strong);}
 /* ---------- 경영이념: 배경 고정 · 오른쪽 내용이 스크롤 단계마다 교체 ---------- */
 .phil.grow{height:600vh;background:var(--ink-night);color:var(--text-default-inverse);}
 .phil__head{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:var(--ph,0);}
-.phil__head .container{position:relative;padding-top:var(--space-10);}
+.phil__head .container{position:relative;padding-top:var(--space-12);}
 .phil__head .sec__label{color:var(--brand-green);}
 .phil .grow__statement{opacity:calc(1 - var(--ph,0));}
-.phil__panel{position:absolute;z-index:2;overflow:hidden;inset:0 0 0 50%;transform:translateX(calc((1 - var(--ph,0)) * 100%));background:var(--color-canvas);color:var(--text-default);}
+.phil__panel{position:absolute;z-index:2;overflow:hidden;inset:var(--space-9) 0 0 50%;transform:translateX(calc((1 - var(--ph,0)) * 100%));background:var(--color-canvas);color:var(--text-default);}
 .phil__list{list-style:none;height:100%;transform:translateY(calc(var(--i,0) * -100%));transition:transform .9s cubic-bezier(.65,0,.35,1);}
 .phil__item{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;
   padding-left:calc(var(--space-12) + var(--space-6));padding-right:var(--space-9);}
@@ -690,7 +690,7 @@ strong,b{font-weight:var(--fw-strong);}
 
 @media (min-width:1921px){ .merit-col{margin-right:calc(var(--space-11) * -1);} }
 @media (max-width:1024px){
-  .phil__head .container{padding-top:var(--space-9);}
+  .phil__head .container{padding-top:calc(var(--space-9) + var(--space-5));}
   .phil__panel{inset:50% 0 0 0;transform:translateY(calc((1 - var(--ph,0)) * 100%));}
   .phil__item{padding:var(--space-5) var(--gutter);}
   .phil__img{display:none;}

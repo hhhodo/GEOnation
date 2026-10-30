@@ -160,9 +160,8 @@
   var calcClear = function (sec) {                            // 이미지가 화면을 가득 채운 동안만 GNB 투명 (흰 패널이 나오면 해제)
     var m = sec.querySelector('[data-grow-media]');
     var e = parseFloat(m.style.getPropertyValue('--e')) || 0;
-    var ph = parseFloat(sec.style.getPropertyValue('--ph')) || 0;
     var r = sec.getBoundingClientRect();
-    sec._clear = e > 0.98 && r.top <= 1 && r.bottom > (header ? header.offsetHeight : 0) && ph < 0.02;
+    sec._clear = e > 0.98 && r.top <= 1 && r.bottom > (header ? header.offsetHeight : 0);
     syncHeader();
   };
   var syncHeader = function () { if (header) header.classList.toggle('is-clear', growSecs.some(function (s) { return s._clear; })); };
