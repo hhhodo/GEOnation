@@ -23,7 +23,7 @@ Keywords      — wide — 6-6
 Applications  — wide — 4-4-4
 Equipment     — wide — rows 5-7
 Analysis      — wide — 4-4-4
-CTA           — full-bleed — centered
+CTA           — full-bleed — centered + 6-6 link tiles
 Footer        — wide — logo | company facts
 -->
 <!doctype html>
@@ -76,18 +76,18 @@ Footer        — wide — logo | company facts
       <h2 class="sec__title">사업영역</h2>
     </div>
     <div class="grid">
-      <div class="s4"><article class="pcard ">
-        <div class="pcard__img "><img src="assets/img/biz-metal.png" alt="금속과 플라스틱 접합" loading="lazy"></div>
-        <div class="pcard__body"><h3 class="pcard__title ">금속과 플라스틱 접합사업</h3><p class="pcard__text ">지오네이션의 모리오카연구소와 토아덴카와의 공동연구개발을 통해 금속과 수지의 접합기술 및 양산기술 확보를 실현</p></div>
-      </article></div>
-      <div class="s4"><article class="pcard ">
-        <div class="pcard__img "><img src="assets/img/biz-auto.png" alt="자동차 부품" loading="lazy"></div>
-        <div class="pcard__body"><h3 class="pcard__title ">자동차 부품사업</h3><p class="pcard__text ">자동차 경량화, 방수, 강성 등 자동차 부품별 고객 니즈에 맞춘 최적화된 접합 솔루션 제공</p></div>
-      </article></div>
-      <div class="s4"><article class="pcard ">
-        <div class="pcard__img "><img src="assets/img/biz-electronic.png" alt="전기·전자 부품" loading="lazy"></div>
-        <div class="pcard__body"><h3 class="pcard__title ">전기 · 전자 부품사업</h3><p class="pcard__text ">금속 소재별 최적화된 접합 기술을 보유하고 있으며, 고객의 요구에 맞춰 표면처리 및 사출 · 접합까지 One Stop 진행 가능</p></div>
-      </article></div>
+      <a class="s4 tile" href="#tri">
+        <img src="assets/img/biz-metal.png" alt="금속과 플라스틱 접합" loading="lazy">
+        <span class="tile__body"><span class="tile__title">금속과 플라스틱 접합사업</span><span class="tile__text">지오네이션의 모리오카연구소와 토아덴카와의 공동연구개발을 통해 금속과 수지의 접합기술 및 양산기술 확보를 실현</span></span>
+      </a>
+      <a class="s4 tile" href="#tri">
+        <img src="assets/img/biz-auto.png" alt="자동차 부품" loading="lazy">
+        <span class="tile__body"><span class="tile__title">자동차 부품사업</span><span class="tile__text">자동차 경량화, 방수, 강성 등 자동차 부품별 고객 니즈에 맞춘 최적화된 접합 솔루션 제공</span></span>
+      </a>
+      <a class="s4 tile" href="#tri">
+        <img src="assets/img/biz-electronic.png" alt="전기·전자 부품" loading="lazy">
+        <span class="tile__body"><span class="tile__title">전기 · 전자 부품사업</span><span class="tile__text">금속 소재별 최적화된 접합 기술을 보유하고 있으며, 고객의 요구에 맞춰 표면처리 및 사출 · 접합까지 One Stop 진행 가능</span></span>
+      </a>
     </div>
   </div>
 </section>
@@ -269,8 +269,9 @@ Footer        — wide — logo | company facts
   <img class="band__bg" src="assets/img/cover.jpg" alt="" loading="lazy">
   <div class="container container--wide">
     <div class="band__inner">
+      
       <h2 class="band__title">접합 기술 적용을 검토 중이신가요?</h2>
-      <a class="btn-outline" href="contact.html">문의하기</a>
+      <div class="grid band__tiles"><a class="s6 band__tile" href="contact.html"><span class="band__tile-name">문의하기</span><span class="band__tile-desc">사업 · 기술 제휴 문의</span></a><a class="s6 band__tile" href="products.html"><span class="band__tile-name">제품·서비스 소개</span><span class="band__tile-desc">GCM 콜드플레이트 모듈</span></a></div>
     </div>
   </div>
 </section>

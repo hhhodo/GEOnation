@@ -16,16 +16,19 @@ spacing=space-10 (sections) / space-section
 <!--
 Layout Declaration — company.html
 Hero          — full-bleed bg, wide inner — 8 (title + lead)
+Mission       — full-bleed — centered statement
 Greeting      — wide — 4-8
 Philosophy    — wide — 7-5
 Overview      — wide — 4-8
 Organization  — wide — 3-3-3-3
 Operations    — wide — 4-4-4
 History       — wide — header + rows 5-7
+Merit         — wide — 6-6
 Certificates  — wide — 3-3-3-3
-Network       — wide — 4-4-4
+Network       — full-bleed dark, wide inner — KPI 3-3-3-3 + sites 4-4-4
 Customers     — full-bleed — centered heading + 2 opposite logo marquees
 Location      — wide — 8-4
+CTA           — full-bleed — centered + 6-6 link tiles
 Footer        — wide — logo | company facts
 -->
 <!doctype html>
@@ -66,6 +69,18 @@ Footer        — wide — logo | company facts
         <h1 class="page-hero__title">회사 소개</h1>
         <p class="page-hero__lead">최고의 제품과 최고의 기술을 전세계에 제공하는 기업, <strong>지오네이션 주식회사</strong></p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== STATEMENT ============================== -->
+<section class="band band--statement">
+  <img class="band__bg" src="assets/img/hero.jpg" alt="" loading="lazy">
+  <div class="container container--wide">
+    <div class="band__inner">
+      <p class="band__label">Our Mission</p>
+      <h2 class="band__title">Goods · Engineering · Offer<br>최고의 제품과 최고의 기술을 전세계에 제공합니다</h2>
+      
     </div>
   </div>
 </section>
@@ -235,6 +250,24 @@ Footer        — wide — logo | company facts
   </div>
 </section>
 
+<!-- ============================== MERIT ============================== -->
+<section class="sec" id="merit">
+  <div class="container container--wide">
+    <div class="grid grid--top">
+      <div class="s6">
+      <p class="sec__label">Merit</p>
+      <h2 class="sec__title">신뢰로 완성하는<br>기술력</h2>
+      </div>
+      <div class="s6">
+        <div class="merit"><p class="merit__word">Certified</p><p class="merit__text">IATF 16949 · ISO 9001 · ISO 14001 인증 보유</p></div>
+        <div class="merit"><p class="merit__word">Patented</p><p class="merit__text">금속-수지 접합 특허 및 TOA 상표등록 (TRI SYSTEM)</p></div>
+        <div class="merit"><p class="merit__word">Global</p><p class="merit__text">한국 · 일본 · 베트남 · 중국, 4개국 생산·연구 거점</p></div>
+        <div class="merit"><p class="merit__word">Zero-Leak</p><p class="merit__text">출하 LEAK 검사 100% 전수검사</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================== CERTIFICATES ============================== -->
 <section class="sec" id="certificates">
   <div class="container container--wide">
@@ -303,13 +336,14 @@ Footer        — wide — logo | company facts
 </section>
 
 <!-- ============================== NETWORK ============================== -->
-<section class="sec sec--tint" id="network">
+<section class="sec sec--dark" id="network">
   <div class="container container--wide">
     <div class="sec__head">
       <p class="sec__label">Global Network</p>
       <h2 class="sec__title">글로벌 네트워크</h2>
       <p class="sec__lead">한국 · 일본 · 베트남 · 중국, 4개국을 잇는 생산·연구 거점입니다.</p>
     </div>
+    <div class="grid grid--top grid--rows kpi-row"><div class="s3 kpi"><p class="kpi__num">4</p><p class="kpi__name">개국</p><p class="kpi__label">한국 · 일본 · 베트남 · 중국</p></div><div class="s3 kpi"><p class="kpi__num">6</p><p class="kpi__name">생산·연구 거점</p><p class="kpi__label">공장 · 연구소 · 사무소</p></div><div class="s3 kpi"><p class="kpi__num">2014</p><p class="kpi__name">설립</p><p class="kpi__label">6월 19일</p></div><div class="s3 kpi"><p class="kpi__num">500,000</p><p class="kpi__name">월 생산능력</p><p class="kpi__label">UNITS / MONTH</p></div></div>
     <div class="grid grid--top grid--rows">
       <div class="s4"><article class="pcard pcard--flat">
         <div class="pcard__img "><img src="assets/img/pages/site-korea.jpg" alt="KOREA" loading="lazy"></div>
@@ -382,6 +416,18 @@ Footer        — wide — logo | company facts
       <ul class="checks checks--lg"><li>지하철 인천 2호선 <strong>검단오류(검단산업단지)역</strong> 하차 후 2번 출구</li><li>간선 <strong>66번</strong>(검단오류역) 또는 <strong>79번</strong> 버스 승차 후 검단지식산업센터 정류장 하차</li><li>도보 약 500m 이동 (약 7분)</li></ul>
       <p class="mt-6"><a class="btn-line" href="https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EA%B2%80%EB%8B%A8%EA%B5%AC%20%EB%A7%88%EC%A4%914%EB%A1%9C%209" target="_blank" rel="noopener">네이버 지도에서 보기</a></p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CTA ============================== -->
+<section class="band">
+  <img class="band__bg" src="assets/img/korea.jpg" alt="" loading="lazy">
+  <div class="container container--wide">
+    <div class="band__inner">
+      
+      <h2 class="band__title">지오네이션과 함께할 프로젝트가 있으신가요?</h2>
+      <div class="grid band__tiles"><a class="s6 band__tile" href="contact.html"><span class="band__tile-name">문의하기</span><span class="band__tile-desc">제품 · 기술 · 사업 제휴 문의</span></a><a class="s6 band__tile" href="products.html"><span class="band__tile-name">제품·서비스 소개</span><span class="band__tile-desc">GCM 콜드플레이트 모듈</span></a></div>
     </div>
   </div>
 </section>

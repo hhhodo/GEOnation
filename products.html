@@ -16,14 +16,16 @@ spacing=space-10 (sections) / space-section
 <!--
 Layout Declaration — products.html
 Hero          — full-bleed bg, wide inner — 8 (title + lead)
+KPI           — wide — 3-3-3-3
 GCM           — wide — 5-7
+Statement     — full-bleed — centered slogan
 Core tech     — wide — 7-5
 Structure     — wide — 4-8
 Advantage     — wide — 5-7
 Performance   — wide — 6-6
 Production    — wide — header + 3-3-3-3
 Q&A           — wide — 7-5
-CTA           — full-bleed — centered
+CTA           — full-bleed — centered + 6-6 link tiles
 Footer        — wide — logo | company facts
 -->
 <!doctype html>
@@ -68,6 +70,13 @@ Footer        — wide — logo | company facts
   </div>
 </section>
 
+<!-- ============================== KPI ============================== -->
+<section class="sec" id="kpi">
+  <div class="container container--wide">
+    <div class="grid grid--top grid--rows"><div class="s3 kpi"><p class="kpi__num">1,000W+</p><p class="kpi__name">대응 TDP</p><p class="kpi__label">AI GPU / CPU</p></div><div class="s3 kpi"><p class="kpi__num">50~55%</p><p class="kpi__name">경량화</p><p class="kpi__label">WEIGHT DOWN</p></div><div class="s3 kpi"><p class="kpi__num">500,000</p><p class="kpi__name">월 생산능력</p><p class="kpi__label">UNITS / MONTH</p></div><div class="s3 kpi"><p class="kpi__num">100%</p><p class="kpi__name">LEAK 검사</p><p class="kpi__label">INSPECTED</p></div></div>
+  </div>
+</section>
+
 <!-- ============================== GCM ============================== -->
 <section class="sec" id="gcm">
   <div class="container container--wide">
@@ -84,6 +93,18 @@ Footer        — wide — logo | company facts
         <figure class="fig fig--white"><img src="assets/img/pages/gcm-models.jpg" alt="GCM 모델 3종" loading="lazy"></figure>
         <dl class="dl "><div class="dl__row"><dt>모델 1 · 2</dt><dd>Ni도금 적용 — AI GPU/CPU 1,000W+ 대응</dd></div><div class="dl__row"><dt>모델 3</dt><dd>Ni도금 적용 — AI GPU/CPU 400W+ 대응</dd></div></dl>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== STATEMENT ============================== -->
+<section class="band band--statement">
+  <img class="band__bg" src="assets/img/cover.jpg" alt="" loading="lazy">
+  <div class="container container--wide">
+    <div class="band__inner">
+      <p class="band__label">GCM</p>
+      <h2 class="band__title">BEYOND METAL!<br>HALF THE WEIGHT!<br>ZERO LEAKS!</h2>
+      
     </div>
   </div>
 </section>
@@ -231,8 +252,9 @@ Footer        — wide — logo | company facts
   <img class="band__bg" src="assets/img/thermal.jpg" alt="" loading="lazy">
   <div class="container container--wide">
     <div class="band__inner">
+      
       <h2 class="band__title">GCM에 대해 궁금한 점이 있으신가요?</h2>
-      <a class="btn-outline" href="contact.html">문의하기</a>
+      <div class="grid band__tiles"><a class="s6 band__tile" href="contact.html"><span class="band__tile-name">문의하기</span><span class="band__tile-desc">제품 · 기술 문의</span></a><a class="s6 band__tile" href="business.html"><span class="band__tile-name">사업 분야</span><span class="band__tile-desc">TRI SYSTEM 접합기술</span></a></div>
     </div>
   </div>
 </section>
