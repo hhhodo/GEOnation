@@ -754,16 +754,16 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 /* =========================================================
    history.html — Figma 49:4993 (연혁): 왼쪽 고정 · 오른쪽 연도가 한 칸씩 스티키
    ========================================================= */
-.hist-intro{padding-bottom:var(--space-9);}
+.hist-intro{padding-bottom:0;}
 .hist-p{position:relative;height:calc(100vh * (var(--n) * .8 + 1));}
-.hist-p__stage{position:sticky;top:0;height:100vh;overflow:hidden;padding-top:var(--space-9);background:var(--color-canvas);}
+.hist-p__stage{position:sticky;top:0;height:100vh;overflow:hidden;padding-top:var(--space-11);background:var(--color-canvas);}
 .hist-p__inner,.hist-p__grid{height:100%;}
-.hist-p__grid{align-items:center;}
+.hist-p__grid{align-items:start;}
 .hist-p__era{font-size:var(--fs-h1);font-weight:var(--fw-strong);line-height:var(--lh-h1);letter-spacing:var(--display-tracking);}
 .hist-p__img{margin-top:var(--space-6);aspect-ratio:517/327;border-radius:var(--radius-md);overflow:hidden;background:var(--color-primary-050);}
 .hist-p__img img{width:100%;height:100%;object-fit:cover;}
 .hist-p__view{position:relative;align-self:stretch;overflow:hidden;
-  -webkit-mask-image:linear-gradient(transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(transparent,#000 14%,#000 86%,transparent);}
+  -webkit-mask-image:linear-gradient(#000 88%,transparent);mask-image:linear-gradient(#000 88%,transparent);}
 .hist-p__track{position:absolute;left:0;right:0;top:0;list-style:none;padding-left:var(--space-11);
   transform:translateY(var(--ty,0px));transition:transform .9s cubic-bezier(.65,0,.35,1);}
 .hist-p__track::before{content:"";position:absolute;left:calc(var(--space-11) - var(--space-7) + var(--space-1));top:var(--space-6);bottom:0;width:1px;background:var(--color-primary-100);}

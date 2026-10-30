@@ -299,10 +299,7 @@
     var cur = -1;
     var place = function () {
       if (cur < 0) return;
-      var el = items[cur];
-      var pb = parseFloat(getComputedStyle(el).paddingBottom) || 0;
-      var center = el.offsetTop + (el.offsetHeight - pb) / 2;
-      track.style.setProperty('--ty', (view.clientHeight / 2 - center) + 'px');
+      track.style.setProperty('--ty', (-items[cur].offsetTop) + 'px');   // 현재 연도를 왼쪽 제목과 같은 높이에 맞춤
     };
     var step = function () {
       var r = sec.getBoundingClientRect();
