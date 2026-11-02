@@ -258,6 +258,7 @@
     };
     var side = function (n) { return n === 0 ? 'left' : 'right'; };
     tag('.subnav__list', 'up');
+    tag('.gcm__info', 'up'); tag('.pfig', 'up', 80); tag('.core__head', 'up'); tag('.core3__item', 'up', 120); tag('.struct__info', 'up'); tag('#advantage .sec__head--center', 'up'); tag('#advantage .tbl-wrap', 'up'); tag('.perf > *', 'up', 0); tag('#production .container > *:not(.prod)', 'up', 60); tag('.prod__cap, .prod__card', 'up', 110); tag('#qna .container > *', 'up', 80);
     tag('.loc__info', 'up'); tag('.loc__map', 'up', 0);
     tag('.hist-intro .container', 'up');
     tag('#greeting .sec__side', 'left');
@@ -327,6 +328,43 @@
     window.addEventListener('resize', measure);
     window.addEventListener('load', measure);
     measure();
+  });
+
+  /* ---------- 제품 소개: 숫자 카운팅 ---------- */
+  [].slice.call(document.querySelectorAll('.pstats')).forEach(function (box) {
+    var els = [].slice.call(box.querySelectorAll('[data-count]'));
+    els.forEach(function (el) {
+      el._parts = el.textContent.split(/(\d[\d,]*)/).map(function (p, i) {
+        return i % 2 === 1 ? { n: parseInt(p.replace(/,/g, ''), 10), comma: p.indexOf(',') > -1 } : p;
+      });
+      el._final = el.textContent;
+      el.style.minWidth = el.offsetWidth + 'px';
+      if (!reduce) render(el, 0);
+    });
+    var run = function () {
+      var start = performance.now(), dur = 2200;
+      (function step(now) {
+        var t = clamp((now - start) / dur, 0, 1), e = 1 - Math.pow(1 - t, 3);
+        els.forEach(function (el) { render(el, e); });
+        if (t < 1) requestAnimationFrame(step);
+      })(start);
+    };
+    if (reduce || !('IntersectionObserver' in window)) { els.forEach(function (el) { render(el, 1); }); return; }
+    var io3 = new IntersectionObserver(function (en) {
+      if (en[0].isIntersecting) { io3.disconnect(); run(); }
+    }, { threshold: 0.6 });
+    io3.observe(box);
+  });
+
+  /* ---------- Q&A 펼치고 닫기 ---------- */
+  [].slice.call(document.querySelectorAll('.faq')).forEach(function (faq) {
+    faq.addEventListener('click', function (e) {
+      var q = e.target.closest('.faq__q');
+      if (!q) return;
+      var item = q.parentNode, open = !item.classList.contains('is-open');
+      item.classList.toggle('is-open', open);
+      q.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
   });
 
   /* ---------- 숫자 카운트업 ---------- */
