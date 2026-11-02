@@ -294,7 +294,7 @@ strong,b{font-weight:var(--fw-strong);}
 .page-hero__slogan{align-self:end;font-size:var(--fs-h3);font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--display-tracking);font-style:italic;}
 
 /* 12컬럼 span 유틸 — 허용 조합: 6-6 · 5-7 · 7-5 · 4-8 · 8-4 · 4-4-4 · 3-3-3-3 */
-.s3{grid-column:span 3;} .s4{grid-column:span 4;} .s5{grid-column:span 5;}
+.s2{grid-column:span 2;} .s3{grid-column:span 3;} .s4{grid-column:span 4;} .s5{grid-column:span 5;}
 .s6{grid-column:span 6;} .s7{grid-column:span 7;} .s8{grid-column:span 8;}
 .grid--top{align-items:start;}
 .grid--rows{row-gap:var(--space-8);}
@@ -302,7 +302,7 @@ strong,b{font-weight:var(--fw-strong);}
 /* section */
 .sec{padding-block:var(--space-10);}
 .sec--tint{background:var(--color-primary-050);}
-.sec__label{font-size:var(--fs-body-1);font-weight:var(--fw-strong);line-height:var(--lh-label);color:var(--brand-green-dark);}
+.sec__label{font-size:var(--fs-body-1);font-weight:var(--fw-strong);line-height:var(--lh-label);color:var(--brand-lime);}
 .sec__title{font-size:var(--fs-title);font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
 .sec__lead{margin-top:var(--space-5);font-size:var(--fs-body-1);line-height:var(--lh-body);color:var(--text-subtle);}
 .sec__head{margin-bottom:var(--space-9);}
@@ -423,7 +423,7 @@ strong,b{font-weight:var(--fw-strong);}
 
 /* dark section */
 .sec--dark{background:var(--ink-night);color:var(--text-default-inverse);}
-.sec--dark .sec__label{color:var(--brand-green);}
+
 .sec--dark .sec__lead,.sec--dark .kpi__label,.sec--dark .dl__row dt{color:var(--text-subtle-inverse);}
 .sec--dark .dl,.sec--dark .dl__row{border-color:var(--line-faint);}
 .sec--dark .pcard__title{color:var(--text-default-inverse);}
@@ -446,7 +446,7 @@ strong,b{font-weight:var(--fw-strong);}
 
 /* cards */
 .pcard{display:flex;flex-direction:column;border:var(--border-1);border-radius:var(--radius-md);overflow:hidden;background:var(--color-canvas);}
-.s3 > .pcard,.s4 > .pcard{height:100%;}
+.s2 > .pcard,.s3 > .pcard,.s4 > .pcard{height:100%;}
 .pcard__img{aspect-ratio:4/3;background:var(--color-primary-050);overflow:hidden;}
 .pcard__img img{width:100%;height:100%;object-fit:cover;}
 .pcard__img--doc{aspect-ratio:3/4;}
@@ -565,6 +565,7 @@ strong,b{font-weight:var(--fw-strong);}
 .dl__row dt small{color:var(--text-subtle);}
 
 @media (max-width:1024px){
+  .s2{grid-column:span 4;}
   .s3,.s4{grid-column:span 6;}
   .s5,.s6,.s7,.s8{grid-column:1 / -1;}
   .sec__side{position:static;}
@@ -572,7 +573,7 @@ strong,b{font-weight:var(--fw-strong);}
   .grid--rows{row-gap:var(--space-7);}
 }
 @media (max-width:768px){
-  .s3,.s4{grid-column:1 / -1;}
+  .s2,.s3,.s4{grid-column:1 / -1;}
   .band__tile{padding:var(--space-6);}
   .band--statement .band__title{font-size:var(--fs-h0);}
   .page-hero__title{font-size:var(--fs-h0);}
@@ -631,7 +632,7 @@ strong,b{font-weight:var(--fw-strong);}
 .phil.grow{height:600vh;background:var(--ink-night);color:var(--text-default-inverse);}
 .phil__head{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:var(--ph,0);}
 .phil__head .container{position:relative;padding-top:var(--space-12);}
-.phil__head .sec__label{color:var(--brand-green);}
+
 .phil .grow__statement{opacity:calc(1 - var(--ph,0));}
 .phil__panel{position:absolute;z-index:2;overflow:hidden;inset:var(--space-9) 0 0 50%;transform:translateX(calc((1 - var(--ph,0)) * 100%));background:var(--color-canvas);color:var(--text-default);}
 .phil__list{list-style:none;height:100%;transform:translateY(calc(var(--i,0) * -100%));transition:transform .9s cubic-bezier(.65,0,.35,1);}
@@ -797,3 +798,10 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 .subnav--tabs .subnav__list a{padding:var(--space-2) var(--space-4);border-radius:var(--radius-circle);font-size:var(--fs-body-1);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);color:var(--text-subtle);}
 .subnav--tabs .subnav__list a:hover{color:var(--text-default);}
 .subnav--tabs .subnav__list a.is-active{padding:var(--space-3) var(--space-4);border-radius:var(--radius-sm);background:var(--brand-lime);color:var(--text-default-inverse);font-weight:var(--fw-strong);}
+
+/* 상세 메뉴(드롭다운): 18px 레귤러 · 흰 박스 확대 */
+.main-nav__sub{padding:var(--space-3);border-radius:var(--radius-md);}
+.main-nav .main-nav__sub a{padding:var(--space-3) var(--space-6);font-size:var(--fs-body-2);font-weight:var(--fw-base);line-height:var(--lh-body);}
+/* 인증서 6열 카드 */
+.s2 .pcard__body{padding:var(--space-4);}
+.s2 .pcard__title--sm{font-size:var(--fs-body-2);line-height:var(--lh-body);}
