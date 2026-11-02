@@ -1004,8 +1004,8 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 .sv-kw{background:var(--brand-lime);color:var(--color-canvas);}
 .sv-kw .sec__label,.sv-kw .sec__title{color:var(--color-canvas);}
 .sv-kw .sec__head{margin-bottom:60px;}
-.sv-kw__chips{max-width:780px;}
-.sv-kw .chip{border-color:var(--color-primary-050);color:var(--color-canvas);font-size:var(--fs-body-2);}
+.sv-kw__chips{gap:var(--space-5) var(--space-8);}
+.sv-kw .chip{padding:0;border:0;color:var(--color-canvas);font-size:var(--fs-h1);font-weight:var(--fw-strong);line-height:var(--lh-h1);letter-spacing:var(--tracking-kr);}
 .sv-apps{padding-top:var(--space-13);}
 .sv-grid5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:60px 20px;align-items:stretch;}
 .sv-app{display:flex;flex-direction:column;height:100%;border:var(--border-1);border-radius:var(--radius-md);overflow:hidden;background:var(--color-canvas);}
