@@ -809,7 +809,7 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 /* =========================================================
    location.html — Figma 58:3 (오시는 길): 5-7 · 왼쪽 정보 / 오른쪽 지도 임베드 (923:595)
    ========================================================= */
-.loc{align-items:start;}
+.loc{align-items:stretch;}
 .loc__info{display:flex;flex-direction:column;gap:20px;}
 .loc__dl{padding-right:var(--space-7);}
 .loc__row{display:grid;grid-template-columns:120px 1fr;column-gap:var(--space-5);padding-block:20px;border-bottom:var(--border-1);}
@@ -821,7 +821,7 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 .loc__list li{position:relative;padding-left:var(--space-5);font-size:var(--fs-body-1);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
 .loc__list li + li{margin-top:var(--space-2);}
 .loc__list li::before{content:"";position:absolute;left:0;top:var(--space-2);width:6px;aspect-ratio:1;border-radius:var(--radius-circle);background:var(--brand-lime);}
-.loc__map{aspect-ratio:923/595;border:var(--border-1);border-radius:var(--radius-md);overflow:hidden;background:var(--color-primary-050);}
+.loc__map{height:100%;min-height:var(--space-13);border:var(--border-1);border-radius:var(--radius-md);overflow:hidden;background:var(--color-primary-050);}
 .loc__map iframe{display:block;width:100%;height:100%;border:0;}
-@media (max-width:1024px){.loc__dl{padding-right:0;}}
+@media (max-width:1024px){.loc__dl{padding-right:0;}.loc__map{height:auto;aspect-ratio:3/2;}}
 @media (max-width:768px){.loc__row{grid-template-columns:1fr;row-gap:var(--space-1);}}
