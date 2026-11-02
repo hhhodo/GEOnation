@@ -964,7 +964,7 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 .sv-fig__img{background:var(--color-canvas);}
 .sv-fig__img img{display:block;width:100%;height:100%;object-fit:contain;}
 .sv-fig__cap{padding:var(--space-4) var(--space-5);font-size:var(--fs-body-2);line-height:var(--lh-body);letter-spacing:var(--tracking-kr);color:var(--text-subtle);background:var(--color-canvas);}
-.sv-fig--tint .sv-fig__img{background:#f0efeb;}
+.sv-fig--tint .sv-fig__img,.sv-fig--tri .sv-fig__img{background:#f0efeb;}
 .sv-fig--tint .sv-fig__img img{object-fit:contain;}
 .sv-feat{display:flex;flex-direction:column;gap:var(--space-10);margin-top:0;}
 .sv-feat__head{padding-bottom:60px;}
@@ -1004,12 +1004,12 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 .sv-kw{background:var(--brand-lime);color:var(--color-canvas);}
 .sv-kw .sec__label,.sv-kw .sec__title{color:var(--color-canvas);}
 .sv-kw .sec__head{margin-bottom:60px;}
-.sv-kw__chips{gap:var(--space-5) var(--space-8);}
-.sv-kw .chip{padding:0;border:0;color:var(--color-canvas);font-size:var(--fs-h1);font-weight:var(--fw-strong);line-height:var(--lh-h1);letter-spacing:var(--tracking-kr);}
+.sv-kw__chips{justify-content:center;gap:var(--space-5) var(--space-8);}
+.sv-kw .chip{padding:0;border:0;color:var(--color-canvas);font-size:var(--fs-h2);font-weight:var(--fw-base);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
 .sv-apps{padding-top:var(--space-13);}
 .sv-grid5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:60px 20px;align-items:stretch;}
 .sv-app{display:flex;flex-direction:column;height:100%;border:var(--border-1);border-radius:var(--radius-md);overflow:hidden;background:var(--color-canvas);}
-.sv-app__img{height:114px;background:var(--color-primary-050);overflow:hidden;}
+.sv-app__img{height:114px;background:var(--color-canvas);overflow:hidden;}
 .sv-app__img img{display:block;width:100%;height:100%;object-fit:contain;}
 .sv-app__body{display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-6);}
 .sv-app__title{font-size:var(--fs-body-1);font-weight:var(--fw-strong);line-height:var(--lh-body);letter-spacing:var(--tracking-kr);}
