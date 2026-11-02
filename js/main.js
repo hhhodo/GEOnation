@@ -10,6 +10,22 @@
   onScrollHeader();
   window.addEventListener('scroll', onScrollHeader, { passive: true });
 
+
+  /* ---------- 모바일 메뉴 (햄버거) ---------- */
+  var navBtn = header && header.querySelector('.nav-toggle');
+  if (navBtn) {
+    var setMenu = function (open) {
+      header.classList.toggle('is-menu', open);
+      navBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navBtn.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+      document.documentElement.style.overflow = open ? 'hidden' : '';
+    };
+    navBtn.addEventListener('click', function () { setMenu(!header.classList.contains('is-menu')); });
+    header.querySelectorAll('.main-nav a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 1024) setMenu(false); });
+  }
+
   /* ---------- hero slider (진행바가 시간에 따라 흰색으로 채워지면 다음 슬라이드) ---------- */
   var hero = document.querySelector('[data-hero]');
   if (hero) {
