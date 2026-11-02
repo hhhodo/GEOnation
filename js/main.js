@@ -432,21 +432,23 @@
     window.addEventListener('resize', spy);
   }
 
-  /* ---------- 키워드 구간: 마우스를 따라 그라데이션이 번지는 배경 ---------- */
+  /* ---------- 키워드 구간: 마우스 커서를 그린 점으로 ---------- */
   var kw = document.querySelector('.sv-kw');
-  if (kw && !reduce) {
-    var kx = 50, ky = 50, tx = 50, ty = 50, raf = 0;
+  if (kw && !reduce && window.matchMedia('(hover: hover)').matches) {
+    var dot = document.createElement('i');
+    dot.className = 'sv-kw__dot';
+    dot.setAttribute('aria-hidden', 'true');
+    kw.appendChild(dot);
+    var dx = 0, dy = 0, tx = 0, ty = 0, raf = 0;
     var tick = function () {
-      kx += (tx - kx) * 0.12; ky += (ty - ky) * 0.12;
-      kw.style.setProperty('--mx', kx.toFixed(2) + '%');
-      kw.style.setProperty('--my', ky.toFixed(2) + '%');
-      raf = (Math.abs(tx - kx) + Math.abs(ty - ky) > 0.05 && kw.classList.contains('is-hover')) ? requestAnimationFrame(tick) : 0;
+      dx += (tx - dx) * 0.25; dy += (ty - dy) * 0.25;
+      dot.style.transform = 'translate(' + dx.toFixed(1) + 'px,' + dy.toFixed(1) + 'px) translate(-50%,-50%)';
+      raf = (Math.abs(tx - dx) + Math.abs(ty - dy) > 0.1 && kw.classList.contains('is-hover')) ? requestAnimationFrame(tick) : 0;
     };
     kw.addEventListener('mousemove', function (e) {
       var r = kw.getBoundingClientRect();
-      tx = (e.clientX - r.left) / r.width * 100;
-      ty = (e.clientY - r.top) / r.height * 100;
-      if (!kw.classList.contains('is-hover')) { kx = tx; ky = ty; kw.classList.add('is-hover'); }
+      tx = e.clientX - r.left; ty = e.clientY - r.top;
+      if (!kw.classList.contains('is-hover')) { dx = tx; dy = ty; kw.classList.add('is-hover'); }
       if (!raf) raf = requestAnimationFrame(tick);
     });
     kw.addEventListener('mouseleave', function () { kw.classList.remove('is-hover'); });
