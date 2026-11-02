@@ -37,8 +37,8 @@ Footer        — wide — logo | company facts
 <meta name="description" content="GCM(GEO Nation Cold Plate Module): 금속과 수지의 하이브리드 접합기술(K-TRI Cu, Over Molding)로 구현한 AI 서버 냉각용 콜드플레이트 솔루션.">
 <script>document.documentElement.classList.add("js")</script>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/styles.css?v=202611021335">
-<link rel="stylesheet" href="css/site.css?v=202611021335">
+<link rel="stylesheet" href="css/styles.css?v=202611021601">
+<link rel="stylesheet" href="css/site.css?v=202611021601">
 </head>
 <body data-solid data-fly-page>
 
@@ -166,12 +166,17 @@ Footer        — wide — logo | company facts
 <section class="sec" id="performance">
   <div class="container container--wide">
     <div class="perf">
-      <h2 class="perf__title">GCM의 적용분야와 냉각 퍼포먼스</h2>
-      <dl class="dl perf__dl"><div class="dl__row"><dt>대응 TDP<br><small>열설계 전력에 대응가능</small></dt><dd>GPU/CPU 400W ~ 1,000W 등의 고성능 프로세서에 적합</dd></div><div class="dl__row"><dt>적용분야</dt><dd>추론AI, 학습용AI GPU 서버, 데이터 센터, SSD, 게이밍PC</dd></div><div class="dl__row"><dt>구조적 우위성</dt><dd>열교환의 90% 이상을 담당하는 하부 동(Cu) 마이크로핀과 수지커버의 조합에 의하여 최적화된 열저항(Thermal Resistance)을 구현</dd></div></dl>
-      <figure class="pfig pfig--cfd"><img src="assets/img/pages/gcm-cfd.jpg" alt="GCM 열 유동 해석" loading="lazy"></figure>
-      <h2 class="perf__title perf__title--2">Full Copper Plate와 GCM 성능 비교</h2>
-      <div class="perf__tbl"><div class="tbl-wrap"><table class="tbl"><thead><tr><th scope="col">비교항목</th><th scope="col">Full Copper Cold Plate</th><th scope="col" class=is-key>GCM<small>(Copper + Plastic)</small></th></tr></thead><tbody><tr><th scope="row">전압 (V)</th><td>205</td><td class="is-key">205</td></tr><tr><th scope="row">출력전력 (W)</th><td>703</td><td class="is-key">703</td></tr><tr><th scope="row">Ambient 온도 (°C)</th><td>26.2</td><td class="is-key">25.8</td></tr><tr><th scope="row">CPU 온도 (°C)</th><td>50.6</td><td class="is-key">50.4</td></tr><tr><th scope="row">열저항</th><td>0.046</td><td class="is-key">0.046</td></tr></tbody></table></div></div>
-      <p class="perf__note">TEST 조건 기준 비교 결과</p>
+      <div class="perf__block">
+        <h2 class="perf__title">GCM의 적용분야와 냉각 퍼포먼스</h2>
+        <div class="perf__row">
+          <dl class="perf__dl"><div><dt>대응 TDP</dt><dd>GPU/CPU 400W ~ 1,000W 등의 고성능 프로세서에 적합</dd></div><div><dt>적용분야</dt><dd>추론AI, 학습용AI GPU 서버, 데이터 센터, SSD, 게이밍PC</dd></div><div><dt>구조적 우위성</dt><dd>열교환의 90% 이상을 담당하는 하부 동(Cu) 마이크로핀과 수지커버의 조합에 의하여 최적화된 열저항(Thermal Resistance)을 구현</dd></div></dl>
+          <figure class="pfig pfig--cfd"><img src="assets/img/pages/gcm-cfd.jpg" alt="GCM 열 유동 해석" loading="lazy"></figure>
+        </div>
+      </div>
+      <div class="perf__block">
+        <h2 class="perf__title">Full Copper Plate와 GCM 성능 비교</h2>
+        <div class="perf__tbl"><div class="tbl-wrap"><table class="tbl"><thead><tr><th scope="col">비교항목</th><th scope="col">Full Copper Cold Plate</th><th scope="col" class=is-key>GCM<small>(Copper + Plastic)</small></th></tr></thead><tbody><tr><th scope="row">전압 (V)</th><td>205</td><td class="is-key">205</td></tr><tr><th scope="row">출력전력 (W)</th><td>703</td><td class="is-key">703</td></tr><tr><th scope="row">Ambient 온도 (°C)</th><td>26.2</td><td class="is-key">25.8</td></tr><tr><th scope="row">CPU 온도 (°C)</th><td>50.6</td><td class="is-key">50.4</td></tr><tr><th scope="row">열저항</th><td>0.046</td><td class="is-key">0.046</td></tr></tbody></table></div></div>
+        <p class="perf__note">TEST 조건 기준 비교 결과</p>
     </div>
   </div>
 </section>
@@ -224,16 +229,6 @@ Footer        — wide — logo | company facts
         <button class="faq__q" type="button" aria-expanded="false"><span class="faq__mark">Q.</span><span class="faq__text">고수압 환경에서 파손의 위험은 없는지?</span><i class="faq__icon" aria-hidden="true"></i></button>
         <div class="faq__a"><div class="faq__body"><p>스크류 체결과 K-TRI Cu의 접합 밀폐 구조로, 요구되는 최대 동작 압력과 파괴 압력 사양을 넘는 내압 성능을 이미 입증했습니다.</p></div></div>
       </div>
-      <div class="faq__item">
-        <button class="faq__q" type="button" aria-expanded="false"><span class="faq__mark">Q.</span><span class="faq__text">내압 리크 시험은 어떻게 진행하나요?</span><i class="faq__icon" aria-hidden="true"></i></button>
-        <div class="faq__a"><div class="faq__body">
-          <ol class="faq__steps faq__steps--plain">
-            <li><span>가스 또는 냉각유체로 가압합니다.</span></li>
-            <li><span>최대 운용압력으로 5분간 가압한 뒤 누출 여부를 확인합니다.</span></li>
-            <li><span>운용압의 3배(최대 15Bar)를 2분간 가압한 뒤 누출 여부를 확인합니다.</span></li>
-          </ol>
-        </div></div>
-      </div>
     </div>
   </div>
 </section>
@@ -248,7 +243,7 @@ Footer        — wide — logo | company facts
     <div class="band__inner">
       <h2 class="band__title">지오네이션과 함께할 프로젝트가 있으신가요?</h2>
       <div class="band__links">
-        <a class="band__link band__link--a" href="services.html" data-state-link="a"><span>서비스 소개</span><i class="band__dot" aria-hidden="true"></i></a>
+        <a class="band__link band__link--a" href="services.html" data-state-link="a"><span>제품·서비스 소개</span><i class="band__dot" aria-hidden="true"></i></a>
         <a class="band__link band__link--b" href="contact.html" data-state-link="b"><span>문의하기</span><i class="band__dot" aria-hidden="true"></i></a>
       </div>
     </div>
@@ -277,6 +272,6 @@ Footer        — wide — logo | company facts
   </div>
 </footer>
 
-<script src="js/main.js?v=202611021335" defer></script>
+<script src="js/main.js?v=202611021601" defer></script>
 </body>
 </html>

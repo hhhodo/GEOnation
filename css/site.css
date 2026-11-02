@@ -840,7 +840,7 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 .pfig img{display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.03);}
 .pfig--models{aspect-ratio:945/468;}
 .pfig--struct{aspect-ratio:1059/540;}
-.pfig--cfd{aspect-ratio:788/394;margin-top:var(--space-6);}
+.pfig--cfd{aspect-ratio:770/394;}
 
 /* 숫자 4개 (카운팅 · 그리드 없이 균등 배치) */
 .pstats{display:flex;justify-content:space-around;align-items:flex-start;gap:var(--space-6);list-style:none;}
@@ -869,15 +869,24 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 /* 장점 표 */
 #advantage .sec__head--center{margin-bottom:var(--space-8);}
 
-/* 적용분야와 냉각 퍼포먼스 (가운데 한 줄) */
-.perf{max-width:788px;margin-inline:auto;}
+/* 적용분야와 냉각 퍼포먼스 */
+.perf{display:flex;flex-direction:column;gap:var(--space-10);}
 .perf__title{font-size:var(--fs-title);font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
-.perf__dl{margin-top:var(--space-6);}
-.perf__dl .dl__row{grid-template-columns:160px 1fr;}
-.perf__dl dt,.perf__dl dd{font-size:var(--fs-body-2);}
-.perf__dl dd{font-size:var(--fs-body-1);}
-.perf__title--2{margin-top:var(--space-9);}
-.perf__tbl{margin-top:var(--space-6);}
+.perf__row{display:flex;gap:60px;align-items:flex-start;padding-top:var(--space-6);}
+.perf__row > *{flex:1 1 0;min-width:1px;}
+.perf__dl > div{display:grid;grid-template-columns:160px 1fr;column-gap:var(--space-5);padding-block:var(--space-4);border-bottom:var(--border-1);}
+.perf__dl dt{font-size:var(--fs-body-1);line-height:var(--lh-body);letter-spacing:var(--tracking-kr);color:var(--text-subtle);}
+.perf__dl dd{font-size:var(--fs-body-1);line-height:var(--lh-body);letter-spacing:var(--tracking-kr);}
+.perf .pfig--cfd{margin-top:0;}
+.perf__tbl{padding-top:var(--space-6);}
+.perf__tbl .tbl thead th,.perf__tbl .tbl tbody th{background:var(--color-primary-050);}
+.perf__tbl .tbl thead .is-key{background:var(--brand-green-dark);}
+.perf__tbl .tbl{table-layout:fixed;font-size:var(--fs-body-1);letter-spacing:var(--tracking-kr);}
+.perf__tbl .tbl th,.perf__tbl .tbl td{padding-block:20px;}
+.perf__tbl .tbl thead th{padding-block:var(--space-4);}
+.perf__tbl .tbl th:first-child{width:244.59px;}
+.perf__tbl .tbl small{font-size:var(--fs-body-1);}
+.perf__dl > div:first-child dt{min-height:54px;}
 .perf__note{padding-top:var(--space-4);font-size:var(--fs-body-1);line-height:var(--lh-body);color:var(--text-subtle);}
 
 /* 양산성 */
@@ -923,7 +932,10 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
   .pstat{flex:1 1 40%;}
 }
 @media (max-width:768px){
-  .perf__dl .dl__row{grid-template-columns:1fr;}
+  .perf__row{flex-direction:column;gap:var(--space-5);}
+  .perf__row > *{flex:none;width:100%;}
+  .perf__dl > div{grid-template-columns:1fr;}
+  .perf__tbl .tbl th:first-child{width:auto;}
   .faq__body{padding-left:0;padding-right:0;}
   .faq__text{font-size:var(--fs-h3);}
   .pstat__num{font-size:var(--fs-display-sm);}
