@@ -258,6 +258,7 @@
     };
     var side = function (n) { return n === 0 ? 'left' : 'right'; };
     tag('.subnav__list', 'up');
+    tag('.loc__info', 'up'); tag('.loc__map', 'up', 0);
     tag('.hist-intro .container', 'up');
     tag('#greeting .sec__side', 'left');
     tag('#greeting .prose', 'up');

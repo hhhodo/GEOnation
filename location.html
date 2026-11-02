@@ -30,8 +30,8 @@ Footer        — wide — logo | company facts
 <meta name="description" content="지오네이션 오시는 길: 주소, 대표전화, 대중교통 안내.">
 <script>document.documentElement.classList.add("js")</script>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/styles.css?v=202611021218">
-<link rel="stylesheet" href="css/site.css?v=202611021218">
+<link rel="stylesheet" href="css/styles.css?v=202611021221">
+<link rel="stylesheet" href="css/site.css?v=202611021221">
 </head>
 <body data-solid data-fly-page>
 
@@ -69,22 +69,25 @@ Footer        — wide — logo | company facts
 <!-- ============================== LOCATION ============================== -->
 <section class="sec" id="location">
   <div class="container container--wide">
-    <div class="sec__head">
-      <p class="sec__label">Location</p>
-      <h2 class="sec__title">오시는 길</h2>
-    </div>
-    <div class="grid grid--top">
-      <div class="s8">
-      <figure class="fig fig--white"><img src="assets/img/pages/map.jpg" alt="지오네이션 오시는 길 지도" loading="lazy"></figure>
+    <div class="grid grid--top loc">
+      <div class="s5 loc__info">
+        <p class="sec__label">Location</p>
+        <h2 class="sec__title">오시는 길</h2>
+        <dl class="loc__dl">
+          <div class="loc__row"><dt>우편번호</dt><dd>23516</dd></div>
+          <div class="loc__row"><dt>주소</dt><dd>인천광역시 검단구 마중4로 9 지오네이션(주)</dd></div>
+          <div class="loc__row"><dt>대표전화</dt><dd><a href="tel:0328584283">032-858-4283</a></dd></div>
+          <div class="loc__row"><dt>FAX</dt><dd>032-858-4284</dd></div>
+        </dl>
+        <h3 class="loc__sub">대중교통 이용시</h3>
+        <ul class="loc__list">
+          <li>지하철 인천 2호선 검단오류(검단산업단지)역 하차 후 2번 출구</li>
+          <li>간선 66번(검단오류역) 또는 79번 버스 승차 후 검단지식산업센터 정류장 하차</li>
+          <li>도보 약 500m 이동 (약 7분)</li>
+        </ul>
       </div>
-      <div class="s4">
-      <div class="box box--fill box--full">
-      <h3 class="box__title">찾아오시는 길</h3>
-      <dl class="dl dl--sm"><div class="dl__row"><dt>우편번호</dt><dd>23516</dd></div><div class="dl__row"><dt>주소</dt><dd>인천광역시 검단구 마중4로 9 지오네이션(주)</dd></div><div class="dl__row"><dt>대표전화</dt><dd><a href="tel:0328584283">032-858-4283</a></dd></div><div class="dl__row"><dt>FAX</dt><dd>032-858-4284</dd></div></dl>
-      <h3 class="box__title mt-6">대중교통 이용시</h3>
-      <ul class="checks "><li>지하철 인천 2호선 <strong>검단오류(검단산업단지)역</strong> 하차 후 2번 출구</li><li>간선 <strong>66번</strong>(검단오류역) 또는 <strong>79번</strong> 버스 승차 후 검단지식산업센터 정류장 하차</li><li>도보 약 500m 이동 (약 7분)</li></ul>
-      <p class="mt-6"><a class="btn-line" href="https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EA%B2%80%EB%8B%A8%EA%B5%AC%20%EB%A7%88%EC%A4%914%EB%A1%9C%209" target="_blank" rel="noopener">네이버 지도에서 보기</a></p>
-      </div>
+      <div class="s7">
+        <figure class="loc__map"><img src="assets/img/about/map.jpg" alt="지오네이션 오시는 길 지도" loading="lazy"></figure>
       </div>
     </div>
   </div>
@@ -129,6 +132,6 @@ Footer        — wide — logo | company facts
   </div>
 </footer>
 
-<script src="js/main.js?v=202611021218" defer></script>
+<script src="js/main.js?v=202611021221" defer></script>
 </body>
 </html>
