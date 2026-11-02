@@ -432,6 +432,26 @@
     window.addEventListener('resize', spy);
   }
 
+  /* ---------- 키워드 구간: 마우스를 따라 그라데이션이 번지는 배경 ---------- */
+  var kw = document.querySelector('.sv-kw');
+  if (kw && !reduce) {
+    var kx = 50, ky = 50, tx = 50, ty = 50, raf = 0;
+    var tick = function () {
+      kx += (tx - kx) * 0.12; ky += (ty - ky) * 0.12;
+      kw.style.setProperty('--mx', kx.toFixed(2) + '%');
+      kw.style.setProperty('--my', ky.toFixed(2) + '%');
+      raf = (Math.abs(tx - kx) + Math.abs(ty - ky) > 0.05 && kw.classList.contains('is-hover')) ? requestAnimationFrame(tick) : 0;
+    };
+    kw.addEventListener('mousemove', function (e) {
+      var r = kw.getBoundingClientRect();
+      tx = (e.clientX - r.left) / r.width * 100;
+      ty = (e.clientY - r.top) / r.height * 100;
+      if (!kw.classList.contains('is-hover')) { kx = tx; ky = ty; kw.classList.add('is-hover'); }
+      if (!raf) raf = requestAnimationFrame(tick);
+    });
+    kw.addEventListener('mouseleave', function () { kw.classList.remove('is-hover'); });
+  }
+
   function render(el, e) {
     el.textContent = el._parts.map(function (p) {
       if (typeof p === 'string') return p;
