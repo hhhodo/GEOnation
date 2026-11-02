@@ -868,6 +868,11 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 
 /* 장점 표 */
 #advantage .sec__head--center{margin-bottom:var(--space-8);}
+#advantage .tbl{line-height:1.4;table-layout:fixed;font-size:var(--fs-body-1);letter-spacing:var(--tracking-kr);}
+#advantage .tbl th,#advantage .tbl td{padding-block:20px;}
+#advantage .tbl thead th{padding-block:var(--space-4);}
+#advantage .tbl th:first-child{width:136.5px;}
+#advantage .tbl small{font-size:var(--fs-body-1);}
 
 /* 적용분야와 냉각 퍼포먼스 */
 .perf{display:flex;flex-direction:column;gap:var(--space-10);}
@@ -881,7 +886,7 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 .perf__tbl{padding-top:var(--space-6);}
 .perf__tbl .tbl thead th,.perf__tbl .tbl tbody th{background:var(--color-primary-050);}
 .perf__tbl .tbl thead .is-key{background:var(--brand-green-dark);}
-.perf__tbl .tbl{table-layout:fixed;font-size:var(--fs-body-1);letter-spacing:var(--tracking-kr);}
+.perf__tbl .tbl{line-height:1.4;table-layout:fixed;font-size:var(--fs-body-1);letter-spacing:var(--tracking-kr);}
 .perf__tbl .tbl th,.perf__tbl .tbl td{padding-block:20px;}
 .perf__tbl .tbl thead th{padding-block:var(--space-4);}
 .perf__tbl .tbl th:first-child{width:244.59px;}
