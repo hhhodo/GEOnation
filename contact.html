@@ -29,8 +29,8 @@ Footer        — wide — logo | company facts
 <meta name="description" content="지오네이션 문의하기: 업체명, 담당자, 이메일, 연락처, 문의내용을 작성하면 cs@geo-nation.com 으로 메일이 작성됩니다.">
 <script>document.documentElement.classList.add("js")</script>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/styles.css?v=202611021719">
-<link rel="stylesheet" href="css/site.css?v=202611021719">
+<link rel="stylesheet" href="css/styles.css?v=202611021720">
+<link rel="stylesheet" href="css/site.css?v=202611021720">
 </head>
 <body data-solid data-fly-page>
 
@@ -54,7 +54,7 @@ Footer        — wide — logo | company facts
   <div class="grow__stage">
     <div class="grow__slot"></div>
     <div class="grow__media" data-grow-media data-grow-shade>
-      <img src="assets/img/about/hero.jpg" alt="유리 외벽에 비친 지오네이션 본사 전경">
+      <img src="assets/img/about/hero-contact.jpg" alt="문서를 가리키며 협의하는 모습">
       <span class="grow__scrim"></span>
     </div>
     <div class="grow__text" data-grow-text>
@@ -65,55 +65,33 @@ Footer        — wide — logo | company facts
 </section>
 
 <!-- ============================== INQUIRY ============================== -->
-<section class="sec" id="inquiry">
+<section class="sec ct" id="inquiry">
   <div class="container container--wide">
     <div class="grid grid--top">
-      <div class="s5">
-        <div class="sec__side">
-      <p class="sec__label">Contact</p>
-      <h2 class="sec__title">문의 안내</h2>
-          <div class="mt-6">
-          <dl class="dl "><div class="dl__row"><dt>대표전화</dt><dd><a href="tel:0328584283">032-858-4283</a></dd></div><div class="dl__row"><dt>FAX</dt><dd>032-858-4284</dd></div><div class="dl__row"><dt>이메일</dt><dd><a href="mailto:cs@geo-nation.com">cs@geo-nation.com</a></dd></div><div class="dl__row"><dt>주소</dt><dd>인천광역시 검단구 마중4로 9 지오네이션(주)</dd></div></dl>
-          </div>
-        </div>
-      </div>
       <div class="s7">
         <form class="form" data-mailto="cs@geo-nation.com" novalidate>
-          <p class="form__note"><span class="req">*</span> 표시는 필수 입력사항입니다.</p>
           <div class="form__row"><div class="field"><label for="f-company">업체명 <span class="req" aria-hidden="true">*</span></label><input id="f-company" name="company" type="text" autocomplete="organization" required></div><div class="field"><label for="f-name">담당자 (직급) <span class="req" aria-hidden="true">*</span></label><input id="f-name" name="name" type="text" autocomplete="name" required></div></div>
           <div class="form__row"><div class="field"><label for="f-email">이메일 <span class="req" aria-hidden="true">*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required></div><div class="field"><label for="f-phone">연락처 <span class="req" aria-hidden="true">*</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div></div>
           <div class="field"><label for="f-subject">제목 <span class="req" aria-hidden="true">*</span></label><input id="f-subject" name="subject" type="text" autocomplete="off" required></div>
           <div class="field"><label for="f-message">문의내용 <span class="req" aria-hidden="true">*</span></label><textarea id="f-message" name="message" required></textarea></div>
           <div class="field field--check"><input id="f-agree" name="agree" type="checkbox" required><label for="f-agree">문의 처리를 위한 개인정보(업체명, 담당자, 이메일, 연락처) 수집 및 이용에 동의합니다. <span class="req" aria-hidden="true">*</span></label></div>
-          <div class="box box--fill privacy"><h3 class="box__title">개인정보 수집 및 이용 안내</h3><ul class="checks "><li>수집항목: 업체명, 담당자(직급), 이메일, 연락처, 문의내용</li><li>이용목적: 문의 접수 및 회신</li><li>문의 처리 및 회신에 필요한 기간 동안만 보관합니다.</li></ul></div>
+          <div class="box privacy"><h3 class="box__title">개인정보 수집 및 이용 안내</h3><ul class="checks "><li>수집항목: 업체명, 담당자(직급), 이메일, 연락처, 문의내용</li><li>이용목적: 문의 접수 및 회신</li><li>문의 처리 및 회신에 필요한 기간 동안만 보관합니다.</li></ul></div>
           <p class="form__note">첨부파일이 있는 경우 메일 작성 화면에서 직접 첨부하거나, 회신 메일로 보내주세요.</p>
           <button class="btn-solid" type="submit">문의하기</button>
           <p class="form__done" data-mailto-note hidden role="status">메일 프로그램이 열립니다. 열리지 않으면 <a href="mailto:cs@geo-nation.com">cs@geo-nation.com</a> 으로 직접 보내주세요.</p>
         </form>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== LOCATION ============================== -->
-<section class="sec sec--tint" id="location">
-  <div class="container container--wide">
-    <div class="sec__head">
-      <p class="sec__label">Location</p>
-      <h2 class="sec__title">오시는 길</h2>
-    </div>
-    <div class="grid grid--top">
-      <div class="s6">
-      <figure class="fig fig--white"><img src="assets/img/pages/map.jpg" alt="지오네이션 오시는 길 지도" loading="lazy"></figure>
-      </div>
-      <div class="s6">
-      <div class="box box--fill box--full">
-      <h3 class="box__title">찾아오시는 길</h3>
-      <dl class="dl dl--sm"><div class="dl__row"><dt>우편번호</dt><dd>23516</dd></div><div class="dl__row"><dt>주소</dt><dd>인천광역시 검단구 마중4로 9 지오네이션(주)</dd></div><div class="dl__row"><dt>대표전화</dt><dd><a href="tel:0328584283">032-858-4283</a></dd></div><div class="dl__row"><dt>FAX</dt><dd>032-858-4284</dd></div></dl>
-      <h3 class="box__title mt-6">대중교통 이용시</h3>
-      <ul class="checks "><li>지하철 인천 2호선 <strong>검단오류(검단산업단지)역</strong> 하차 후 2번 출구</li><li>간선 <strong>66번</strong>(검단오류역) 또는 <strong>79번</strong> 버스 승차 후 검단지식산업센터 정류장 하차</li><li>도보 약 500m 이동 (약 7분)</li></ul>
-      <p class="mt-6"><a class="btn-line" href="https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EA%B2%80%EB%8B%A8%EA%B5%AC%20%EB%A7%88%EC%A4%914%EB%A1%9C%209" target="_blank" rel="noopener">네이버 지도에서 보기</a></p>
-      </div>
+      <div class="s5 ct__info">
+        <div><p class="sec__label">Contact</p><h2 class="sec__title">문의 안내</h2></div>
+        <dl class="dl"><div class="dl__row"><dt>대표전화</dt><dd><a href="tel:0328584283">032-858-4283</a></dd></div><div class="dl__row"><dt>FAX</dt><dd>032-858-4284</dd></div><div class="dl__row"><dt>이메일</dt><dd><a href="mailto:cs@geo-nation.com">cs@geo-nation.com</a></dd></div><div class="dl__row"><dt>주소</dt><dd>인천광역시 검단구 마중4로 9 지오네이션(주)</dd></div><div class="dl__row"><dt>우편번호</dt><dd>23516</dd></div></dl>
+        <div>
+          <h3 class="ct__sub">대중교통 이용시</h3>
+          <ul class="loc__list ct__list">
+            <li>지하철 인천 2호선 검단오류(검단산업단지)역 하차 후 2번 출구</li>
+            <li>간선 66번(검단오류역) 또는 79번 버스 승차 후 검단지식산업센터 정류장 하차</li>
+            <li>도보 약 500m 이동 (약 7분)</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -158,6 +136,6 @@ Footer        — wide — logo | company facts
   </div>
 </footer>
 
-<script src="js/main.js?v=202611021719" defer></script>
+<script src="js/main.js?v=202611021720" defer></script>
 </body>
 </html>

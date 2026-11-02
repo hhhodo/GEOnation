@@ -1043,3 +1043,19 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
   .sv-apps{padding-top:var(--space-11);}
   .sv-last{padding-bottom:var(--space-11);}
 }
+
+/* ===== 문의하기 (Figma 62:2544) ===== */
+.ct .field input,.ct .field textarea{height:64px;padding:0 var(--space-5);border:0;border-radius:var(--radius-md);background:var(--color-primary-050);font-size:var(--fs-body-1);}
+.ct .field textarea{height:auto;min-height:240px;padding:var(--space-4) var(--space-5);}
+.ct .field--check input{width:24px;height:24px;margin-top:0;padding:0;border:var(--border-1);border-radius:8px;background:var(--color-canvas);}
+.ct .privacy{padding:var(--space-6);}
+.ct .box__title{font-size:var(--fs-body-1);line-height:var(--lh-body);}
+.ct .checks li{padding-left:var(--space-5);font-size:var(--fs-body-2);line-height:var(--lh-body);}
+.ct .checks li + li{margin-top:var(--space-2);}
+.ct .checks li::before{width:8px;background:#8fc693;}
+.ct .form__note{color:var(--text-subtle);}
+.ct__info{display:flex;flex-direction:column;gap:20px;padding-left:40px;}
+.ct__info .dl{border-top:0;}
+.ct__sub{padding-top:var(--space-6);font-size:28px;font-weight:var(--fw-strong);line-height:var(--lh-h3);letter-spacing:var(--tracking-kr);}
+.ct__list{padding-top:var(--space-3);}
+@media (max-width:1100px){.ct__info{padding-left:0;margin-top:var(--space-7);}}
