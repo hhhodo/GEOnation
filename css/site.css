@@ -1010,7 +1010,7 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 .sv-kw .sec__label,.sv-kw .sec__title{color:var(--color-canvas);}
 .sv-kw .sec__head{margin-bottom:60px;text-align:center;}
 .sv-kw__chips{justify-content:center;gap:var(--space-5);}
-.sv-kw .chip{padding:28px 40px;border:2px solid var(--color-canvas);color:var(--color-canvas);font-size:var(--fs-h2);font-weight:var(--fw-base);line-height:56px;letter-spacing:var(--tracking-kr);}
+.sv-kw .chip{padding:28px 40px;border:2px solid var(--color-canvas);color:var(--color-canvas);font-size:36px;font-weight:var(--fw-base);line-height:56px;letter-spacing:var(--tracking-kr);}
 .sv-apps{padding-top:var(--space-13);}
 .sv-grid5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:60px 20px;align-items:stretch;}
 .sv-app{display:flex;flex-direction:column;height:100%;border:var(--border-1);border-radius:var(--radius-md);overflow:hidden;background:var(--color-canvas);}
