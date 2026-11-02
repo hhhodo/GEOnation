@@ -961,7 +961,7 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 .sv-tri__figs > *{flex:1 1 0;min-width:1px;}
 .sv-fig{border:var(--border-1);border-radius:var(--radius-md);overflow:hidden;background:var(--color-canvas);}
 .sv-fig__img{height:var(--h);overflow:hidden;}
-.sv-fig__img{background:var(--color-primary-050);}
+.sv-fig__img{background:var(--color-canvas);}
 .sv-fig__img img{display:block;width:100%;height:100%;object-fit:contain;}
 .sv-fig__cap{padding:var(--space-4) var(--space-5);font-size:var(--fs-body-2);line-height:var(--lh-body);letter-spacing:var(--tracking-kr);color:var(--text-subtle);background:var(--color-canvas);}
 .sv-fig--tint .sv-fig__img{background:#f0efeb;}
