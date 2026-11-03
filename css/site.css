@@ -1083,7 +1083,6 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 
 /* 모바일: 표는 최소 너비를 두고 가로 스크롤 */
 @media (max-width:768px){
-  #advantage .tbl{min-width:760px;}
   .perf__tbl .tbl{min-width:560px;}
   .sv-tbl .tbl{min-width:480px;}
   .sv-tbl--mt .tbl{min-width:760px;}
@@ -1113,4 +1112,30 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
   .grow--mission .grow__slot{width:calc(100% - 2 * var(--gutter));aspect-ratio:4/3;}
   .grow__statement{padding-inline:0;font-size:var(--fs-h3);}
   .grow__statement > span{display:block;width:calc(100vw - 2 * var(--gutter));margin-inline:auto;}
+}
+
+/* 모바일: 장점 표는 항목별 카드 · 이미지 2x2 · 타이틀과 본문 간격 축소 */
+.sv-shapes__t{display:none;}
+@media (max-width:768px){
+  #advantage .tbl-wrap{border:0;background:none;overflow:visible;}
+  #advantage .tbl,#advantage .tbl tbody,#advantage .tbl tr,#advantage .tbl th,#advantage .tbl td{display:block;width:100%;}
+  #advantage .tbl thead{display:none;}
+  #advantage .tbl th:first-child{width:100%;}
+  #advantage .tbl tr{margin-bottom:var(--space-4);border:var(--border-1);border-radius:var(--radius-md);overflow:hidden;background:var(--color-canvas);}
+  #advantage .tbl tbody tr:last-child{margin-bottom:0;}
+  #advantage .tbl tbody th{padding:var(--space-3) var(--space-4);border:0;text-align:left;font-size:var(--fs-body-1);}
+  #advantage .tbl td{padding:var(--space-3) var(--space-4);border:0;border-top:var(--border-1);text-align:left;font-size:var(--fs-body-2);}
+  #advantage .tbl td::before{content:attr(data-label);display:block;margin-bottom:var(--space-1);font-size:var(--fs-body-2);font-weight:var(--fw-strong);color:var(--text-subtle);line-height:1.4;}
+  #advantage .tbl td.is-key{background:var(--color-primary-050);color:var(--brand-green-dark);}
+  #advantage .tbl td.is-key::before{color:var(--brand-green-dark);}
+  .sv-shapes{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2);background:none;}
+  .sv-shapes__all{display:none !important;}
+  .sv-shapes img.sv-shapes__t{display:block;width:100%;height:auto;aspect-ratio:207/154;border-radius:var(--radius-sm);background:var(--color-primary-050);}
+  .sec__head{margin-bottom:var(--space-7);}
+  .sec__head--center,#advantage .sec__head--center,.sec__head--center[style]{margin-bottom:var(--space-7) !important;}
+  .sv-kw .sec__head{margin-bottom:var(--space-7);}
+  .sv-feat__head{padding-bottom:var(--space-5);}
+  .sec__sub{margin-top:var(--space-6);}
+  .prod{margin-top:var(--space-7);}
+  .prod__lead{margin-top:var(--space-4);}
 }
