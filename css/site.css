@@ -1176,3 +1176,12 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
   .sv-tri__cols,.sv-tri__figs{gap:var(--space-5);}
   .sv-tri{gap:var(--space-6);}
 }
+
+/* 모바일 맨 위로 버튼 */
+.to-top{display:none;}
+@media (max-width:1024px){
+  .to-top{position:fixed;right:var(--space-4);bottom:var(--space-4);z-index:40;display:grid;place-items:center;width:48px;aspect-ratio:1;
+    border:0;border-radius:var(--radius-circle);background:var(--brand-green-dark);color:var(--text-default-inverse);box-shadow:0 4px 12px rgba(0,0,0,.2);
+    opacity:0;visibility:hidden;transform:translateY(var(--space-2));transition:opacity .25s,transform .25s,visibility .25s;cursor:pointer;}
+  .to-top.is-show{opacity:1;visibility:visible;transform:none;}
+}

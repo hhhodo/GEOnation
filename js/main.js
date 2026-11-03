@@ -477,4 +477,15 @@
       return p.comma ? v.toLocaleString('en-US') : String(v);
     }).join('');
   }
+  /* ---------- 모바일 맨 위로 버튼 ---------- */
+  var toTop = document.createElement('button');
+  toTop.type = 'button';
+  toTop.className = 'to-top';
+  toTop.setAttribute('aria-label', '맨 위로');
+  toTop.innerHTML = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 16V4M4.5 9.5 10 4l5.5 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  document.body.appendChild(toTop);
+  var syncTop = function () { toTop.classList.toggle('is-show', window.scrollY > window.innerHeight * 0.8); };
+  window.addEventListener('scroll', syncTop, { passive: true });
+  syncTop();
+  toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); });
 })();
