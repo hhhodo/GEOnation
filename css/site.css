@@ -1105,3 +1105,12 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
   .marquee--logo .marquee__item{padding-block:var(--space-3);padding-inline:var(--space-4);}
   .marquee--logo .marquee__item img{height:var(--space-6);max-width:calc(var(--space-11) * .6);}
 }
+
+/* 모바일: 본문 16px · 인증서 2열 · 미션 문구가 스크롤로 재배열되지 않게 고정 폭 */
+@media (max-width:768px){
+  :root{--fs-body-1:16px;}
+  #certificates .s2{grid-column:span 6;}
+  .grow--mission .grow__slot{width:calc(100% - 2 * var(--gutter));aspect-ratio:4/3;}
+  .grow__statement{padding-inline:0;font-size:var(--fs-h3);}
+  .grow__statement > span{display:block;width:calc(100vw - 2 * var(--gutter));margin-inline:auto;}
+}
