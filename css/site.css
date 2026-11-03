@@ -1139,3 +1139,16 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
   .prod{margin-top:var(--space-7);}
   .prod__lead{margin-top:var(--space-4);}
 }
+
+/* 모바일: 서비스 키워드 · 적용 분야 1열 · 장비 카드 높이 */
+@media (max-width:768px){
+  .sv-kw .chip{padding:var(--space-3) var(--space-5);font-size:var(--fs-h3);line-height:1.4;border-width:1px;}
+  .sv-kw__chips{gap:var(--space-3);}
+  .sv-grid5{grid-template-columns:1fr;gap:var(--space-4);}
+  .sv-app__img{height:140px;}
+  .sv-app__body{gap:var(--space-2);padding:var(--space-4);}
+  .sv-eq{gap:var(--space-3);}
+  .sv-eq__col{gap:var(--space-5);}
+  .sv-eq__img{height:140px;}
+  .sv-eq__title{font-size:var(--fs-body-1);line-height:1.4;}
+}
