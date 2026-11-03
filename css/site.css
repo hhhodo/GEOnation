@@ -1167,7 +1167,12 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 
 /* 모바일: 세로로 쌓이는 flex 자식이 높이 0으로 접히지 않게 */
 @media (max-width:768px){
-  .sv-tri__cols > *,.sv-tri__figs > *,.sv-eq > *{flex:none;width:100%;}
+  .sv-tri__cols > *,.sv-tri__figs > *{flex:none;width:100%;}
+  .sv-eq{flex-direction:column;align-items:stretch;}
+  .sv-eq > .sv-eq__col{flex:none;width:100%;}
+  .sv-grid5--an{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-5) var(--space-3);}
+  .sv-an__img{height:140px;}
+  .sv-an__title{padding-top:var(--space-3);}
   .sv-tri__cols,.sv-tri__figs{gap:var(--space-5);}
   .sv-tri{gap:var(--space-6);}
 }
