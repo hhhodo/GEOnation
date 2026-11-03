@@ -1090,3 +1090,18 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
   .sv-tbl--k200 .tbl th:first-child{width:140px;}
   .sv-app__title,.sv-app__text{overflow-wrap:anywhere;}
 }
+
+/* 메인 모바일 여백 */
+@media (max-width:768px){
+  .stats{padding-block:var(--space-9);}
+  .stats__list{padding-top:var(--space-8);gap:var(--space-7);}
+  .apps{padding-block:var(--space-9);}
+  .apps__head{gap:var(--space-2);}
+  .apps__grid{margin-top:var(--space-7);row-gap:var(--space-7);}
+  .tech{padding-block:var(--space-9);}
+  .tech__grid{margin-top:var(--space-7);row-gap:var(--space-5);}
+  .certs{padding-block:var(--space-8);}
+  .marquee{margin-top:var(--space-7);}
+  .marquee--logo .marquee__item{padding-block:var(--space-3);padding-inline:var(--space-4);}
+  .marquee--logo .marquee__item img{height:var(--space-6);max-width:calc(var(--space-11) * .6);}
+}

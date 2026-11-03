@@ -409,7 +409,7 @@
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries) {
         if (entries[0].isIntersecting) { io.disconnect(); run(); }
-      }, { threshold: 0.9, rootMargin: '0px 0px -15% 0px' });
+      }, { threshold: 0.2, rootMargin: '0px 0px -15% 0px' });
       io.observe(stats.querySelector('.stats__list'));
     } else { nums.forEach(function (el) { render(el, 1); }); }
   }
