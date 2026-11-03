@@ -1164,3 +1164,10 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
   .sv-tbl--mt .tbl td:first-child{border-top:0;background:var(--color-primary-050);font-weight:var(--fw-strong);}
   .sv-tbl--mt .tbl td::before{content:attr(data-label);color:var(--text-subtle);font-weight:var(--fw-strong);}
 }
+
+/* 모바일: 세로로 쌓이는 flex 자식이 높이 0으로 접히지 않게 */
+@media (max-width:768px){
+  .sv-tri__cols > *,.sv-tri__figs > *,.sv-eq > *{flex:none;width:100%;}
+  .sv-tri__cols,.sv-tri__figs{gap:var(--space-5);}
+  .sv-tri{gap:var(--space-6);}
+}
