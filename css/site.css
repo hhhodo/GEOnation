@@ -1083,9 +1083,6 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
 
 /* 모바일: 표는 최소 너비를 두고 가로 스크롤 */
 @media (max-width:768px){
-  .perf__tbl .tbl{min-width:560px;}
-  .sv-tbl .tbl{min-width:480px;}
-  .sv-tbl--mt .tbl{min-width:760px;}
   .sv-tbl--k200 .tbl th:first-child{width:140px;}
   .sv-app__title,.sv-app__text{overflow-wrap:anywhere;}
 }
@@ -1151,4 +1148,19 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
   .sv-eq__col{gap:var(--space-5);}
   .sv-eq__img{height:140px;}
   .sv-eq__title{font-size:var(--fs-body-1);line-height:1.4;}
+}
+
+/* 모바일: 나머지 표 — 좁은 표는 화면에 맞추고, 7열 표는 카드형 */
+@media (max-width:768px){
+  .perf__tbl .tbl th,.perf__tbl .tbl td,.sv-tbl .tbl th,.sv-tbl .tbl td{padding:var(--space-3);}
+  .perf__tbl .tbl,.sv-tbl .tbl{table-layout:auto;}
+  .sv-tbl .tbl th,.sv-tbl .tbl td{overflow-wrap:anywhere;}
+  .sv-tbl--mt .tbl-wrap{border:0;background:none;overflow:visible;}
+  .sv-tbl--mt .tbl,.sv-tbl--mt .tbl tbody,.sv-tbl--mt .tbl tr,.sv-tbl--mt .tbl td{display:block;width:100%;}
+  .sv-tbl--mt .tbl thead{display:none;}
+  .sv-tbl--mt .tbl tr{margin-bottom:var(--space-4);border:var(--border-1);border-radius:var(--radius-md);overflow:hidden;background:var(--color-canvas);}
+  .sv-tbl--mt .tbl tr:last-child{margin-bottom:0;}
+  .sv-tbl--mt .tbl td{display:grid;grid-template-columns:40% 1fr;column-gap:var(--space-3);padding:var(--space-2) var(--space-4);border:0;border-top:var(--border-1);text-align:left;}
+  .sv-tbl--mt .tbl td:first-child{border-top:0;background:var(--color-primary-050);font-weight:var(--fw-strong);}
+  .sv-tbl--mt .tbl td::before{content:attr(data-label);color:var(--text-subtle);font-weight:var(--fw-strong);}
 }
