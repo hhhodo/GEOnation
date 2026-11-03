@@ -1123,7 +1123,7 @@ html.js [data-fly].is-in{opacity:1;transform:none;}
   #advantage .tbl tbody th{padding:var(--space-3) var(--space-4);border:0;text-align:left;font-size:var(--fs-body-1);}
   #advantage .tbl td{padding:var(--space-3) var(--space-4);border:0;border-top:var(--border-1);text-align:left;font-size:var(--fs-body-2);}
   #advantage .tbl td::before{content:attr(data-label);display:block;margin-bottom:var(--space-1);font-size:var(--fs-body-2);font-weight:var(--fw-strong);color:var(--text-subtle);line-height:1.4;}
-  #advantage .tbl td.is-key{background:var(--color-primary-050);color:var(--brand-green-dark);}
+  #advantage .tbl td.is-key{color:var(--brand-green-dark);}
   #advantage .tbl td.is-key::before{color:var(--brand-green-dark);}
   .sv-shapes{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2);background:none;}
   .sv-shapes__all{display:none !important;}
